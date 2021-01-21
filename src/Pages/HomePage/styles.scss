@@ -1,0 +1,10 @@
+@import 'src/_colors.scss';
+
+.HomeComponentContainer {
+  background-color: $main-violet;
+  min-height: 100vh;
+  background-image: url('../../assets/img/portrait_background.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
