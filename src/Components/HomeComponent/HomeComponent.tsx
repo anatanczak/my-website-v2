@@ -1,14 +1,16 @@
 import React, { FunctionComponent } from 'react';
 import NavBar from '../../Components/NavBar/NavBar';
+import LanguageSelect from '../LanguageSelect/LanguageSelect';
 
 type HomeComponentProps = {};
 
-const HomeComponent: FunctionComponent<HomeComponentProps> = () => {
+const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
   return (
-    <div className="HomeComponentContainer">
-      <NavBar />
-      <p>HomeComponent</p>
-    </div>
+    <>
+      <NavBar activePage="aboutMe" />
+      <LanguageSelect />
+      <div className="HomeComponentContainer"></div>
+    </>
   );
 };
 

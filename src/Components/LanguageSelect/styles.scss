@@ -1,45 +1,31 @@
 @import 'src/_colors.scss';
+@import 'src/_vars.scss';
 
-.LanguageSelect {
-  display: block;
-  font-family: 'Comfortaa', sans-serif;
-  font-weight: 400;
-  color: $main-white;
-  line-height: 1.3;
-  padding: 0.4em 1.2em 0.3em 0.4em;
-  box-sizing: border-box;
-  margin: 0 0 0.4em 1em;
-  border: 2px solid $main-white;
-  border-radius: 8px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  background-image: url('../../assets/icons/dropdown_arrow_icon.png');
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.4em top 50%, 0 0;
-  background-size: 0.65em auto, 100%;
+.LangugageSelectContainer {
+  position: fixed;
+  top: -162px;
+  right: -110px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: $main-lilly;
 
-  &-LanguageOption {
-    -webkit-appearance: none;
-    font-weight: normal;
+  &-Languages {
+    position: relative;
+    top: 65%;
+    left: 0;
+    width: 60%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-Language {
+      font: $language-select-font;
+      margin-left: 0.5em;
+      color: $main-white;
+    }
   }
 }
-.LanguageSelect::-ms-expand {
-  display: none;
-}
-.LanguageSelect:focus,
-.LanguageSelect:active {
-  outline: none;
-}
-.LanguageSelect:hover {
-  transition: all 250ms ease-in-out;
-  border: 2px solid $main-darkblue;
+.activeLangugage {
   color: $main-darkblue;
-}
-/*  --------------------------------- MOBILE ------------------------------------ */
-@media (max-width: 500px) {
-  .LanguageSelect {
-    padding: 0.4em 1.2em 0.3em 0.4em;
-  }
 }

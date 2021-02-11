@@ -1,10 +1,14 @@
 @import 'src/_colors.scss';
 
 .HomeComponentContainer {
-  background-color: $main-violet;
+  background-color: $main-lilly;
   min-height: 100vh;
-  background-image: url('../../assets/img/portrait_background.webp');
+  background-image: url('../../assets/img/home_background_mobile.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: left 0;
 }
+
+/*    Mobile   */
+
+// @media (max-width: );

@@ -1,34 +1,88 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import LanguageSelect from '../LanguageSelect/LanguageSelect';
 import Logo from '../../assets/icons/logo.svg';
+import HamburgerMenuButton from './HamburgerMenuButton/HamburgerMenuButton';
 
 import './style.scss';
 
-type NavBarProps = {};
+interface MenuItem {
+  title: string;
+  translationKey: string;
+}
 
-const NavBar: FunctionComponent<NavBarProps> = ({}) => {
+type NavBarProps = {
+  activePage: string;
+};
+
+const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
+  const menuItems: Array<MenuItem> = [
+    {
+      title: 'aboutMe',
+      translationKey: 'navbar.aboutMe'
+    },
+    {
+      title: 'portfolio',
+      translationKey: 'navbar.portfolio'
+    },
+    {
+      title: 'contact',
+      translationKey: 'navbar.contact'
+    }
+  ];
   const { t }: { t: any } = useTranslation();
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   return (
     <nav className="NavBarContainer">
-      <div className="NavBarContainer-LogoContainer">
-        <Link to="/">
-          <img
-            className="NavBarContainer-LogoContainer-Logo"
-            src={Logo}
-            alt="logo"
-          />
-        </Link>
+      <div className="NavBarContainer-AllwaysVisibleMenuContainer">
+        <div className="NavBarContainer-AllwaysVisibleMenuContainer-LogoContainer">
+          <Link to="/">
+            <img
+              className="NavBarContainer-AllwaysVisibleMenuContainer-LogoContainer-Logo"
+              src={Logo}
+              alt="logo"
+            />
+          </Link>
+        </div>
+        <HamburgerMenuButton
+          menuIsOpen={menuIsOpen}
+          setMenuIsOpen={setMenuIsOpen}
+        />
+        <div className="NavBarContainer-AllwaysVisibleMenuContainer-InvisibleItem"></div>
       </div>
-      <ul className="NavBarContainer-MenuContainer">
-        <li>{t('navbar.home')}</li>
-        <li>{t('navbar.aboutMe')}</li>
-        <li>{t('navbar.portfolio')}</li>
-        <li>{t('navbar.contact')}</li>
-        <LanguageSelect />
-      </ul>
+      <div
+        className={
+          menuIsOpen
+            ? 'NavBarContainer-ClosedMenuContainer NavBarContainer-MenuVisible'
+            : 'NavBarContainer-ClosedMenuContainer'
+        }
+      >
+        <ul className="NavBarContainer-ClosedMenuContainer-MenuListContainer">
+          {menuItems.map((menuItem) => {
+            let styleClassName =
+              'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem';
+            if (menuItem.title == activePage) {
+              console.log(activePage);
+              styleClassName +=
+                ' NavBarContainer-ClosedMenuContainer-MenuListContainer-ActiveMenuItem';
+            }
+            return (
+              <li className={styleClassName} key={menuItem.translationKey}>
+                <span
+                  className={
+                    menuItem.title == activePage
+                      ? 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-Circle'
+                      : 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-EmptyCircle'
+                  }
+                ></span>{' '}
+                {t(menuItem.translationKey)}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 };

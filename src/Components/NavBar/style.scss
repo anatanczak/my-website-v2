@@ -1,47 +1,90 @@
 @import 'src/_colors.scss';
+@import 'src/_vars.scss';
 
 .NavBarContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5em 1.5em;
-
-  &-LogoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &-Logo {
-      width: 40px;
-      height: auto;
-    }
-  }
-
-  &-MenuContainer {
+  &-AllwaysVisibleMenuContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
+    padding: 5px 20px;
 
-    li {
-      list-style-type: none;
-      margin: 0 1em;
-      font-family: 'Comfortaa', sans-serif;
-      text-transform: uppercase;
-      color: $main-white;
-      letter-spacing: 1px;
+    &-LogoContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-Logo {
+        width: 40px;
+        height: auto;
+      }
     }
-    li:after {
-      display: block;
-      content: '';
-      border-bottom: solid 2px $main-darkblue;
-      transform: scaleX(0);
-      transition: transform 250ms ease-in-out;
-    }
-    li:hover {
-      color: $main-darkblue;
-    }
-    li:hover:after {
-      transform: scaleX(1);
+    &-InvisibleItem {
+      width: 40px;
     }
   }
+
+  &-ClosedMenuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.5s;
+
+    &-MenuListContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 0;
+      padding: 1em;
+
+      &-MenuItem {
+        list-style-type: none;
+        font: $menu-font;
+        text-transform: uppercase;
+        color: $main-darkblue;
+        text-align: left;
+        margin-top: 0.5em;
+
+        display: flex;
+        align-items: center;
+        &:hover {
+          color: $main-lilly;
+          & > span {
+            margin-right: 0.5em;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $main-lilly;
+          }
+        }
+
+        &-Circle {
+          margin-right: 0.5em;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $main-lilly;
+        }
+        &-EmptyCircle {
+          margin-right: 0.5em;
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      &-ActiveMenuItem {
+        color: $main-lilly;
+      }
+    }
+  }
+
+  &-MenuVisible {
+    height: 100px;
+    transition: height ease-in-out 0.5s;
+  }
 }
+
+/* ---------------------------  Mobile --------------------------- */

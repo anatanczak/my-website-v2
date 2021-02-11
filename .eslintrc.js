@@ -1,3 +1,5 @@
+const { NONAME } = require('dns');
+
 module.exports = {
   extends: [
     'airbnb-typescript',
@@ -55,11 +57,12 @@ module.exports = {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'prettier/prettier': [
-      'error',
+      'warn',
       {
         endOfLine: 'auto',
         usePrettierrc: false,
-        singleQuote: true
+        singleQuote: true,
+        trailingComma: 'none'
       }
     ]
   },
