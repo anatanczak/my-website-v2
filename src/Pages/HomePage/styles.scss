@@ -1,7 +1,7 @@
 @import 'src/_colors.scss';
 
 .HomeComponentContainer {
-  background-color: $main-lilly;
+  background-color: $main-darkblue;
   min-height: 100vh;
   background-image: url('../../assets/img/home_background_mobile.webp');
   background-repeat: no-repeat;
@@ -13,7 +13,8 @@
 @media (max-width: 767px) {
   .HomeComponentContainer {
     background-image: url('../../assets/img/home_background_mobile.webp');
-    background-position: left 0;
+    background-position: left 0 bottom 0;
+    background-size: contain;
   }
 }
 
@@ -22,5 +23,14 @@
   .HomeComponentContainer {
     background-image: url('../../assets/img/home_background_tablet.webp');
     background-position: left 0;
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: 1024px) {
+  .HomeComponentContainer {
+    background-image: url('../../assets/img/home_background_desktop.webp');
+    background-position: left 0 bottom 0;
+    background-size: contain;
   }
 }

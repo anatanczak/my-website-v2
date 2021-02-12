@@ -60,7 +60,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
         />
         <div className="NavBarContainer-AllwaysVisibleMenuContainer-SocialLinksContainer">
           <a href="https://github.com/anaviktoriv">
-            <img width="20" height="20" src={GithubIcon} alt="github logo" />
+            <img src={GithubIcon} alt="github logo" />
           </a>
           <a href="https://www.linkedin.com/in/anastasiatanczak/">
             <img src={LinkedinIcon} alt="linkedin logo" />
@@ -75,7 +75,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
         }
       >
         <ul className="NavBarContainer-ClosedMenuContainer-MenuListContainer">
-          {menuItems.map((menuItem) => {
+          {menuItems.map((menuItem, index) => {
             let styleClassName =
               'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem';
             if (menuItem.title == activePage) {
@@ -83,20 +83,38 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
               styleClassName +=
                 ' NavBarContainer-ClosedMenuContainer-MenuListContainer-ActiveMenuItem';
             }
+            if (menuIsOpen) {
+              styleClassName +=
+                ' NavBarContainer-ClosedMenuContainer-MenuListContainer-VisibleMenuItem' +
+                (index + 1);
+            }
             return (
               <li className={styleClassName} key={menuItem.translationKey}>
-                <span
+                {/* <span
                   className={
                     menuItem.title == activePage
                       ? 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-Circle'
                       : 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-EmptyCircle'
                   }
-                ></span>{' '}
+                ></span> */}
                 {t(menuItem.translationKey)}
+                {/* <span
+                  className={
+                    menuItem.title == activePage
+                      ? 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-Circle'
+                      : 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-EmptyCircle'
+                  }
+                ></span> */}
               </li>
             );
           })}
-          <div className="NavBarContainer-ClosedMenuContainer-MenuListContainer-SocialLinksContainerMobile">
+          <div
+            className={
+              menuIsOpen
+                ? 'NavBarContainer-ClosedMenuContainer-MenuListContainer-SocialLinksContainerMobile NavBarContainer-ClosedMenuContainer-MenuListContainer-SocialLinksContainerMobileAppear'
+                : 'NavBarContainer-ClosedMenuContainer-MenuListContainer-SocialLinksContainerMobile'
+            }
+          >
             <a href="https://github.com/anaviktoriv">
               <img src={GithubIcon} alt="github logo" />
             </a>
