@@ -2,12 +2,12 @@
 @import 'src/_vars.scss';
 
 .NavBarContainer {
+  position: fixed;
+  background-color: $main-white;
   &-AllwaysVisibleMenuContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
-    padding: 5px 20px;
 
     &-LogoContainer {
       display: flex;
@@ -19,16 +19,12 @@
         height: auto;
       }
     }
-    &-InvisibleItem {
-      width: 40px;
-    }
   }
 
   &-ClosedMenuContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 0;
     overflow: hidden;
     transition: all ease-in-out 0.5s;
 
@@ -80,11 +76,97 @@
       }
     }
   }
-
-  &-MenuVisible {
-    height: 100px;
-    transition: height ease-in-out 0.5s;
-  }
 }
 
 /* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: 767px) {
+  .NavBarContainer {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    &-AllwaysVisibleMenuContainer {
+      height: 50px;
+      padding: 5px 20px;
+
+      &-SocialLinksContainer {
+        width: 40px;
+        a {
+          display: none;
+        }
+      }
+    }
+    &-ClosedMenuContainer {
+      height: 0;
+
+      &-MenuListContainer {
+        &-SocialLinksContainerMobile {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          a {
+            margin-left: 0.3em;
+            img {
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    &-MenuVisible {
+      height: 150px;
+      transition: height ease-in-out 0.5s;
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: 768px) {
+  .NavBarContainer {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: -webkit-fill-available;
+    width: 50px;
+    transition: all ease-in-out 0.5s;
+    &-AllwaysVisibleMenuContainer {
+      flex-direction: column;
+      width: 50px;
+      padding: 10px 5px;
+
+      &-SocialLinksContainer {
+        display: flex;
+        flex-direction: column;
+        a {
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    &-ClosedMenuContainer {
+      // width: 0;
+
+      &-MenuListContainer {
+        &-SocialLinksContainerMobile {
+          display: none;
+        }
+      }
+    }
+    // &-MenuVisible {
+    //   width: 200px;
+    //   transition: all ease-in-out 0.5s;
+    // }
+  }
+  .OpenNavBarContainer {
+    width: 250px;
+    transition: all ease-in-out 0.5s;
+  }
+}

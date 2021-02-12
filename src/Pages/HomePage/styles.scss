@@ -6,9 +6,21 @@
   background-image: url('../../assets/img/home_background_mobile.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left 0;
 }
 
-/*    Mobile   */
+/* ---------------------------  Mobile --------------------------- */
 
-// @media (max-width: );
+@media (max-width: 767px) {
+  .HomeComponentContainer {
+    background-image: url('../../assets/img/home_background_mobile.webp');
+    background-position: left 0;
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: 768px) {
+  .HomeComponentContainer {
+    background-image: url('../../assets/img/home_background_tablet.webp');
+    background-position: left 0;
+  }
+}

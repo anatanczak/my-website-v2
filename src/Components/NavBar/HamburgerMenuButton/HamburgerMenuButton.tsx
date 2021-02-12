@@ -12,7 +12,6 @@ const HamburgerMenuButton: FunctionComponent<HamburgerMenuButtonProps> = ({
 }) => {
   const handleMenuButtonClick = () => {
     setMenuIsOpen(!menuIsOpen);
-    console.log(menuIsOpen);
   };
 
   return (
@@ -20,7 +19,7 @@ const HamburgerMenuButton: FunctionComponent<HamburgerMenuButtonProps> = ({
       className="HamburgerButtonContainer"
       onClick={handleMenuButtonClick}
     >
-      <svg viewBox="0 0 100 100">
+      <svg height="50" width="50" viewBox="0 0 100 100">
         <path
           className={
             menuIsOpen

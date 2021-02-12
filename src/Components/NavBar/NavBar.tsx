@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/icons/logo.svg';
+import GithubIcon from '../../assets/icons/github_icon.svg';
+import LinkedinIcon from '../../assets/icons/linkedin_icon.svg';
+
 import HamburgerMenuButton from './HamburgerMenuButton/HamburgerMenuButton';
 
 import './style.scss';
@@ -31,11 +34,16 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
       translationKey: 'navbar.contact'
     }
   ];
+
   const { t }: { t: any } = useTranslation();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
-    <nav className="NavBarContainer">
+    <nav
+      className={
+        menuIsOpen ? 'NavBarContainer OpenNavBarContainer' : 'NavBarContainer'
+      }
+    >
       <div className="NavBarContainer-AllwaysVisibleMenuContainer">
         <div className="NavBarContainer-AllwaysVisibleMenuContainer-LogoContainer">
           <Link to="/">
@@ -50,7 +58,14 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
           menuIsOpen={menuIsOpen}
           setMenuIsOpen={setMenuIsOpen}
         />
-        <div className="NavBarContainer-AllwaysVisibleMenuContainer-InvisibleItem"></div>
+        <div className="NavBarContainer-AllwaysVisibleMenuContainer-SocialLinksContainer">
+          <a href="https://github.com/anaviktoriv">
+            <img width="20" height="20" src={GithubIcon} alt="github logo" />
+          </a>
+          <a href="https://www.linkedin.com/in/anastasiatanczak/">
+            <img src={LinkedinIcon} alt="linkedin logo" />
+          </a>
+        </div>
       </div>
       <div
         className={
@@ -81,6 +96,14 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
               </li>
             );
           })}
+          <div className="NavBarContainer-ClosedMenuContainer-MenuListContainer-SocialLinksContainerMobile">
+            <a href="https://github.com/anaviktoriv">
+              <img src={GithubIcon} alt="github logo" />
+            </a>
+            <a href="https://www.linkedin.com/in/anastasiatanczak/">
+              <img src={LinkedinIcon} alt="linkedin logo" />
+            </a>
+          </div>
         </ul>
       </div>
     </nav>
