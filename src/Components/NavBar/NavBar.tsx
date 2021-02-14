@@ -90,21 +90,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
             }
             return (
               <li className={styleClassName} key={menuItem.translationKey}>
-                {/* <span
-                  className={
-                    menuItem.title == activePage
-                      ? 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-Circle'
-                      : 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-EmptyCircle'
-                  }
-                ></span> */}
                 {t(menuItem.translationKey)}
-                {/* <span
-                  className={
-                    menuItem.title == activePage
-                      ? 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-Circle'
-                      : 'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem-EmptyCircle'
-                  }
-                ></span> */}
               </li>
             );
           })}

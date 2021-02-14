@@ -3,8 +3,8 @@
 
 .NavBarContainer {
   position: fixed;
-  background-color: $main-white;
   &-AllwaysVisibleMenuContainer {
+    background-color: $main-white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,6 +22,7 @@
   }
 
   &-ClosedMenuContainer {
+    background-color: $main-white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,53 +46,23 @@
         margin-top: 0.5em;
         display: flex;
         align-items: center;
-        //transform: scale(0);
         opacity: 0;
 
         &:hover {
           color: $main-lilly;
-          // & > span {
-          //   margin-right: 0.5em;
-          //   margin-left: 0.5em;
-          //   width: 10px;
-          //   height: 10px;
-          //   border-radius: 50%;
-          //   background-color: $main-lilly;
-          // }
         }
-
-        // &-Circle {
-        //   margin-right: 0.5em;
-        //   margin-left: 0.5em;
-        //   width: 10px;
-        //   height: 10px;
-        //   border-radius: 50%;
-        //   background-color: $main-lilly;
-        // }
-        // &-EmptyCircle {
-        //   margin-right: 0.5em;
-        //   width: 10px;
-        //   height: 10px;
-        // }
       }
 
       &-ActiveMenuItem {
         color: $main-lilly;
       }
-      &-VisibleMenuItem1 {
-        transform: scale(1);
-        opacity: 1;
-        transition: all ease-in-out 0.5s 0.5s;
-      }
-      &-VisibleMenuItem2 {
-        transform: scale(1);
-        opacity: 1;
-        transition: all ease-in-out 0.5s 1s;
-      }
-      &-VisibleMenuItem3 {
-        transform: scale(1);
-        opacity: 1;
-        transition: all ease-in-out 0.5s 1.5s;
+
+      @for $item from 1 through 3 {
+        &-VisibleMenuItem#{$item} {
+          transform: scale(1);
+          opacity: 1;
+          transition: all ease-in-out 0.5s 0.5s * $item;
+        }
       }
     }
   }
@@ -117,23 +88,25 @@
       }
     }
     &-ClosedMenuContainer {
-      height: 0;
+      transform-origin: top;
+      transform: scaleY(0);
 
       &-MenuListContainer {
         height: 100%;
         align-items: center;
+        padding-bottom: 0.2em;
         &-SocialLinksContainerMobile {
           width: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
           margin-top: auto;
-          margin-bottom: 0.5em;
+          margin-bottom: 0.2em;
           transform: scale(0);
           opacity: 0;
+
           a {
-            margin-left: 0.3em;
-            margin-right: 0.3em;
+            margin: 0.6em 0.3em 0 0.3em;
             img {
               width: 25px;
             }
@@ -148,8 +121,8 @@
     }
 
     &-MenuVisible {
-      height: 170px;
-      transition: height ease-in-out 0.5s;
+      transform: scaleY(1);
+      transition: all ease-in-out 0.5s;
     }
   }
 }
@@ -162,8 +135,8 @@
     bottom: 0;
     left: 0;
     height: -webkit-fill-available;
-    width: 50px;
     transition: all ease-in-out 0.5s;
+
     &-AllwaysVisibleMenuContainer {
       flex-direction: column;
       width: 50px;
@@ -181,21 +154,17 @@
     }
 
     &-ClosedMenuContainer {
-      width: 100%;
-
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: all ease-in-out 0.5s;
       &-MenuListContainer {
         &-SocialLinksContainerMobile {
           display: none;
         }
       }
     }
-    // &-MenuVisible {
-    //   width: 200px;
-    //   transition: all ease-in-out 0.5s;
-    // }
-  }
-  .OpenNavBarContainer {
-    width: 250px;
-    transition: all ease-in-out 0.5s;
+    &-MenuVisible {
+      transform: scaleX(1);
+    }
   }
 }
