@@ -1,11 +1,10 @@
-/*TODO: see Mixing for SASS!!!*/
-
 html {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  /* padding: 0; */
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,4 +15,28 @@ body {
 }
 h {
   font-family: 'Comfortaa', sans-serif;
+}
+
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:hover {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
+
+button:focus {
+  outline: 0;
 }

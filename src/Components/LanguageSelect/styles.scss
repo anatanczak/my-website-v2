@@ -1,5 +1,6 @@
 @import 'src/_colors.scss';
 @import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
 
 .LangugageSelectContainer {
   z-index: 2;
@@ -29,4 +30,22 @@
 }
 .activeLangugage {
   color: $main-darkblue;
+}
+/*  --------------- Mobile ----------------- */
+@media (max-width: $mobile-max-width) and (max-height: $shortmobile-max-height) {
+  .LangugageSelectContainer {
+    top: -175px;
+
+    &-Languages {
+      top: 70%;
+    }
+  }
+}
+
+/*  --------------- Tiny Mobile ----------------- */
+@media (max-width: $tiny-mobile-max-width) {
+  .LangugageSelectContainer {
+    top: -162px;
+    right: -120px;
+  }
 }

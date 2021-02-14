@@ -1,0 +1,19 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+
+@mixin pale-green-button {
+  background-color: $main-palegreen;
+  font: $button-font;
+  padding: 0.4em 1em;
+  border-radius: 8px;
+
+  &:hover {
+    //TODO: decide what to do on hover
+    background-color: red;
+  }
+  &:active,
+  &:focus {
+    //TODO: decide what to do when active
+    background-color: goldenrod;
+  }
+}

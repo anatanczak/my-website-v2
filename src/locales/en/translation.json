@@ -2,5 +2,8 @@
   "navbar.contact": "contact",
   "navbar.portfolio": "my work",
   "navbar.aboutMe": "about me",
-  "navbar.home": "home"
+  "navbar.home": "home",
+  "home.mainTitle": "Hi. I’m Anastasia. \n A Developer.",
+  "home.pitch": "I’m a full stack and iOS developer ready to be a part of your team.",
+  "home.button.downloadResume": "Download résumé"
 }
