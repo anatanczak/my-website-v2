@@ -9,5 +9,11 @@
   "home.services": "What I Do.",
   "home.services.webDevelopment.title": "Web development",
   "home.services.webDevelopment.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.",
-  "home.services.webDevelopment.altText": "Web development icon"
+  "home.services.webDevelopment.altText": "Web development icon",
+  "home.services.iosDevelopment.title": "IOS development",
+  "home.services.iosDevelopment.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.",
+  "home.services.iosDevelopment.altText": "Ios development icon",
+  "home.services.uiDesign.title": "UI/UX design",
+  "home.services.uiDesign.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.",
+  "home.services.uiDesign.altText": "UI/UX design icon"
 }

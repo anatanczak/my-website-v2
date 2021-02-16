@@ -3,6 +3,14 @@
 @import 'src/_buttons.scss';
 @import 'src/_breakpoints.scss';
 
+@mixin h2Title {
+  color: $main-darkblue;
+  font: $mobile-tablet-h2;
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+}
+
 .HomeComponentContainer {
   &-IntroductionAndPitchContainer {
     background-color: $main-darkblue;
@@ -21,6 +29,18 @@
       &-DownloadButton {
         @include pale-green-button;
       }
+    }
+  }
+  &-ServicesContainer {
+    background-color: $main-lightgrey;
+    display: flex;
+    flex-direction: column;
+
+    &-Title {
+      @include h2Title;
+    }
+    &-Services {
+      display: flex;
     }
   }
 }
@@ -48,6 +68,12 @@
         }
       }
     }
+
+    &-ServicesContainer {
+      &-Services {
+        flex-direction: column;
+      }
+    }
   }
 }
 
@@ -69,10 +95,10 @@
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: 768px) {
   .HomeComponentContainer {
+    margin-left: 50px;
     &-IntroductionAndPitchContainer {
       z-index: -1;
       position: relative;
-      margin-left: 50px;
       height: 100vh;
       background-image: url('../../assets/img/home_background_tablet.webp');
       display: flex;
@@ -113,6 +139,22 @@
     &-IntroductionAndPitchContainer {
       background-image: url('../../assets/img/home_background_desktop.webp');
       padding: 0;
+
+      &-TextAndButtonContainer {
+        margin-right: 50px;
+        &-MainTitle {
+          font: $desktop-h1;
+        }
+        &-Pitch {
+          font: $desktop-pitch-font;
+        }
+      }
+    }
+
+    &-ServicesContainer {
+      &-Title {
+        font: $desktop-h2;
+      }
     }
   }
 }

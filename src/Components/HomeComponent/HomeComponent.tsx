@@ -1,30 +1,19 @@
 import React, { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import Service from './ServiceComponent/ServiceInterface';
-
 import NavBar from '../../Components/NavBar/NavBar';
+import Ball from '../BallComponent/Ball';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
+import ServiceComponent from './ServiceComponent/ServiceComponent';
 
-import webDevIcon from '../../assets/icons/web_dev_icon.svg';
+import services from './Services';
 
 import './styles.scss';
-import ServicesComponent from './ServiceComponent/ServiceComponent';
-import ServiceComponent from './ServiceComponent/ServiceComponent';
 
 type HomeComponentProps = {};
 
 const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
   const { t }: { t: any } = useTranslation();
-
-  const services: Array<Service> = [
-    {
-      image: webDevIcon,
-      altText: t('home.services.webDevelopment.altText'),
-      title: t('home.services.webDevelopment.title'),
-      text: t('home.services.webDevelopment.text')
-    }
-  ];
 
   return (
     <>
@@ -32,6 +21,7 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
       <LanguageSelect />
       <div className="HomeComponentContainer">
         <div className="HomeComponentContainer-IntroductionAndPitchContainer">
+          <Ball />
           <div className="HomeComponentContainer-IntroductionAndPitchContainer-TextAndButtonContainer">
             <h1 className="HomeComponentContainer-IntroductionAndPitchContainer-TextAndButtonContainer-MainTitle">
               {t('home.mainTitle')}
@@ -44,13 +34,20 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
             </button>
           </div>
         </div>
-        <div className="HomeComponentContainer-WhatIDoContainer">
-          <h2> {t('home.services')} </h2>
-          {services.map((service, index) => {
-            return (
-              <ServiceComponent service={service} key={service.title + index} />
-            );
-          })}
+        <div className="HomeComponentContainer-ServicesContainer">
+          <h2 className="HomeComponentContainer-ServicesContainer-Title">
+            {t('home.services')}{' '}
+          </h2>
+          <div className="HomeComponentContainer-ServicesContainer-Services">
+            {services.map((service, index) => {
+              return (
+                <ServiceComponent
+                  service={service}
+                  key={service.title + index}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </>
