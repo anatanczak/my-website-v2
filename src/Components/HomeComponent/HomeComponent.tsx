@@ -17,15 +17,17 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
       <LanguageSelect />
       <div className="HomeComponentContainer">
         <div className="HomeComponentContainer-IntroductionAndPitchContainer">
-          <h1 className="HomeComponentContainer-IntroductionAndPitchContainer-MainTitle">
-            {t('home.mainTitle')}
-          </h1>
-          <h2 className="HomeComponentContainer-IntroductionAndPitchContainer-Pitch">
-            {t('home.pitch')}
-          </h2>
-          <button className="HomeComponentContainer-IntroductionAndPitchContainer-DownloadButton">
-            {t('home.button.downloadResume')}
-          </button>
+          <div className="HomeComponentContainer-IntroductionAndPitchContainer-TextAndButtonContainer">
+            <h1 className="HomeComponentContainer-IntroductionAndPitchContainer-TextAndButtonContainer-MainTitle">
+              {t('home.mainTitle')}
+            </h1>
+            <h2 className="HomeComponentContainer-IntroductionAndPitchContainer-TextAndButtonContainer-Pitch">
+              {t('home.pitch')}
+            </h2>
+            <button className="HomeComponentContainer-IntroductionAndPitchContainer-TextAndButtonContainer-DownloadButton">
+              {t('home.button.downloadResume')}
+            </button>
+          </div>
         </div>
       </div>
     </>
