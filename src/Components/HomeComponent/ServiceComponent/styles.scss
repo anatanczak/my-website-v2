@@ -1,0 +1,32 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+
+/* ---------------------------  Commont Styles --------------------------- */
+.ServicesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+}
+
+/* ---------------------------  Longer Mobile --------------------------- */
+@media (max-width: $mobile-max-width) and (min-height: $shortmobile-max-height) {
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: 768px) {
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: 768px) and (orientation: portrait) {
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: 1024px) {
+}

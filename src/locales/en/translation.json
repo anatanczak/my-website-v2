@@ -5,5 +5,9 @@
   "navbar.home": "home",
   "home.mainTitle": "Hi. I’m Anastasia. \n A Developer.",
   "home.pitch": "I’m a full stack and iOS developer ready to be a part of your team.",
-  "home.button.downloadResume": "Download résumé"
+  "home.button.downloadResume": "Download résumé",
+  "home.services": "What I Do.",
+  "home.services.webDevelopment.title": "Web development",
+  "home.services.webDevelopment.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.",
+  "home.services.webDevelopment.altText": "Web development icon"
 }
