@@ -1,10 +1,12 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import useIntersectionObserver from '../../CustomHooks/useIntersectionObserver';
 
 import NavBar from '../../Components/NavBar/NavBar';
 import Ball from '../BallComponent/Ball';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
 import ServiceComponent from './ServiceComponent/ServiceComponent';
+import SkillsComponent from './SkillsComponent/SkillsComponent';
 
 import services from './Services';
 
@@ -14,6 +16,11 @@ type HomeComponentProps = {};
 
 const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
   const { t }: { t: any } = useTranslation();
+  const skillsDivRef = useRef<HTMLDivElement | null>(null);
+
+  const [skillsDivIsVisible, entry] = useIntersectionObserver({
+    elementRef: skillsDivRef
+  });
 
   return (
     <>
@@ -47,6 +54,12 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
                 />
               );
             })}
+          </div>
+          <div
+            className="HomeComponentContainer-SkillsContainer"
+            ref={skillsDivRef}
+          >
+            <SkillsComponent />
           </div>
         </div>
       </div>

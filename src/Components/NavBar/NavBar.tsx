@@ -79,7 +79,6 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
             let styleClassName =
               'NavBarContainer-ClosedMenuContainer-MenuListContainer-MenuItem';
             if (menuItem.title == activePage) {
-              console.log(activePage);
               styleClassName +=
                 ' NavBarContainer-ClosedMenuContainer-MenuListContainer-ActiveMenuItem';
             }
