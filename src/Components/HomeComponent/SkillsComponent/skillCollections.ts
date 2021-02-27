@@ -1,8 +1,4 @@
-interface SkillBubble {
-  section: string;
-  sizeRatio: number;
-  label: string;
-}
+import SkillBubble from './SkillInterface';
 
 export const leftSkillBubblesCollection: Array<SkillBubble> = [
   {

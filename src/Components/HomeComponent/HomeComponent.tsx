@@ -28,7 +28,7 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
       <LanguageSelect />
       <div className="HomeComponentContainer">
         <div className="HomeComponentContainer-IntroductionAndPitchContainer">
-          <Ball />
+          <Ball color="#c7a9c3" width="100px" />
           <div className="HomeComponentContainer-IntroductionAndPitchContainer-TextAndButtonContainer">
             <h1 className="HomeComponentContainer-IntroductionAndPitchContainer-TextAndButtonContainer-MainTitle">
               {t('home.mainTitle')}

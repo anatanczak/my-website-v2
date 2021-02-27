@@ -1,6 +1,9 @@
 import React, { FunctionComponent } from 'react';
 
+import Skill from './SkillBubble/SkillBubble';
+
 import './styles.scss';
+
 import {
   leftSkillBubblesCollection,
   upperSkillBubblesCollection,
@@ -18,28 +21,34 @@ const SkillsComponent: FunctionComponent<SkillsComponentProps> = ({
   return (
     <div className="SkillCollectionsContainer">
       <div className="SkillCollectionsContainer-Left">
-        {leftSkillBubblesCollection.map((leftSkillBubble, index) => {
-          return <p>{leftSkillBubble.label}</p>;
+        {leftSkillBubblesCollection.map((skillBubble, index) => {
+          return <Skill key={skillBubble.label + index} skill={skillBubble} />;
         })}
       </div>
       <div className="SkillCollectionsContainer-Center">
         <div className="SkillCollectionsContainer-Center-UpperBubblesContainer">
-          {upperSkillBubblesCollection.map((upperSkillBubble, index) => {
-            return <p>{upperSkillBubble.label}</p>;
+          {upperSkillBubblesCollection.map((skillBubble, index) => {
+            return (
+              <Skill key={skillBubble.label + index} skill={skillBubble} />
+            );
           })}
         </div>
         <div className="SkillCollectionsContainer-Center-ComputerContainer">
-          <h2 className="SkillCollectionsContainer-Title">{title}</h2>
+          <h2 className="SkillCollectionsContainer-Center-ComputerContainer-Title">
+            {title}
+          </h2>
         </div>
         <div className="SkillCollectionsContainer-Center-LowerBubblesContainer">
-          {lowerSkillBubblesCollection.map((lowerSkillBubble, index) => {
-            return <p>{lowerSkillBubble.label}</p>;
+          {lowerSkillBubblesCollection.map((skillBubble, index) => {
+            return (
+              <Skill key={skillBubble.label + index} skill={skillBubble} />
+            );
           })}
         </div>
       </div>
       <div className="SkillCollectionsContainer-Right">
-        {rightSkillBubblesCollection.map((rightSkillBubble, index) => {
-          return <p>{rightSkillBubble.label}</p>;
+        {rightSkillBubblesCollection.map((skillBubble, index) => {
+          return <Skill key={skillBubble.label + index} skill={skillBubble} />;
         })}
       </div>
     </div>

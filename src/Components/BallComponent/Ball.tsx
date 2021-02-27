@@ -2,12 +2,37 @@ import React, { FunctionComponent, useEffect, useState } from 'react';
 
 import './styles.scss';
 
-type BallProps = {};
+type BallProps = {
+  width: string;
+  color: string;
+  title?: string;
+  titleColor?: string;
+};
 
-const Ball: FunctionComponent<BallProps> = ({}) => {
+const Ball: FunctionComponent<BallProps> = ({
+  width,
+  color,
+  title,
+  titleColor
+}) => {
   return (
-    <div className="Stage">
-      <figure className="Ball Bubble"></figure>
+    <div
+      className="BallContainer"
+      style={{ height: `${width}`, width: `${width}` }}
+    >
+      <div
+        className="BallContainer-Ball BallContainer-Bubble"
+        style={{ background: `${color}` }}
+      >
+        {title && (
+          <p
+            className="BallContainer-Ball-Title"
+            style={titleColor ? { color: `${titleColor}` } : {}}
+          >
+            {title}{' '}
+          </p>
+        )}
+      </div>
     </div>
   );
 };
