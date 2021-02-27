@@ -5,7 +5,14 @@
 /* ---------------------------  Commont Styles --------------------------- */
 
 .SkillBubblesContainer {
-  width: 100%;
+  background-color: $main-white;
+
+  display: flex;
+  &-Title {
+    color: $main-white;
+    bottom: 38%;
+    left: 44%;
+  }
   &-SkillBubbleContainer {
     width: 50px;
     height: 50px;

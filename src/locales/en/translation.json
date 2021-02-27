@@ -15,5 +15,6 @@
   "home.services.iosDevelopment.altText": "Ios development icon",
   "home.services.uiDesign.title": "UI/UX design",
   "home.services.uiDesign.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.",
-  "home.services.uiDesign.altText": "UI/UX design icon"
+  "home.services.uiDesign.altText": "UI/UX design icon",
+  "home.skills.title": "My skills"
 }

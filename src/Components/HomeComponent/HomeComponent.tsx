@@ -59,7 +59,7 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
             className="HomeComponentContainer-SkillsContainer"
             ref={skillsDivRef}
           >
-            <SkillsComponent />
+            <SkillsComponent title={t('home.skills.title')} />
           </div>
         </div>
       </div>

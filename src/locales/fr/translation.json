@@ -2,5 +2,6 @@
   "navbar.contact": "contact",
   "navbar.portfolio": "portfolio",
   "navbar.aboutMe": "me conaître",
-  "navbar.home": "accueil"
+  "navbar.home": "accueil",
+  "home.skills.title": "Mes compétence"
 }
