@@ -5,6 +5,13 @@
 /* ---------------------------  Commont Styles --------------------------- */
 
 .SkillBubbleContainer {
-  padding: 0.5em;
-  border: 1px solid blueviolet;
+  padding: 0.1em;
+  transform: scale(0);
+}
+
+.SkillBubbleContainerVisible {
+  padding: 0.1em;
+  transform: scale(1);
+  transform-origin: center;
+  transition: ease-in-out 2s;
 }

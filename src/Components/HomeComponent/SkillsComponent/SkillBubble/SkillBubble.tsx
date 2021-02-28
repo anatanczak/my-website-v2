@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState, useEffect } from 'react';
 import SkillBubbleType from '../SkillInterface';
 
 import Ball from '../../../BallComponent/Ball';
@@ -7,9 +7,15 @@ import './styles.scss';
 
 type SkillBubbleProps = {
   skill: SkillBubbleType;
+  makeVisible?: Boolean;
+  delay: number;
 };
 
-const SkillBubble: FunctionComponent<SkillBubbleProps> = ({ skill }) => {
+const SkillBubble: FunctionComponent<SkillBubbleProps> = ({
+  skill,
+  makeVisible = true,
+  delay
+}) => {
   const bubbleColor = (() => {
     switch (skill.section) {
       case 'Mobile':
@@ -23,15 +29,20 @@ const SkillBubble: FunctionComponent<SkillBubbleProps> = ({ skill }) => {
     }
   })();
 
-  const bubbleSize = skill.sizeRatio * 5 + 60;
+  const bubbleSize = skill.sizeRatio * 5 + 80;
 
   return (
-    <div className="SkillBubbleContainer">
+    <div
+      className={
+        makeVisible ? 'SkillBubbleContainerVisible' : 'SkillBubbleContainer'
+      }
+    >
       <Ball
         color={bubbleColor}
         width={`${bubbleSize}px`}
         title={skill.label}
         titleColor={bubbleColor == '#f3f2f2' ? '#122744' : ''}
+        delay={delay}
       />
     </div>
   );

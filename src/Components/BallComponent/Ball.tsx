@@ -7,14 +7,17 @@ type BallProps = {
   color: string;
   title?: string;
   titleColor?: string;
+  delay: number;
 };
 
 const Ball: FunctionComponent<BallProps> = ({
   width,
   color,
   title,
-  titleColor
+  titleColor,
+  delay
 }) => {
+  console.log(`name${title}---${delay}`);
   return (
     <div
       className="BallContainer"
@@ -22,7 +25,7 @@ const Ball: FunctionComponent<BallProps> = ({
     >
       <div
         className="BallContainer-Ball BallContainer-Bubble"
-        style={{ background: `${color}` }}
+        style={{ background: `${color}`, animationDelay: `${delay}s` }}
       >
         {title && (
           <p

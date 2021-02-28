@@ -18,18 +18,33 @@ type SkillsComponentProps = {
 const SkillsComponent: FunctionComponent<SkillsComponentProps> = ({
   title
 }) => {
+  let delayCount = 0;
   return (
     <div className="SkillCollectionsContainer">
       <div className="SkillCollectionsContainer-Left">
         {leftSkillBubblesCollection.map((skillBubble, index) => {
-          return <Skill key={skillBubble.label + index} skill={skillBubble} />;
+          let temp = delayCount;
+          delayCount += 3;
+          return (
+            <Skill
+              key={skillBubble.label + index}
+              skill={skillBubble}
+              delay={temp}
+            />
+          );
         })}
       </div>
       <div className="SkillCollectionsContainer-Center">
         <div className="SkillCollectionsContainer-Center-UpperBubblesContainer">
           {upperSkillBubblesCollection.map((skillBubble, index) => {
+            let temp = delayCount;
+            delayCount += 3;
             return (
-              <Skill key={skillBubble.label + index} skill={skillBubble} />
+              <Skill
+                key={skillBubble.label + index}
+                skill={skillBubble}
+                delay={temp}
+              />
             );
           })}
         </div>
@@ -40,15 +55,29 @@ const SkillsComponent: FunctionComponent<SkillsComponentProps> = ({
         </div>
         <div className="SkillCollectionsContainer-Center-LowerBubblesContainer">
           {lowerSkillBubblesCollection.map((skillBubble, index) => {
+            let temp = delayCount;
+            delayCount += 3;
             return (
-              <Skill key={skillBubble.label + index} skill={skillBubble} />
+              <Skill
+                key={skillBubble.label + index}
+                skill={skillBubble}
+                delay={temp}
+              />
             );
           })}
         </div>
       </div>
       <div className="SkillCollectionsContainer-Right">
         {rightSkillBubblesCollection.map((skillBubble, index) => {
-          return <Skill key={skillBubble.label + index} skill={skillBubble} />;
+          let temp = delayCount;
+          delayCount += 3;
+          return (
+            <Skill
+              key={skillBubble.label + index}
+              skill={skillBubble}
+              delay={temp}
+            />
+          );
         })}
       </div>
     </div>

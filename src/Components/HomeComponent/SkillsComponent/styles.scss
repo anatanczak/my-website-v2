@@ -8,32 +8,53 @@
   background-color: $main-white;
   display: flex;
   justify-content: center;
+  padding: 1em;
+
   &-Left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 30%;
+    align-items: flex-end;
+    // border: 1px solid green;
+
+    & > div:nth-child(1) {
+      align-self: center;
+      margin-top: 15%;
+      margin-left: 10%;
+    }
+    & > div:nth-child(2) {
+      margin-right: 10%;
+      margin-bottom: 15%;
+    }
+    & > div:nth-child(3) {
+      align-self: center;
+      margin-left: 20%;
+    }
+    & > div:nth-child(4) {
+      margin-bottom: 30%;
+    }
   }
   &-Center {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    min-width: 35%;
+
     &-UpperBubblesContainer {
       display: flex;
-      //TODO: ADD IRREGULAR MARGIN
-      // @for $item from 1 through 3 {
-      //   @if ($item == 1) {
-      //     & > div {
-      //       margin-top: 20px;
-      //       background-color: cadetblue;
-      //     }
-      //   } @else {
-      //     & > div {
-      //       margin-bottom: 20px;
-      //       background-color: coral;
-      //     }
-      //   }
-      // }
+      flex-wrap: wrap;
+      //border: 1px solid green;
+      & > div:nth-child(1) {
+        width: 50%;
+      }
+      & > div:nth-child(2) {
+        margin-left: 15%;
+      }
+      & > div:nth-child(3) {
+        margin-left: 30%;
+        margin-bottom: 5%;
+      }
     }
     &-ComputerContainer {
       position: relative;
@@ -42,9 +63,8 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      min-width: 500px;
-      min-height: 330px;
-      // height: 500px;
+      min-width: 400px;
+      min-height: 384px;
 
       &-Title {
         position: absolute;
@@ -58,11 +78,40 @@
     }
     &-LowerBubblesContainer {
       display: flex;
+      justify-content: space-around;
+      align-self: stretch;
+      //  border: 1px solid green;
+      & > div:nth-child(1) {
+        margin-top: 10%;
+        margin-left: 5%;
+      }
+      & > div:nth-child(2) {
+        margin-right: 15%;
+        margin-top: 3%;
+      }
     }
   }
   &-Right {
+    // border: 1px solid green;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-width: 30%;
+
+    & > div:nth-child(1) {
+      margin-top: 12%;
+      margin-left: 20%;
+    }
+    & > div:nth-child(2) {
+      margin-top: 1%;
+    }
+    & > div:nth-child(3) {
+      margin-left: 20%;
+      margin-top: 10%;
+    }
+    & > div:nth-child(4) {
+      margin-top: 20%;
+      margin-bottom: 10%;
+    }
   }
 }
