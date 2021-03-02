@@ -5,10 +5,9 @@
 
 @mixin h2Title {
   color: $main-darkblue;
-  font: $mobile-tablet-h2;
   text-align: center;
   margin: 0;
-  padding: 1em;
+  padding: 1em 0.5em 0 0.5em;
 }
 
 .HomeComponentContainer {
@@ -71,6 +70,9 @@
     }
 
     &-ServicesContainer {
+      &-Title {
+        font: $mobile-h2;
+      }
       &-Services {
         flex-direction: column;
       }
@@ -94,7 +96,7 @@
 }
 
 /* ---------------------------  Tablet --------------------------- */
-@media (min-width: 768px) {
+@media (min-width: $tablet-min-width) {
   .HomeComponentContainer {
     margin-left: 50px;
     &-IntroductionAndPitchContainer {
@@ -121,21 +123,26 @@
         }
       }
     }
+    &-ServicesContainer {
+      &-Title {
+        font: $tablet-h2;
+      }
+    }
   }
 }
 
 /* ---------------------------  Tablet --------------------------- */
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: $tablet-min-width) and (orientation: portrait) {
   .HomeComponentContainer {
     &-IntroductionAndPitchContainer {
-      margin-left: 50px;
+      // margin-left: 50px;
       height: 50vh;
     }
   }
 }
 
 /* ---------------------------  Desktop --------------------------- */
-@media (min-width: 1024px) {
+@media (min-width: $desktop-min-width) {
   .HomeComponentContainer {
     &-IntroductionAndPitchContainer {
       background-image: url('../../assets/img/home_background_desktop.webp');

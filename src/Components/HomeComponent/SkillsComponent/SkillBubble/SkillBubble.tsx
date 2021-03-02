@@ -16,6 +16,7 @@ const SkillBubble: FunctionComponent<SkillBubbleProps> = ({
   makeVisible = true,
   delay
 }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const bubbleColor = (() => {
     switch (skill.section) {
       case 'Mobile':
@@ -28,8 +29,17 @@ const SkillBubble: FunctionComponent<SkillBubbleProps> = ({
         return '#f3f2f2';
     }
   })();
+  let bubbleSize = skill.sizeRatio * 5 + 80;
+  if (windowWidth < 767) {
+    bubbleSize /= 2;
+  }
 
-  const bubbleSize = skill.sizeRatio * 5 + 80;
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', handleResize);
+  });
 
   return (
     <div

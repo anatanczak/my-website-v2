@@ -20,7 +20,6 @@
     text-transform: uppercase;
     text-align: center;
     color: $main-lilly;
-    font: $mobile-tablet-h3;
     margin: 0.5em;
   }
   &-Text {
@@ -28,7 +27,33 @@
     width: 80%;
     text-align: center;
     color: $main-darkblue;
-    font: $mobile-tablet-p;
+  }
+}
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .ServiceContainer {
+    &-Image {
+      height: 50px;
+    }
+    &-Title {
+      font: $mobile-h3;
+    }
+    &-Text {
+      font: $mobile-p;
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .ServiceContainer {
+    &-Title {
+      font: $tablet-h3;
+    }
+    &-Text {
+      font: $tablet-p;
+    }
   }
 }
 

@@ -8,71 +8,40 @@
   background-color: $main-white;
   display: flex;
   justify-content: center;
-  padding: 1em;
 
   &-Left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 30%;
     align-items: flex-end;
     // border: 1px solid green;
-
-    & > div:nth-child(1) {
-      align-self: center;
-      margin-top: 15%;
-      margin-left: 10%;
-    }
-    & > div:nth-child(2) {
-      margin-right: 10%;
-      margin-bottom: 15%;
-    }
-    & > div:nth-child(3) {
-      align-self: center;
-      margin-left: 20%;
-    }
-    & > div:nth-child(4) {
-      margin-bottom: 30%;
-    }
   }
   &-Center {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 35%;
 
     &-UpperBubblesContainer {
       display: flex;
       flex-wrap: wrap;
-      //border: 1px solid green;
-      & > div:nth-child(1) {
-        width: 50%;
-      }
-      & > div:nth-child(2) {
-        margin-left: 15%;
-      }
-      & > div:nth-child(3) {
-        margin-left: 30%;
-        margin-bottom: 5%;
-      }
+      // border: 1px solid green;
     }
     &-ComputerContainer {
-      position: relative;
       display: flex;
-      background-image: url('../../../assets/img/imac_background_desktop.webp');
+      justify-content: center;
+      align-items: flex-start;
+
+      background-image: url('../../../assets/img/imac_background_mobile.webp');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      min-width: 400px;
-      min-height: 384px;
 
       &-Title {
-        position: absolute;
+        margin-top: 25%;
+        margin-bottom: 25%;
+        margin-left: 1em;
+        margin-right: 1em;
         color: $main-white;
-        font: $mobile-tablet-h2;
-        bottom: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         text-align: center;
       }
     }
@@ -80,38 +49,205 @@
       display: flex;
       justify-content: space-around;
       align-self: stretch;
-      //  border: 1px solid green;
-      & > div:nth-child(1) {
-        margin-top: 10%;
-        margin-left: 5%;
-      }
-      & > div:nth-child(2) {
-        margin-right: 15%;
-        margin-top: 3%;
-      }
+      //    border: 1px solid green;
     }
   }
   &-Right {
-    // border: 1px solid green;
+    //  border: 1px solid green;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-width: 30%;
+  }
+}
 
-    & > div:nth-child(1) {
-      margin-top: 12%;
-      margin-left: 20%;
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .SkillCollectionsContainer {
+    flex-direction: column;
+    &-Left {
+      flex-direction: row;
+      padding: 1em 0.2em 0.3em 1em;
+      justify-content: space-between;
+
+      & > div:nth-child(1) {
+        margin-bottom: 6%;
+      }
+      & > div:nth-child(2) {
+        margin-top: 7%;
+      }
+      & > div:nth-child(3) {
+        margin-bottom: 7%;
+      }
+      & > div:nth-child(4) {
+        margin-right: 3%;
+        margin-bottom: 2%;
+      }
     }
-    & > div:nth-child(2) {
-      margin-top: 1%;
+    &-Center {
+      flex-direction: row;
+      &-UpperBubblesContainer {
+        flex-direction: column;
+        min-width: 25%;
+        & > div:nth-child(1) {
+          align-self: flex-end;
+        }
+        & > div:nth-child(2) {
+          margin-top: 10%;
+        }
+        & > div:nth-child(3) {
+          align-self: flex-end;
+        }
+      }
+      &-ComputerContainer {
+        padding: 1em;
+        min-width: 50%;
+        min-height: 160px;
+
+        &-Title {
+          font: $mobile-h2;
+        }
+      }
+      &-LowerBubblesContainer {
+        flex-direction: column;
+        min-width: 25%;
+
+        & > div:nth-child(1) {
+          margin-left: 4%;
+        }
+        & > div:nth-child(2) {
+          align-self: flex-end;
+          margin-bottom: 3%;
+          margin-right: 4%;
+        }
+      }
     }
-    & > div:nth-child(3) {
-      margin-left: 20%;
-      margin-top: 10%;
+    &-Right {
+      flex-direction: row;
+      & > div:nth-child(1) {
+        margin-top: 4%;
+      }
+      & > div:nth-child(2) {
+        margin-top: 6%;
+        margin-left: 5%;
+      }
+      & > div:nth-child(3) {
+        margin-bottom: 20%;
+        margin-left: 5%;
+      }
+      & > div:nth-child(4) {
+        margin-top: 7%;
+        margin-right: 2%;
+      }
     }
-    & > div:nth-child(4) {
-      margin-top: 20%;
-      margin-bottom: 10%;
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .SkillCollectionsContainer {
+    padding: 2.5em 1em;
+
+    &-Left {
+      min-width: 30%;
+
+      & > div:nth-child(1) {
+        align-self: flex-end;
+        margin-top: 30%;
+      }
+      & > div:nth-child(2) {
+        align-self: center;
+        margin-left: 7%;
+        margin-bottom: 10%;
+      }
+      & > div:nth-child(3) {
+        align-self: flex-end;
+        margin-bottom: 15%;
+      }
+      & > div:nth-child(4) {
+        margin-bottom: 15%;
+        margin-right: 10%;
+      }
+    }
+    &-Center {
+      min-width: 40%;
+
+      &-UpperBubblesContainer {
+        & > div:nth-child(1) {
+          width: 50%;
+        }
+        & > div:nth-child(2) {
+          margin-left: 15%;
+        }
+        & > div:nth-child(3) {
+          margin-left: 30%;
+          margin-bottom: 5%;
+        }
+      }
+      &-ComputerContainer {
+        min-width: 380;
+        min-height: 300px;
+
+        &-Title {
+          font: $tablet-h2;
+        }
+      }
+      &-LowerBubblesContainer {
+        & > div:nth-child(1) {
+          margin-top: 10%;
+          margin-left: 5%;
+        }
+        & > div:nth-child(2) {
+          margin-right: 15%;
+          margin-top: 3%;
+        }
+      }
+    }
+    &-Right {
+      min-width: 30%;
+
+      & > div:nth-child(1) {
+        margin-top: 12%;
+        margin-left: 20%;
+      }
+      & > div:nth-child(2) {
+        margin-top: 1%;
+      }
+      & > div:nth-child(3) {
+        margin-left: 20%;
+        margin-top: 10%;
+      }
+      & > div:nth-child(4) {
+        margin-top: 20%;
+        margin-bottom: 10%;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .SkillCollectionsContainer {
+    padding: 2.5em 1em;
+
+    &-Left {
+      min-width: 25%;
+    }
+    &-Center {
+      min-width: 35%;
+
+      &-ComputerContainer {
+        background-image: url('../../../assets/img/imac_background_desktop.webp');
+        min-width: 400px;
+        min-height: 384px;
+
+        &-Title {
+          font: $desktop-h2;
+        }
+      }
+    }
+    &-Right {
+      min-width: 25%;
     }
   }
 }

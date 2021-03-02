@@ -9,16 +9,18 @@ export const leftSkillBubblesCollection: Array<SkillBubble> = [
   },
   {
     section: 'Front',
-    sizeRatio: 6,
-    animationDelay: 3,
-    label: 'React JS'
+    sizeRatio: 9,
+    animationDelay: 12,
+    label: 'CSS'
   },
+
   {
     section: 'Back',
-    sizeRatio: 2,
-    animationDelay: 6,
-    label: 'C#'
+    sizeRatio: 6,
+    animationDelay: 15,
+    label: 'PHP'
   },
+
   {
     section: 'Front',
     sizeRatio: 7,
@@ -29,15 +31,15 @@ export const leftSkillBubblesCollection: Array<SkillBubble> = [
 export const upperSkillBubblesCollection: Array<SkillBubble> = [
   {
     section: 'Front',
-    sizeRatio: 9,
-    animationDelay: 12,
-    label: 'CSS'
+    sizeRatio: 6,
+    animationDelay: 3,
+    label: 'React JS'
   },
   {
     section: 'Back',
-    sizeRatio: 6,
-    animationDelay: 15,
-    label: 'PHP'
+    sizeRatio: 2,
+    animationDelay: 6,
+    label: 'C#'
   },
   {
     section: 'Design',
@@ -54,10 +56,10 @@ export const lowerSkillBubblesCollection: Array<SkillBubble> = [
     label: 'Node.js'
   },
   {
-    section: 'Design',
-    sizeRatio: 5,
-    animationDelay: 24,
-    label: 'AI'
+    section: 'Mobile',
+    sizeRatio: 2,
+    animationDelay: 30,
+    label: 'Java'
   }
 ];
 export const rightSkillBubblesCollection: Array<SkillBubble> = [
@@ -68,17 +70,18 @@ export const rightSkillBubblesCollection: Array<SkillBubble> = [
     label: 'HTML'
   },
   {
-    section: 'Mobile',
-    sizeRatio: 2,
-    animationDelay: 30,
-    label: 'Java'
-  },
-  {
     section: 'Back',
     sizeRatio: 5,
     animationDelay: 33,
     label: 'MySQL'
   },
+  {
+    section: 'Design',
+    sizeRatio: 5,
+    animationDelay: 24,
+    label: 'AI'
+  },
+
   {
     section: 'Front',
     sizeRatio: 7,

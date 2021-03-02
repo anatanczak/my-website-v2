@@ -17,7 +17,6 @@ const Ball: FunctionComponent<BallProps> = ({
   titleColor,
   delay
 }) => {
-  console.log(`name${title}---${delay}`);
   return (
     <div
       className="BallContainer"
