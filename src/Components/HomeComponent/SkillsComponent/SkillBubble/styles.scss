@@ -6,12 +6,4 @@
 
 .SkillBubbleContainer {
   padding: 0.1em;
-  transform: scale(0);
-}
-
-.SkillBubbleContainerVisible {
-  padding: 0.1em;
-  transform: scale(1);
-  transform-origin: center;
-  transition: ease-in-out 2s;
 }

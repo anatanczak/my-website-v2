@@ -13,6 +13,7 @@ import {
 
 type SkillsComponentProps = {
   title: string;
+  // isVisible: boolean;
 };
 
 const SkillsComponent: FunctionComponent<SkillsComponentProps> = ({

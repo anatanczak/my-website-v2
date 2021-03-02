@@ -16,11 +16,11 @@ type HomeComponentProps = {};
 
 const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
   const { t }: { t: any } = useTranslation();
-  const skillsDivRef = useRef<HTMLDivElement | null>(null);
+  // const skillsDivRef = useRef<HTMLDivElement | null>(null);
 
-  const [skillsDivIsVisible, entry] = useIntersectionObserver({
-    elementRef: skillsDivRef
-  });
+  // const [skillsDivIsVisible, entry] = useIntersectionObserver({
+  //   elementRef: skillsDivRef
+  // });
 
   return (
     <>
@@ -57,9 +57,12 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
           </div>
           <div
             className="HomeComponentContainer-SkillsContainer"
-            ref={skillsDivRef}
+            // ref={skillsDivRef}
           >
-            <SkillsComponent title={t('home.skills.title')} />
+            <SkillsComponent
+              title={t('home.skills.title')}
+              // isVisible={skillsDivIsVisible}
+            />
           </div>
         </div>
       </div>

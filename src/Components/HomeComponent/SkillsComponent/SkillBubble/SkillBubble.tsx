@@ -1,5 +1,6 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent, useState, useEffect, useRef } from 'react';
 import SkillBubbleType from '../SkillInterface';
+import useIntersectionObserver from '../../../../CustomHooks/useIntersectionObserver';
 
 import Ball from '../../../BallComponent/Ball';
 
@@ -17,6 +18,11 @@ const SkillBubble: FunctionComponent<SkillBubbleProps> = ({
   delay
 }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const skillDivRef = useRef<HTMLDivElement | null>(null);
+
+  const [skillsDivIsVisible, entry] = useIntersectionObserver({
+    elementRef: skillDivRef
+  });
   const bubbleColor = (() => {
     switch (skill.section) {
       case 'Mobile':
@@ -29,6 +35,7 @@ const SkillBubble: FunctionComponent<SkillBubbleProps> = ({
         return '#f3f2f2';
     }
   })();
+
   let bubbleSize = skill.sizeRatio * 5 + 80;
   if (windowWidth < 767) {
     bubbleSize /= 2;
@@ -42,17 +49,15 @@ const SkillBubble: FunctionComponent<SkillBubbleProps> = ({
   });
 
   return (
-    <div
-      className={
-        makeVisible ? 'SkillBubbleContainerVisible' : 'SkillBubbleContainer'
-      }
-    >
+    <div className="SkillBubbleContainer" ref={skillDivRef}>
       <Ball
         color={bubbleColor}
         width={`${bubbleSize}px`}
         title={skill.label}
         titleColor={bubbleColor == '#f3f2f2' ? '#122744' : ''}
         delay={delay}
+        isScalable
+        isVisible={skillsDivIsVisible}
       />
     </div>
   );

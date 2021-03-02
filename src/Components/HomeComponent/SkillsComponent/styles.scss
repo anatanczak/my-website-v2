@@ -105,6 +105,7 @@
         min-height: 160px;
 
         &-Title {
+          margin-top: 36px;
           font: $mobile-h2;
         }
       }
@@ -189,6 +190,7 @@
         min-height: 300px;
 
         &-Title {
+          margin-top: 100px;
           font: $tablet-h2;
         }
       }
@@ -240,8 +242,8 @@
         background-image: url('../../../assets/img/imac_background_desktop.webp');
         min-width: 400px;
         min-height: 384px;
-
         &-Title {
+          margin-top: 120px;
           font: $desktop-h2;
         }
       }

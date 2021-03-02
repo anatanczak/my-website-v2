@@ -4,6 +4,7 @@
 
 .BallContainer {
   display: flex;
+
   &-Ball {
     display: inline-block;
     width: 100%;
@@ -27,6 +28,14 @@
     -webkit-animation: bubble-anim 39s ease-out infinite;
     animation: bubble-anim 39s ease-out infinite;
   }
+}
+.BallContainerInvisible {
+  transform: scale(0);
+}
+.BallContainerVisible {
+  transform: scale(1);
+  transform-origin: center;
+  transition: ease-in-out 2s;
 }
 
 /* ---------------------------  Mobile --------------------------- */

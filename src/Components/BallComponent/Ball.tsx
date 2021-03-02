@@ -8,6 +8,8 @@ type BallProps = {
   title?: string;
   titleColor?: string;
   delay: number;
+  isScalable: boolean;
+  isVisible?: boolean;
 };
 
 const Ball: FunctionComponent<BallProps> = ({
@@ -15,11 +17,19 @@ const Ball: FunctionComponent<BallProps> = ({
   color,
   title,
   titleColor,
-  delay
+  delay,
+  isScalable = false,
+  isVisible
 }) => {
+  let containerClassName = 'BallContainer';
+  if (isScalable && !isVisible) {
+    containerClassName += ' BallContainerInvisible';
+  } else if (isScalable && isVisible) {
+    containerClassName += ' BallContainerVisible';
+  }
   return (
     <div
-      className="BallContainer"
+      className={containerClassName}
       style={{ height: `${width}`, width: `${width}` }}
     >
       <div
