@@ -3,4 +3,5 @@ export default interface Service {
   altText: string;
   title: string;
   text: string;
+  tag: string;
 }

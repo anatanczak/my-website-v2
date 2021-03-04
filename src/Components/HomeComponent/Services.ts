@@ -8,19 +8,22 @@ const services: Array<Service> = [
     image: webDevIcon,
     altText: 'home.services.webDevelopment.altText',
     title: 'home.services.webDevelopment.title',
-    text: 'home.services.webDevelopment.text'
+    text: 'home.services.webDevelopment.text',
+    tag: 'web'
   },
   {
     image: iosWebicon,
     altText: 'home.services.iosDevelopment.altText',
     title: 'home.services.iosDevelopment.title',
-    text: 'home.services.iosDevelopment.text'
+    text: 'home.services.iosDevelopment.text',
+    tag: 'ios'
   },
   {
     image: uiDesignIcon,
     altText: 'home.services.uiDesign.altText',
     title: 'home.services.uiDesign.title',
-    text: 'home.services.uiDesign.text'
+    text: 'home.services.uiDesign.text',
+    tag: 'design'
   }
 ];
 

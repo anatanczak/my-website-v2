@@ -1,7 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import Service from './ServiceInterface';
+
+import Arrow from '../../../assets/icons/darkblue_arrow.svg';
 
 import './styles.scss';
 
@@ -22,6 +25,22 @@ const ServiceComponent: FunctionComponent<ServiceComponentProps> = ({
       />
       <h3 className="ServiceContainer-Title">{t(service.title)}</h3>
       <p className="ServiceContainer-Text">{t(service.text)}</p>
+      {/* TODO: add services.tag to link */}
+      <Link to="/portfolio" className="ServiceContainer-Link">
+        <div className="ServiceContainer-Link-LinkTextContainer">
+          <p className="ServiceContainer-Link-LinkTextContainer-Text">
+            {t('home.services.link')}
+          </p>
+        </div>
+
+        <span className="ServiceContainer-Link-ArrowCircleBackground">
+          <img
+            className="ServiceContainer-Link-ArrowCircleBackground-Arrow"
+            src={Arrow}
+            alt="arrow"
+          />
+        </span>
+      </Link>
     </div>
   );
 };

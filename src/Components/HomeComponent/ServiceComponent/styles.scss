@@ -28,7 +28,58 @@
     text-align: center;
     color: $main-darkblue;
   }
+  &-Link {
+    display: flex;
+    align-items: center;
+    color: $main-darkblue;
+    text-decoration: none;
+
+    &-LinkTextContainer {
+      position: relative;
+      padding: 0.1em 0.3em;
+      margin-right: 0.1em;
+
+      &-Text {
+        position: relative;
+        z-index: 2;
+      }
+    }
+    &-LinkTextContainer::after {
+      content: ' ';
+      background-color: $main-lilly;
+      position: absolute;
+      border-radius: 3px;
+      height: 20%;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 0.5s ease-in-out;
+    }
+    &-LinkTextContainer:hover::after {
+      transform: scaleX(1);
+    }
+    // &-LinkText:hover {
+    //   background-color: $main-lilly;
+    // }
+    &-ArrowCircleBackground {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      background-color: $main-lilly;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      &-Arrow {
+        width: 50%;
+        margin-left: 0.1em;
+      }
+    }
+  }
 }
+
 /* ---------------------------  Mobile --------------------------- */
 
 @media (max-width: $mobile-max-width) {
@@ -48,6 +99,7 @@
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
   .ServiceContainer {
+    width: 33%;
     &-Title {
       font: $tablet-h3;
     }
