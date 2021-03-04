@@ -17,5 +17,12 @@
   "home.services.uiDesign.title": "UI/UX design",
   "home.services.uiDesign.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.",
   "home.services.uiDesign.altText": "UI/UX design icon",
-  "home.skills.title": "My skills"
+  "home.skills.title": "My skills",
+  "home.laguages.title": "Languages",
+  "home.laguages.en": "English",
+  "home.laguages.de": "German",
+  "home.laguages.fr": "French",
+  "home.laguages.ua": "Ukrainian",
+  "home.laguages.ru": "Russian",
+  "home.laguages.es": "Spanish"
 }

@@ -1,6 +1,8 @@
 import React, { FunctionComponent, useState, useEffect, useRef } from 'react';
-import SkillBubbleType from '../SkillInterface';
+
 import useIntersectionObserver from '../../../../CustomHooks/useIntersectionObserver';
+
+import SkillBubbleType from '../SkillInterface';
 
 import Ball from '../../../BallComponent/Ball';
 

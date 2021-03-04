@@ -1,0 +1,58 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+
+/* ---------------------------  Commont Styles --------------------------- */
+
+.LanguagesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 1em 2em 1em;
+
+  &-Title {
+    @include h2Title;
+  }
+
+  &-LanguageSkillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    margin-top: 1em;
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .LanguagesContainer {
+    &-Title {
+      font: $mobile-h2;
+    }
+    &-LanguageSkillsContainer {
+      justify-content: center;
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .LanguagesContainer {
+    &-Title {
+      font: $tablet-h2;
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .LanguagesContainer {
+    &-Title {
+      font: $desktop-h2;
+    }
+    &-LanguageSkillsContainer {
+      width: 70%;
+    }
+  }
+}

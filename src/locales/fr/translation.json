@@ -3,8 +3,8 @@
   "navbar.portfolio": "portfolio",
   "navbar.aboutMe": "me conaître",
   "navbar.home": "accueil",
-  "home.mainTitle": "Salut. Je m’appelle Anastasia. \n Je suis développeuse.",
-  "home.pitch": "Développeuse full-stack et iOS, je suis prête à faire partie de votre équipe.",
+  "home.mainTitle": "Salut.\nJe m’appelle Anastasia.",
+  "home.pitch": "Je suis développeuse full-stack et iOS, prête à faire partie de votre équipe.",
   "home.button.downloadResume": "Télécharger le CV",
   "home.services.title": "Services.",
   "home.services.link": "Voir les réalisations",
@@ -17,5 +17,12 @@
   "home.services.uiDesign.title": "UI/UX Design",
   "home.services.uiDesign.text": "Analyse des besoins du client, création d’une expérience utilisateur ergonomique et esthétique, création d’une maquette graphique et interactive (web/mobile).",
   "home.services.uiDesign.altText": "icône UI/UX design",
-  "home.skills.title": "Mes compétences"
+  "home.skills.title": "Mes compétences.",
+  "home.laguages.title": "Langues.",
+  "home.laguages.en": "Anglais",
+  "home.laguages.de": "Allemand",
+  "home.laguages.fr": "Français",
+  "home.laguages.ua": "Ukrainien",
+  "home.laguages.ru": "Russe",
+  "home.laguages.es": "Espagnole"
 }

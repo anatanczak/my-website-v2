@@ -11,6 +11,7 @@ import SkillsComponent from './SkillsComponent/SkillsComponent';
 import services from './Services';
 
 import './styles.scss';
+import LanguagesComponent from './LanguagesComponent/LanguagesComponent';
 
 type HomeComponentProps = {};
 
@@ -52,6 +53,9 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
           </div>
           <div className="HomeComponentContainer-SkillsContainer">
             <SkillsComponent title={t('home.skills.title')} />
+          </div>
+          <div className="HomeComponentContainer-LanguagesContainer">
+            <LanguagesComponent />
           </div>
         </div>
       </div>

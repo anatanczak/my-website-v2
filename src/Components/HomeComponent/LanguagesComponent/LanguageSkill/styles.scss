@@ -1,0 +1,81 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+
+/* ---------------------------  Commont Styles --------------------------- */
+
+.LanguageSkillContainer {
+  padding: 1em;
+
+  &-Label {
+    color: $main-darkblue;
+    margin: 0;
+  }
+  &-LevelContainer {
+    width: 100%;
+    background-color: rgba($color: #122744, $alpha: 0.5);
+    border-radius: 2px;
+    margin-top: 0.8em;
+
+    &-Level {
+      width: var(--size);
+      background-color: $main-darkblue;
+      border-radius: 2px;
+    }
+    &-LevelIsInvisible {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    &-LevelMoves {
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: all 1.5s ease-in-out;
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .LanguageSkillContainer {
+    width: 90%;
+    &-Label {
+      font: $mobile-language-skills-font;
+    }
+    &-LevelContainer {
+      &-Level {
+        height: 7px;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .LanguageSkillContainer {
+    width: 50%;
+    &-Label {
+      font: $tablet-language-skills-font;
+    }
+    &-LevelContainer {
+      &-Level {
+        height: 8px;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .LanguageSkillContainer {
+    width: 33%;
+    &-Label {
+      font: $desktop-language-skills-font;
+    }
+    &-LevelContainer {
+      &-Level {
+        height: 9px;
+      }
+    }
+  }
+}
