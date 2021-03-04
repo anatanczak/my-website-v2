@@ -21,16 +21,24 @@ const Ball: FunctionComponent<BallProps> = ({
   isScalable = false,
   isVisible
 }) => {
+  const transitionDelay = Math.random();
+  console.log(transitionDelay);
   let containerClassName = 'BallContainer';
+
   if (isScalable && !isVisible) {
     containerClassName += ' BallContainerInvisible';
   } else if (isScalable && isVisible) {
     containerClassName += ' BallContainerVisible';
   }
+
   return (
     <div
       className={containerClassName}
-      style={{ height: `${width}`, width: `${width}` }}
+      style={{
+        height: `${width}`,
+        width: `${width}`,
+        transitionDelay: `${transitionDelay}s`
+      }}
     >
       <div
         className="BallContainer-Ball BallContainer-Bubble"
