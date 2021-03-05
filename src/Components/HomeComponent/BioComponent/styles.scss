@@ -1,0 +1,29 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+
+/* ---------------------------  Commont Styles --------------------------- */
+
+.BioContainer {
+  display: flex;
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .BioContainer {
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .BioContainer {
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .BioContainer {
+  }
+}

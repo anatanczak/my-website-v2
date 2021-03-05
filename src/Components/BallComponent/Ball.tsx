@@ -22,7 +22,6 @@ const Ball: FunctionComponent<BallProps> = ({
   isVisible
 }) => {
   const transitionDelay = Math.random();
-  console.log(transitionDelay);
   let containerClassName = 'BallContainer';
 
   if (isScalable && !isVisible) {
