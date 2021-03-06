@@ -5,3 +5,6 @@
 Nouvelle version de mon site portfolio
 
 **Technologies utilisées :**
+
+**Aperçu :**
+![preview](home.gif)
