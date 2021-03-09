@@ -7,23 +7,96 @@
 
 .BioContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-white;
+
+  &-Title {
+    @include h2Title;
+  }
+
+  &-ImgTextContainer {
+    display: flex;
+    margin-top: 2em;
+
+    &-Img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &-Text {
+      margin: 0;
+      padding: 1em;
+      color: $main-white;
+      background-color: $main-darkblue;
+      &-Paragraph {
+        padding: 0.3em 1.5em;
+      }
+    }
+  }
 }
 
 /* ---------------------------  Mobile --------------------------- */
 
 @media (max-width: $mobile-max-width) {
   .BioContainer {
+    &-Title {
+      font: $mobile-h2;
+    }
+    &-ImgTextContainer {
+      flex-direction: column;
+      &-Text {
+        &-Paragraph {
+          font: $mobile-p;
+        }
+      }
+    }
   }
 }
 
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
   .BioContainer {
+    &-Title {
+      font: $tablet-h2;
+    }
+    &-ImgTextContainer {
+      flex-direction: column;
+      &-Text {
+        &-Paragraph {
+          font: $tablet-p;
+        }
+      }
+    }
   }
 }
 
 /* ---------------------------  Desktop --------------------------- */
 @media (min-width: $desktop-min-width) {
   .BioContainer {
+    padding: 2em 0.5em 4em 0.5em;
+
+    &-Title {
+      font: $desktop-h2;
+    }
+
+    &-ImgTextContainer {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &-Img {
+        max-width: 30%;
+        height: auto;
+      }
+      &-Text {
+        max-width: 40%;
+        &-Paragraph {
+          padding: 0.3em 1.5em;
+          font: $desktop-p;
+        }
+      }
+    }
   }
 }

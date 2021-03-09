@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState, useEffect, useRef } from 'react';
 
 import useIntersectionObserver from '../../../../CustomHooks/useIntersectionObserver';
+import useWindowSize from '../../../../CustomHooks/useWindowSize';
 
 import SkillBubbleType from '../SkillInterface';
 
@@ -10,19 +11,14 @@ import './styles.scss';
 
 type SkillBubbleProps = {
   skill: SkillBubbleType;
-  makeVisible?: Boolean;
   delay: number;
 };
 
-const SkillBubble: FunctionComponent<SkillBubbleProps> = ({
-  skill,
-  makeVisible = true,
-  delay
-}) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+const SkillBubble: FunctionComponent<SkillBubbleProps> = ({ skill, delay }) => {
+  const [windowWidth] = useWindowSize();
   const skillDivRef = useRef<HTMLDivElement | null>(null);
 
-  const [skillsDivIsVisible, entry] = useIntersectionObserver({
+  const [skillsDivIsVisible] = useIntersectionObserver({
     elementRef: skillDivRef
   });
   const bubbleColor = (() => {
@@ -39,17 +35,10 @@ const SkillBubble: FunctionComponent<SkillBubbleProps> = ({
   })();
 
   let bubbleSize = skill.sizeRatio * 5 + 80;
+
   if (windowWidth < 767) {
     bubbleSize /= 2;
   }
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
-    }
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  });
 
   return (
     <div className="SkillBubbleContainer" ref={skillDivRef}>

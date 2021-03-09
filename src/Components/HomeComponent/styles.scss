@@ -121,6 +121,9 @@
       &-Title {
         font: $tablet-h2;
       }
+      &-Services {
+        align-items: flex-start;
+      }
     }
   }
 }
