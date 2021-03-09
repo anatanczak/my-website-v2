@@ -32,6 +32,7 @@
 
     &-Title {
       @include h2Title;
+      margin-bottom: 1em;
     }
     &-Services {
       display: flex;

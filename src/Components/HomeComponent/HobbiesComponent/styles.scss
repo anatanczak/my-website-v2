@@ -1,0 +1,87 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+
+/* ---------------------------  Commont Styles --------------------------- */
+
+.HobbiesComponentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-Title {
+    @include h2Title;
+    margin: 1em;
+  }
+
+  &-HobbiesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-HobbyContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+
+      &-Label {
+        color: $main-lilly;
+        font: $hobbies-font;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .HobbiesComponentContainer {
+    &-Title {
+      font: $mobile-h2;
+    }
+
+    &-HobbiesContainer {
+      flex-wrap: wrap;
+
+      &-HobbyContainer {
+        width: 40%;
+        &-Img {
+          width: 90px;
+          height: auto;
+        }
+        &-Label {
+          color: $main-lilly;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .HobbiesComponentContainer {
+    &-Title {
+      font: $tablet-h2;
+    }
+
+    &-HobbiesContainer {
+      flex-wrap: wrap;
+
+      &-HobbyContainer {
+        &-Img {
+          width: 110px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+}
