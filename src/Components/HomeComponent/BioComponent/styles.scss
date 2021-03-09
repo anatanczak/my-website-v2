@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   background-color: $main-white;
+  padding-bottom: 36px;
 
   &-Title {
     @include h2Title;
@@ -18,7 +19,7 @@
 
   &-ImgTextContainer {
     display: flex;
-    margin-top: 2em;
+    margin-top: 1em;
 
     &-Img {
       max-width: 100%;
@@ -75,8 +76,6 @@
 /* ---------------------------  Desktop --------------------------- */
 @media (min-width: $desktop-min-width) {
   .BioContainer {
-    padding: 2em 0.5em 4em 0.5em;
-
     &-Title {
       font: $desktop-h2;
     }

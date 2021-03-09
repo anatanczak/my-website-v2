@@ -5,17 +5,16 @@ import ServiceComponent from './ServiceComponent/ServiceComponent';
 import services from './Services';
 
 import './styles.scss';
+
 type ServicesComponentProps = {};
 
 const ServicesComponent: FunctionComponent<ServicesComponentProps> = ({}) => {
   const { t }: { t: any } = useTranslation();
 
   return (
-    <div className="HomeComponentContainer-ServicesContainer">
-      <h2 className="HomeComponentContainer-ServicesContainer-Title">
-        {t('home.services.title')}{' '}
-      </h2>
-      <div className="HomeComponentContainer-ServicesContainer-Services">
+    <div className="ServicesContainer">
+      <h2 className="ServicesContainer-Title">{t('home.services.title')}</h2>
+      <div className="ServicesContainer-Services">
         {services.map((service, index) => {
           return (
             <ServiceComponent service={service} key={service.title + index} />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Service from './ServiceInterface';
 
-import Arrow from '../../../assets/icons/darkblue_arrow.svg';
+import Arrow from '../../../../assets/icons/darkblue_arrow.svg';
 
 import './styles.scss';
 

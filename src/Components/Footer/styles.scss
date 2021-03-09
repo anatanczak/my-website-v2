@@ -4,27 +4,20 @@
 @import 'src/_breakpoints.scss';
 @import 'src/_mixins.scss';
 
-.HomeComponentContainer {
+.FooterContainer {
 }
 
 /* ---------------------------  Mobile --------------------------- */
 
 @media (max-width: $mobile-max-width) {
-  .HomeComponentContainer {
-  }
 }
 
 /* ---------------------------  Longer Mobile --------------------------- */
 @media (max-width: $mobile-max-width) and (min-height: $shortmobile-max-height) {
-  .HomeComponentContainer {
-  }
 }
 
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
-  .HomeComponentContainer {
-    margin-left: 50px;
-  }
 }
 
 /* ---------------------------  Tablet --------------------------- */
@@ -33,6 +26,4 @@
 
 /* ---------------------------  Desktop --------------------------- */
 @media (min-width: $desktop-min-width) {
-  .HomeComponentContainer {
-  }
 }

@@ -8,10 +8,10 @@
   background-color: $main-lightgrey;
   display: flex;
   flex-direction: column;
+  padding-bottom: 36px;
 
   &-Title {
     @include h2Title;
-    margin-bottom: 1em;
   }
   &-Services {
     display: flex;

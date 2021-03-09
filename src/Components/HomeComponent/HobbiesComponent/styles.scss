@@ -10,10 +10,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: $main-lightgrey;
+  padding-bottom: 36px;
 
   &-Title {
     @include h2Title;
-    margin: 1em;
   }
 
   &-HobbiesContainer {
@@ -84,4 +85,9 @@
 
 /* ---------------------------  Desktop --------------------------- */
 @media (min-width: $desktop-min-width) {
+  .HobbiesComponentContainer {
+    &-Title {
+      font: $desktop-h2;
+    }
+  }
 }

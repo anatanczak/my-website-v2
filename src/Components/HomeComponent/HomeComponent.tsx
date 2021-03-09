@@ -1,21 +1,17 @@
 import React, { FunctionComponent, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import useIntersectionObserver from '../../CustomHooks/useIntersectionObserver';
 
 import NavBar from '../../Components/NavBar/NavBar';
-import Ball from '../BallComponent/Ball';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
-import ServiceComponent from '../ServicesComponent/ServiceComponent/ServiceComponent';
 import SkillsComponent from './SkillsComponent/SkillsComponent';
-
-import services from '../ServicesComponent/Services';
-
-import './styles.scss';
 import LanguagesComponent from './LanguagesComponent/LanguagesComponent';
 import BioComponent from './BioComponent/BioComponent';
 import HobbiesComponent from './HobbiesComponent/HobbiesComponent';
 import IntroComponent from './IntroComponent/IntroComponent';
-import ServicesComponent from '../ServicesComponent/ServicesComponent';
+import ServicesComponent from './ServicesComponent/ServicesComponent';
+import Footer from '../Footer/Footer';
+
+import './styles.scss';
 
 type HomeComponentProps = {};
 
@@ -46,6 +42,7 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
           <HobbiesComponent />
         </section>
       </div>
+      <Footer />
     </>
   );
 };

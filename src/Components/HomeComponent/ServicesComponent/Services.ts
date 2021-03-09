@@ -1,7 +1,7 @@
 import Service from './ServiceComponent/ServiceInterface';
-import webDevIcon from '../../assets/icons/web_dev_icon.svg';
-import iosWebicon from '../../assets/icons/ios_dev_icon.svg';
-import uiDesignIcon from '../../assets/icons/ui_design_icon.svg';
+import webDevIcon from '../../../assets/icons/web_dev_icon.svg';
+import iosWebicon from '../../../assets/icons/ios_dev_icon.svg';
+import uiDesignIcon from '../../../assets/icons/ui_design_icon.svg';
 
 const services: Array<Service> = [
   {
