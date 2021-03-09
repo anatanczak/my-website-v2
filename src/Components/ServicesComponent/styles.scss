@@ -1,0 +1,53 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_buttons.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+
+.ServicesContainer {
+  background-color: $main-lightgrey;
+  display: flex;
+  flex-direction: column;
+
+  &-Title {
+    @include h2Title;
+    margin-bottom: 1em;
+  }
+  &-Services {
+    display: flex;
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .ServicesContainer {
+    &-Title {
+      font: $mobile-h2;
+    }
+    &-Services {
+      flex-direction: column;
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .ServicesContainer {
+    &-Title {
+      font: $tablet-h2;
+    }
+    &-Services {
+      align-items: flex-start;
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .ServicesContainer {
+    &-Title {
+      font: $desktop-h2;
+    }
+  }
+}

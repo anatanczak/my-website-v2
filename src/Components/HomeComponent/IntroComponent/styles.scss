@@ -1,0 +1,116 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_buttons.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+
+.IntroductionAndPitchContainer {
+  background-color: $main-darkblue;
+  background-image: url('../../../assets/img/home_background_mobile.webp');
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 0;
+  background-size: contain;
+
+  &-TextAndButtonContainer {
+    &-MainTitle {
+      color: $main-white;
+      white-space: pre-line;
+    }
+    &-Pitch {
+      color: $main-white;
+    }
+    &-DownloadButton {
+      @include pale-green-button;
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .IntroductionAndPitchContainer {
+    height: 100vh;
+    background-image: url('../../../assets/img/home_background_mobile.webp');
+    background-position: left 0 bottom -50px;
+    padding-top: 50px;
+
+    &-TextAndButtonContainer {
+      margin-top: 5vh;
+      margin-left: 40px;
+      margin-right: 40px;
+
+      &-MainTitle {
+        font: $mobile-h1;
+      }
+      &-Pitch {
+        font: $mobile-pitch-font;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Longer Mobile --------------------------- */
+@media (max-width: $mobile-max-width) and (min-height: $shortmobile-max-height) {
+  .IntroductionAndPitchContainer {
+    padding-top: 13vh;
+
+    &-TextAndButtonContainer {
+      &-DownloadButton {
+        margin-top: 1em;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .IntroductionAndPitchContainer {
+    z-index: -1;
+    position: relative;
+    height: 100vh;
+    background-image: url('../../../assets/img/home_background_tablet.webp');
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-TextAndButtonContainer {
+      position: absolute;
+      bottom: 20%;
+      right: 20px;
+      width: 46%;
+      &-MainTitle {
+        font: $tablet-h1;
+        margin-bottom: 25px;
+      }
+      &-Pitch {
+        font: $tablet-pitch-font;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) and (orientation: portrait) {
+  .IntroductionAndPitchContainer {
+    height: 50vh;
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .IntroductionAndPitchContainer {
+    background-image: url('../../../assets/img/home_background_desktop.webp');
+    padding: 0;
+
+    &-TextAndButtonContainer {
+      margin-right: 50px;
+      &-MainTitle {
+        font: $desktop-h1;
+      }
+      &-Pitch {
+        font: $desktop-pitch-font;
+      }
+    }
+  }
+}
