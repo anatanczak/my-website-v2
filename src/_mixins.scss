@@ -3,3 +3,11 @@
   text-align: center;
   margin: 36px;
 }
+
+@mixin footerTitle {
+  margin: 0.7em;
+  padding-top: 0.2em;
+  color: $main-lilly;
+  text-transform: uppercase;
+  font: $footer-title;
+}
