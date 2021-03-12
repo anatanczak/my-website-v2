@@ -1,0 +1,14 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+
+.PortfolioComonentContainer {
+}
+
+/*  --------------- Mobile ----------------- */
+@media (max-width: $mobile-max-width) and (max-height: $shortmobile-max-height) {
+}
+
+/*  --------------- Tiny Mobile ----------------- */
+@media (max-width: $tiny-mobile-max-width) {
+}
