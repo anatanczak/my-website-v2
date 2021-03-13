@@ -34,5 +34,10 @@
   "home.hobbies.salsa": "Salsa",
   "home.hobbies.drawing": "Art Digital",
   "home.hobbies.yoga": "Yoga",
-  "home.hobbies.travel": "Voyages"
+  "home.hobbies.travel": "Voyages",
+  "portfolio.title": "Mon portfolio",
+  "portfolio.projectCategories.all": "Tout",
+  "portfolio.projectCategories.web": "Web",
+  "portfolio.projectCategories.ios": "iOS",
+  "portfolio.projectCategories.uiux": "UI/UX"
 }

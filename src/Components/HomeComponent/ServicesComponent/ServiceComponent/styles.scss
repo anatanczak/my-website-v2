@@ -1,6 +1,7 @@
 @import 'src/_colors.scss';
 @import 'src/_vars.scss';
 @import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
 
 /* ---------------------------  Commont Styles --------------------------- */
 
@@ -35,8 +36,7 @@
     text-decoration: none;
 
     &-LinkTextContainer {
-      position: relative;
-      padding: 0.1em 0.3em;
+      @include underlinedTextContainerOnHover;
       margin-right: 0.1em;
 
       &-Text {
@@ -44,25 +44,6 @@
         z-index: 2;
       }
     }
-    &-LinkTextContainer::after {
-      content: ' ';
-      background-color: $main-lilly;
-      position: absolute;
-      border-radius: 3px;
-      height: 20%;
-      top: 50%;
-      left: 0;
-      right: 0;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: all 0.5s ease-in-out;
-    }
-    &-LinkTextContainer:hover::after {
-      transform: scaleX(1);
-    }
-    // &-LinkText:hover {
-    //   background-color: $main-lilly;
-    // }
     &-ArrowCircleBackground {
       display: flex;
       align-items: center;

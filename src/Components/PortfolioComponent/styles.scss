@@ -1,14 +1,65 @@
 @import 'src/_colors.scss';
 @import 'src/_vars.scss';
 @import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
 
 .PortfolioComonentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $main-white;
+  &-Title {
+    margin: 0.5em;
+    color: $main-darkblue;
+  }
+  &-CategoriesContainer {
+    display: flex;
+
+    &-Category {
+      margin: 0.5em;
+      @include underlinedTextContainerOnHover;
+
+      p {
+        position: relative;
+        z-index: 2;
+      }
+    }
+    &-ActiveCategory {
+      margin: 0.5em;
+      @include underlinedTextContainer;
+      p {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
 }
 
-/*  --------------- Mobile ----------------- */
-@media (max-width: $mobile-max-width) and (max-height: $shortmobile-max-height) {
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .PortfolioComonentContainer {
+    margin-top: 50px;
+    &-Title {
+      font: $mobile-h1;
+    }
+  }
+}
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .PortfolioComonentContainer {
+    margin-left: 50px;
+    &-Title {
+      font: $tablet-h1;
+    }
+  }
 }
 
-/*  --------------- Tiny Mobile ----------------- */
-@media (max-width: $tiny-mobile-max-width) {
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .PortfolioComonentContainer {
+    &-Title {
+      font: $desktop-h1;
+    }
+  }
 }
