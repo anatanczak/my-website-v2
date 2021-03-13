@@ -1,12 +1,16 @@
 import React, { FunctionComponent } from 'react';
-import HomeComponent from '../../Components/HomeComponent/HomeComponent';
+import PortfolioComponent from '../../Components/PortfolioComponent/PortfolioComponent';
 
 import './styles.scss';
 
 type PortfolioPageProps = {};
 
 const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
-  return <div className="PortfolioPageContainer">Portfolio</div>;
+  return (
+    <div className="PortfolioPageContainer">
+      <PortfolioComponent />
+    </div>
+  );
 };
 
 export default PortfolioPage;

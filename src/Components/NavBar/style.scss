@@ -39,7 +39,7 @@
       padding: 1em;
 
       &-MenuItem {
-        list-style-type: none;
+        text-decoration: none;
         font: $menu-font;
         text-transform: uppercase;
         color: $main-darkblue;

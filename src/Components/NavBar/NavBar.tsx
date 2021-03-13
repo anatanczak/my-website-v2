@@ -13,6 +13,7 @@ import './style.scss';
 interface MenuItem {
   title: string;
   translationKey: string;
+  link: string;
 }
 
 type NavBarProps = {
@@ -23,15 +24,18 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
   const menuItems: Array<MenuItem> = [
     {
       title: 'aboutMe',
-      translationKey: 'navbar.aboutMe'
+      translationKey: 'navbar.aboutMe',
+      link: '/'
     },
     {
       title: 'portfolio',
-      translationKey: 'navbar.portfolio'
+      translationKey: 'navbar.portfolio',
+      link: '/portfolio'
     },
     {
       title: 'contact',
-      translationKey: 'navbar.contact'
+      translationKey: 'navbar.contact',
+      link: '/contact'
     }
   ];
 
@@ -88,9 +92,13 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
                 (index + 1);
             }
             return (
-              <li className={styleClassName} key={menuItem.translationKey}>
+              <Link
+                to={menuItem.link}
+                className={styleClassName}
+                key={menuItem.translationKey}
+              >
                 {t(menuItem.translationKey)}
-              </li>
+              </Link>
             );
           })}
           <div
