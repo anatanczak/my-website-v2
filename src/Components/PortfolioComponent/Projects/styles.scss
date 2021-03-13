@@ -1,0 +1,64 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_fonts.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+
+/* ---------------------------  Commont styles --------------------------- */
+
+.ProjectsContainer {
+  display: flex;
+  &-ProjectCoupleContainer {
+    display: flex;
+    &-ProjectAContainer {
+      border-radius: $mainBorderRadius;
+      margin: 10px;
+    }
+    &-ProjectBContainer {
+      border-radius: $mainBorderRadius;
+      margin: 10px;
+    }
+    // &-LillyBackground {
+    //   background-color: $main-lilly;
+    // }
+    // &-GreyBackground {
+    //   background-color: $main-lightgrey;
+    // }
+    // &-PaleGreenBackground {
+    //   background-color: $main-palegreen;
+    // }
+    // &-DarkBlueBackground {
+    //   background-color: $main-palegreen;
+    // }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .ProjectsContainer {
+    &-ProjectCoupleContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .ProjectsContainer {
+    &-ProjectCoupleContainer {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .ProjectsContainer {
+    &-ProjectCoupleContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

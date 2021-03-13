@@ -1,9 +1,9 @@
+@import 'src/_buttons.scss';
 @import 'src/_colors.scss';
 @import 'src/_vars.scss';
-@import 'src/_buttons.scss';
+@import 'src/_fonts.scss';
 @import 'src/_breakpoints.scss';
 @import 'src/_mixins.scss';
-
 .FooterContainer {
   background-color: $main-darkblue;
   display: flex;
@@ -12,7 +12,7 @@
   &-PolicyContainer {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 
     &-CopyRight {
@@ -28,7 +28,7 @@
   &-ContactContainer {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 
     &-Title {
@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 
     &-Title {
       @include footerTitle;

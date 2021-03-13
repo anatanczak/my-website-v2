@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import NavBar from '../../Components/NavBar/NavBar';
@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
 
 import { projectCategories } from './ProjectCategories';
+import Projects from './Projects/Projects';
 
 import './styles.scss';
 
@@ -13,7 +14,29 @@ type PortfolioComponentProps = {};
 
 const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
   const { t }: { t: any } = useTranslation();
+  const { pathname } = window.location;
   const [activeCategory, setActiveCategory] = useState('all');
+
+  useEffect(() => {
+    switch (pathname) {
+      case '/portfolio/web':
+        setActiveCategory('web');
+        break;
+      case '/portfolio/ios':
+        setActiveCategory('ios');
+        break;
+      case '/portfolio/uiux':
+        setActiveCategory('uiux');
+        break;
+      default:
+        break;
+    }
+  }, []);
+
+  const projectCategoryClickHandler = (category: string) => {
+    setActiveCategory(category);
+    //TODO decide if I need history.push('/portfolio' + '/' + category)
+  };
 
   return (
     <>
@@ -32,12 +55,19 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
                 'PortfolioComonentContainer-CategoriesContainer-ActiveCategory';
             }
             return (
-              <div className={categoryClassName} key={projectCategory.name}>
+              <div
+                className={categoryClassName}
+                key={projectCategory.name}
+                onClick={() => {
+                  projectCategoryClickHandler(projectCategory.name);
+                }}
+              >
                 <p>{t(projectCategory.label)}</p>
               </div>
             );
           })}
         </div>
+        <Projects />
       </div>
       <Footer />
     </>

@@ -1,3 +1,5 @@
 export default interface Project {
-  title: string;
+  name: string;
+  thumbnail: string;
+  shortDescription: string;
 }
