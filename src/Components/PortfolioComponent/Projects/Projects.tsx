@@ -14,42 +14,20 @@ const Projects: FunctionComponent<ProjectsProps> = ({}) => {
 
   return (
     <div className="ProjectsContainer">
-      {projectList.map((projectCouple: ProjectCouple, index) => {
-        let projectAClassName =
-          'ProjectsContainer-ProjectCoupleContainer-ProjectAContainer';
-        let projectBClassName =
-          'ProjectsContainer-ProjectCoupleContainer-ProjectAContainer';
-
-        // switch (index) {
-        //   case 0:
-        //     projectAClassName +=
-        //       ' ProjectsContainer-ProjectCoupleContainer-LillyBackground';
-        //     projectBClassName +=
-        //       ' ProjectsContainer-ProjectCoupleContainer-GreyBackground';
-        //     break;
-        //   case 1:
-        //     projectAClassName +=
-        //       ' ProjectsContainer-ProjectCoupleContainer-PaleGreenBackground';
-        //     projectBClassName +=
-        //       ' ProjectsContainer-ProjectCoupleContainer-GreyBackground';
-        //     break;
-        //   default:
-        //     break;
-        // }
+      {projectList.map((projectCouple: ProjectCouple) => {
         return (
           <div
             key={projectCouple.projectA.name}
             className="ProjectsContainer-ProjectCoupleContainer"
           >
-            <div className={projectAClassName}>
+            <div className="ProjectsContainer-ProjectCoupleContainer-ProjectAContainer">
               <Project project={projectCouple.projectA} />
             </div>
-
-            <div className={projectBClassName}>
-              {projectCouple.projectB && (
+            {projectCouple.projectB && (
+              <div className="ProjectsContainer-ProjectCoupleContainer-ProjectBContainer">
                 <Project project={projectCouple.projectB} />
-              )}
-            </div>
+              </div>
+            )}
           </div>
         );
       })}

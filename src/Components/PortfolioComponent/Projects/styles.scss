@@ -11,25 +11,11 @@
   &-ProjectCoupleContainer {
     display: flex;
     &-ProjectAContainer {
-      border-radius: $mainBorderRadius;
       margin: 10px;
     }
     &-ProjectBContainer {
-      border-radius: $mainBorderRadius;
       margin: 10px;
     }
-    // &-LillyBackground {
-    //   background-color: $main-lilly;
-    // }
-    // &-GreyBackground {
-    //   background-color: $main-lightgrey;
-    // }
-    // &-PaleGreenBackground {
-    //   background-color: $main-palegreen;
-    // }
-    // &-DarkBlueBackground {
-    //   background-color: $main-palegreen;
-    // }
   }
 }
 
@@ -37,9 +23,20 @@
 
 @media (max-width: $mobile-max-width) {
   .ProjectsContainer {
+    flex-direction: column;
+    align-items: center;
     &-ProjectCoupleContainer {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &-ProjectAContainer {
+        width: 80%;
+      }
+      &-ProjectBContainer {
+        width: 80%;
+      }
     }
   }
 }
