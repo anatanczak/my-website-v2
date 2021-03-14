@@ -1,10 +1,16 @@
 import ProjectCouple from './ProjectCoupleInterface';
 
-/* New Portfolio Images */
-import NewPortfolioThumbnail from '../../assets/projects/newPortfolio/new_portfolio_thumbnail.webp';
+/* SmartLife Images */
+import SmartLifeThumbnail from '../../assets/projects/smartlife/smartlife_thumbnail.webp';
 
 /* Meslistes Images */
 import MeslistesThumbnail from '../../assets/projects/meslistes/meslistes_thumbnail.webp';
+
+/* New Portfolio Images */
+import NewPortfolioThumbnail from '../../assets/projects/newPortfolio/new_portfolio_thumbnail.webp';
+
+/* Old Portfolio Images */
+import OldPortfolioThumbnail from '../../assets/projects/oldPortfolio/old_portfolio_thumbnail.webp';
 
 export enum BackgroundColorCode {
   'Lilly' = '#c7a9c3',
@@ -18,16 +24,18 @@ const projectList: Array<ProjectCouple> = [
     projectA: {
       id: 1,
       name: 'Smart Life',
-      thumbnail: '',
+      thumbnail: SmartLifeThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Lilly,
-      shortDescription: 'lorem imsum'
+      shortDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
     },
     projectB: {
       id: 2,
       name: 'Meslistes',
       thumbnail: MeslistesThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Grey,
-      shortDescription: 'lorem imsum dolorem'
+      shortDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
     }
   },
   {
@@ -36,14 +44,16 @@ const projectList: Array<ProjectCouple> = [
       name: 'New Portfolio',
       thumbnail: NewPortfolioThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.PaleGreen,
-      shortDescription: 'lorem imsum'
+      shortDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
     },
     projectB: {
       id: 4,
       name: 'Old Portfolio',
-      thumbnail: '',
+      thumbnail: OldPortfolioThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.DarkBlue,
-      shortDescription: 'lorem imsum dolorem'
+      shortDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
     }
   },
   {
@@ -52,14 +62,16 @@ const projectList: Array<ProjectCouple> = [
       name: 'Blue Snail',
       thumbnail: '',
       thumbnailBackgroundColor: BackgroundColorCode.Grey,
-      shortDescription: 'lorem imsum'
+      shortDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
     },
     projectB: {
       id: 6,
       name: 'Success Builder',
       thumbnail: '',
       thumbnailBackgroundColor: BackgroundColorCode.Lilly,
-      shortDescription: 'lorem imsum dolorem'
+      shortDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
     }
   }
 ];
