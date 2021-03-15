@@ -12,6 +12,9 @@ import NewPortfolioThumbnail from '../../assets/projects/newPortfolio/new_portfo
 /* Old Portfolio Images */
 import OldPortfolioThumbnail from '../../assets/projects/oldPortfolio/old_portfolio_thumbnail.webp';
 
+/* Old Portfolio Images */
+import BlueSnailThumbnail from '../../assets/projects/blueSnail/bluesnail_thumbnail.webp';
+
 export enum BackgroundColorCode {
   'Lilly' = '#c7a9c3',
   'Grey' = '#f3f2f2',
@@ -60,7 +63,7 @@ const projectList: Array<ProjectCouple> = [
     projectA: {
       id: 5,
       name: 'Blue Snail',
-      thumbnail: '',
+      thumbnail: BlueSnailThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Grey,
       shortDescription:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
