@@ -1,11 +1,16 @@
 @import 'src/_colors.scss';
 @import 'src/_vars.scss';
+@import 'src/_fonts.scss';
+
+@mixin simple-button {
+  font: $button-font;
+  padding: 0.4em 1em;
+  border-radius: $main-border-radius;
+}
 
 @mixin pale-green-button {
   background-color: $main-palegreen;
-  font: $button-font;
-  padding: 0.4em 1em;
-  border-radius: 8px;
+  @include simple-button;
 
   &:hover {
     //TODO: decide what to do on hover

@@ -2,19 +2,21 @@
 @import 'src/_vars.scss';
 @import 'src/_breakpoints.scss';
 @import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+@import 'src/_buttons.scss';
 
 .ProjectContainer {
   display: flex;
   width: 100%;
   height: 100%;
-  border-radius: $mainBorderRadius;
+  border-radius: $main-border-radius;
   color: $main-white;
 
   &-CardFront {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     &-Title {
       color: inherit;
@@ -23,17 +25,65 @@
       width: 90%;
       height: auto;
     }
+    &-Button {
+      @include simple-button;
+      margin: 1em;
+    }
   }
 }
 
 /* ---------------------------  Mobile --------------------------- */
 
 @media (max-width: $mobile-max-width) {
+  .ProjectContainer {
+    &-CardFront {
+      &-Title {
+        font: $mobile-h2;
+      }
+      &-Description {
+        font: $mobile-p;
+        text-align: center;
+        width: 75%;
+      }
+    }
+  }
 }
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
+  .ProjectContainer {
+    &-CardFront {
+      &-Title {
+        font: $tablet-h2;
+      }
+      &-Description {
+        font: $tablet-p;
+        text-align: center;
+        width: 80%;
+      }
+    }
+  }
 }
 
 /* ---------------------------  Desktop --------------------------- */
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-min-width) and (hover: hover) {
+  .ProjectContainer {
+    &-CardFront {
+      align-items: center;
+      justify-content: center;
+      &-Title {
+        display: none;
+      }
+      &-Description {
+        display: none;
+      }
+      &-Image {
+        width: 250px;
+        max-width: 85%;
+        height: auto;
+      }
+      &-Button {
+        display: none;
+      }
+    }
+  }
 }

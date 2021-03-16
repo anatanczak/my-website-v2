@@ -26,7 +26,6 @@
     flex-direction: column;
     align-items: center;
     &-ProjectCoupleContainer {
-      display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
@@ -43,19 +42,64 @@
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
   .ProjectsContainer {
+    flex-direction: column;
+    align-items: center;
     &-ProjectCoupleContainer {
-      display: flex;
       flex-direction: row;
+      &-ProjectAContainer {
+        width: 50%;
+      }
+      &-ProjectBContainer {
+        width: 50%;
+      }
     }
   }
 }
 
 /* ---------------------------  Desktop --------------------------- */
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-min-width) and (hover: hover) {
   .ProjectsContainer {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+    align-items: flex-start;
+    min-height: 80vh;
+
     &-ProjectCoupleContainer {
+      width: 33%;
       display: flex;
       flex-direction: column;
+      height: 70vh;
+
+      &-ProjectAContainer {
+        width: 95%;
+      }
+      &-ProjectBContainer {
+        width: 95%;
+      }
+    }
+    /* First div */
+    &-ProjectCoupleContainer:nth-child(1n) > div:first-child {
+      height: 40%;
+    }
+    &-ProjectCoupleContainer:nth-child(1n) > div:nth-child(2) {
+      height: 60%;
+    }
+
+    /* Second div */
+    &-ProjectCoupleContainer:nth-child(2n) > div:first-child {
+      height: 60%;
+    }
+    &-ProjectCoupleContainer:nth-child(2n) > div:nth-child(2) {
+      height: 40%;
+    }
+
+    /* Third div */
+    &-ProjectCoupleContainer:nth-child(3n) > div:first-child {
+      height: 40%;
+    }
+    &-ProjectCoupleContainer:nth-child(3n) > div:nth-child(2) {
+      height: 60%;
     }
   }
 }

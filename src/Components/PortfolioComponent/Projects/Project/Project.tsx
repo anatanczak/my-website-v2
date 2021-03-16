@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import ProjectInterface from '../../ProjectInterface';
 import { BackgroundColorCode } from '../../ProjectList';
@@ -18,12 +19,28 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
     color: ''
   };
 
+  let buttonStyles = {
+    backgroundColor: BackgroundColorCode.Grey
+  };
+
   if (project.thumbnailBackgroundColor === BackgroundColorCode.Grey) {
     styles = {
       backgroundColor: project.thumbnailBackgroundColor,
       color: BackgroundColorCode.DarkBlue
     };
+    buttonStyles = {
+      backgroundColor: BackgroundColorCode.Lilly
+    };
   }
+  if (project.thumbnailBackgroundColor === BackgroundColorCode.DarkBlue) {
+    buttonStyles = {
+      backgroundColor: BackgroundColorCode.PaleGreen
+    };
+  }
+
+  const buttonClickHandler = (projectId: number) => {
+    console.log(projectId);
+  };
 
   return (
     <div className="ProjectContainer" style={styles}>
@@ -37,6 +54,15 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
         <p className="ProjectContainer-CardFront-Description">
           {project.shortDescription}
         </p>
+        <button
+          className="ProjectContainer-CardFront-Button"
+          style={buttonStyles}
+          onClick={() => {
+            buttonClickHandler(project.id);
+          }}
+        >
+          {t('portfolio.project.seeProjectLink')}
+        </button>
       </div>
     </div>
   );

@@ -39,5 +39,6 @@
   "portfolio.projectCategories.all": "Tout",
   "portfolio.projectCategories.web": "Web",
   "portfolio.projectCategories.ios": "iOS",
-  "portfolio.projectCategories.uiux": "UI/UX"
+  "portfolio.projectCategories.uiux": "UI/UX",
+  "portfolio.project.seeProjectLink": "Voir le projet"
 }

@@ -12,8 +12,11 @@ import NewPortfolioThumbnail from '../../assets/projects/newPortfolio/new_portfo
 /* Old Portfolio Images */
 import OldPortfolioThumbnail from '../../assets/projects/oldPortfolio/old_portfolio_thumbnail.webp';
 
-/* Old Portfolio Images */
+/* Blue Snail Images */
 import BlueSnailThumbnail from '../../assets/projects/blueSnail/bluesnail_thumbnail.webp';
+
+/* Success Builder Images */
+import SuccessBuilderThumbnail from '../../assets/projects/successBuilder/success_builder_thumbnail.webp';
 
 export enum BackgroundColorCode {
   'Lilly' = '#c7a9c3',
@@ -30,7 +33,8 @@ const projectList: Array<ProjectCouple> = [
       thumbnail: SmartLifeThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Lilly,
       shortDescription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+      githubLink: 'https://github.com/anaviktoriv/SmartLife'
     },
     projectB: {
       id: 2,
@@ -38,7 +42,8 @@ const projectList: Array<ProjectCouple> = [
       thumbnail: MeslistesThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Grey,
       shortDescription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+      githubLink: 'https://github.com/anaviktoriv/meslistes'
     }
   },
   {
@@ -48,7 +53,8 @@ const projectList: Array<ProjectCouple> = [
       thumbnail: NewPortfolioThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.PaleGreen,
       shortDescription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+      githubLink: 'https://github.com/anaviktoriv/my-website-v2'
     },
     projectB: {
       id: 4,
@@ -56,7 +62,8 @@ const projectList: Array<ProjectCouple> = [
       thumbnail: OldPortfolioThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.DarkBlue,
       shortDescription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+      githubLink: 'https://github.com/anaviktoriv/myWebsite'
     }
   },
   {
@@ -66,15 +73,17 @@ const projectList: Array<ProjectCouple> = [
       thumbnail: BlueSnailThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Grey,
       shortDescription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+      githubLink: 'https://github.com/anaviktoriv/BlueSnail'
     },
     projectB: {
       id: 6,
       name: 'Success Builder',
-      thumbnail: '',
+      thumbnail: SuccessBuilderThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Lilly,
       shortDescription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+      githubLink: 'https://github.com/anaviktoriv/Success-Builder'
     }
   }
 ];
