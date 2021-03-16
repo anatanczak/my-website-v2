@@ -64,6 +64,7 @@
     max-width: 1200px;
     align-items: flex-start;
     min-height: 80vh;
+    flex-wrap: wrap;
 
     &-ProjectCoupleContainer {
       width: 33%;
@@ -80,26 +81,26 @@
     }
     /* First div */
     &-ProjectCoupleContainer:nth-child(1n) > div:first-child {
-      height: 40%;
+      height: 45%;
     }
     &-ProjectCoupleContainer:nth-child(1n) > div:nth-child(2) {
-      height: 60%;
+      height: 55%;
     }
 
     /* Second div */
     &-ProjectCoupleContainer:nth-child(2n) > div:first-child {
-      height: 60%;
+      height: 55%;
     }
     &-ProjectCoupleContainer:nth-child(2n) > div:nth-child(2) {
-      height: 40%;
+      height: 45%;
     }
 
     /* Third div */
     &-ProjectCoupleContainer:nth-child(3n) > div:first-child {
-      height: 40%;
+      height: 45%;
     }
     &-ProjectCoupleContainer:nth-child(3n) > div:nth-child(2) {
-      height: 60%;
+      height: 55%;
     }
   }
 }

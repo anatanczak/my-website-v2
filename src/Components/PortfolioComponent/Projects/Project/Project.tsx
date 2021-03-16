@@ -23,6 +23,10 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
     backgroundColor: BackgroundColorCode.Grey
   };
 
+  let separatorStyles = {
+    borderColor: ''
+  };
+
   if (project.thumbnailBackgroundColor === BackgroundColorCode.Grey) {
     styles = {
       backgroundColor: project.thumbnailBackgroundColor,
@@ -30,6 +34,9 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
     };
     buttonStyles = {
       backgroundColor: BackgroundColorCode.Lilly
+    };
+    separatorStyles = {
+      borderColor: BackgroundColorCode.DarkBlue
     };
   }
   if (project.thumbnailBackgroundColor === BackgroundColorCode.DarkBlue) {
@@ -56,6 +63,25 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
         </p>
         <button
           className="ProjectContainer-CardFront-Button"
+          style={buttonStyles}
+          onClick={() => {
+            buttonClickHandler(project.id);
+          }}
+        >
+          {t('portfolio.project.seeProjectLink')}
+        </button>
+      </div>
+      <div className="ProjectContainer-CardBack">
+        <h3 className="ProjectContainer-CardBack-Title">{project.name}</h3>
+        <div
+          className="ProjectContainer-CardBack-Separator"
+          style={separatorStyles}
+        ></div>
+        <p className="ProjectContainer-CardBack-Description">
+          {project.shortDescription}
+        </p>
+        <button
+          className="ProjectContainer-CardBack-Button"
           style={buttonStyles}
           onClick={() => {
             buttonClickHandler(project.id);

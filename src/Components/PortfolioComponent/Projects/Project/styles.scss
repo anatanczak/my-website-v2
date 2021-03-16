@@ -30,6 +30,25 @@
       margin: 1em;
     }
   }
+  &-CardBack {
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-Title {
+      color: inherit;
+    }
+    &-Image {
+      width: 90%;
+      height: auto;
+    }
+    &-Button {
+      @include simple-button;
+      margin: 1em;
+    }
+  }
 }
 
 /* ---------------------------  Mobile --------------------------- */
@@ -67,7 +86,14 @@
 /* ---------------------------  Desktop --------------------------- */
 @media (min-width: $desktop-min-width) and (hover: hover) {
   .ProjectContainer {
+    position: relative;
+
+    &:hover > &-CardBack {
+      opacity: 1;
+    }
+
     &-CardFront {
+      width: 100%;
       align-items: center;
       justify-content: center;
       &-Title {
@@ -83,6 +109,34 @@
       }
       &-Button {
         display: none;
+      }
+    }
+    &-CardBack {
+      background-color: inherit;
+      border-radius: $main-border-radius;
+      display: flex;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.8s opacity ease-in-out;
+      &-Title {
+        font: $tablet-h2;
+        margin: 0.4em;
+      }
+      &-Separator {
+        border-bottom: 1px solid $main-white;
+        width: 70%;
+      }
+      &-Description {
+        font: $desktop-p;
+        text-align: center;
+        margin: 0.4em;
+        width: 95%;
+      }
+      &-Button {
       }
     }
   }
