@@ -24,6 +24,7 @@
     top: 50%;
     left: 0;
     right: 0;
+    transition: all 0.5s ease-in-out;
   }
 }
 
@@ -45,6 +46,22 @@
   }
   &:hover::after {
     transform: scaleX(1);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@mixin underlinedTextContainerTransparent {
+  position: relative;
+  padding: 0.1em 0.3em;
+  &::after {
+    content: ' ';
+    background-color: transparent;
+    position: absolute;
+    border-radius: 3px;
+    height: 20%;
+    top: 50%;
+    left: 0;
+    right: 0;
     transition: all 0.5s ease-in-out;
   }
 }

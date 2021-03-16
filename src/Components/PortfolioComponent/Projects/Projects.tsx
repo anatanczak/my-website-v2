@@ -2,15 +2,25 @@ import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ProjectCouple from '../ProjectCoupleInterface';
 
-import projectList from '../ProjectList';
+import projectListFull from '../ProjectList';
 import Project from './Project/Project';
 
 import './styles.scss';
 
-type ProjectsProps = {};
+type ProjectsProps = {
+  category: string;
+};
 
-const Projects: FunctionComponent<ProjectsProps> = ({}) => {
+const Projects: FunctionComponent<ProjectsProps> = ({ category }) => {
   const { t }: { t: any } = useTranslation();
+
+  let projectList = projectListFull;
+
+  //   if (category !== 'all'){
+  //     projectList = projectListFull.filter((project) =>{
+  // if (project.projectA.)
+  //     })
+  //   }
 
   return (
     <div className="ProjectsContainer">

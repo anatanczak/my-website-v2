@@ -30,6 +30,7 @@ const projectList: Array<ProjectCouple> = [
     projectA: {
       id: 1,
       name: 'Smart Life',
+      tags: ['web', 'ui/ux'],
       thumbnail: SmartLifeThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Lilly,
       shortDescription:
@@ -39,6 +40,7 @@ const projectList: Array<ProjectCouple> = [
     projectB: {
       id: 2,
       name: 'Meslistes',
+      tags: ['iOS'],
       thumbnail: MeslistesThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Grey,
       shortDescription:
@@ -50,6 +52,7 @@ const projectList: Array<ProjectCouple> = [
     projectA: {
       id: 3,
       name: 'New Portfolio',
+      tags: ['web', 'ui/ux'],
       thumbnail: NewPortfolioThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.PaleGreen,
       shortDescription:
@@ -59,6 +62,7 @@ const projectList: Array<ProjectCouple> = [
     projectB: {
       id: 4,
       name: 'Old Portfolio',
+      tags: ['web', 'ui/ux'],
       thumbnail: OldPortfolioThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.DarkBlue,
       shortDescription:
@@ -70,6 +74,7 @@ const projectList: Array<ProjectCouple> = [
     projectA: {
       id: 5,
       name: 'Blue Snail',
+      tags: ['iOS'],
       thumbnail: BlueSnailThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Grey,
       shortDescription:
@@ -79,6 +84,7 @@ const projectList: Array<ProjectCouple> = [
     projectB: {
       id: 6,
       name: 'Success Builder',
+      tags: ['iOS'],
       thumbnail: SuccessBuilderThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Lilly,
       shortDescription:

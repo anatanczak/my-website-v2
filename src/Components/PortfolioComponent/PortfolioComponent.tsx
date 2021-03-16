@@ -43,11 +43,16 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
       <NavBar activePage="portfolio" />
       <LanguageSelect />
       <div className="PortfolioComonentContainer">
-        <h1 className="PortfolioComonentContainer-Title">
+        <h1
+          className="PortfolioComonentContainer-Title"
+          onClick={() => {
+            console.log('clicking');
+          }}
+        >
           {t('portfolio.title')}
         </h1>
         <div className="PortfolioComonentContainer-CategoriesContainer">
-          {projectCategories.map((projectCategory) => {
+          {projectCategories.map((projectCategory, index) => {
             let categoryClassName =
               'PortfolioComonentContainer-CategoriesContainer-Category';
             if (projectCategory.name === activeCategory) {
@@ -57,7 +62,7 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
             return (
               <div
                 className={categoryClassName}
-                key={projectCategory.name}
+                key={projectCategory.name + index}
                 onClick={() => {
                   projectCategoryClickHandler(projectCategory.name);
                 }}
@@ -67,7 +72,7 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
             );
           })}
         </div>
-        <Projects />
+        <Projects category={activeCategory} />
       </div>
       <Footer />
     </>
