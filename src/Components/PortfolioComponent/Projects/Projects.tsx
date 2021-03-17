@@ -13,14 +13,19 @@ type ProjectsProps = {
 
 const Projects: FunctionComponent<ProjectsProps> = ({ category }) => {
   const { t }: { t: any } = useTranslation();
+  const [projectList, setProjectList] = useState(projectListFull);
 
-  let projectList = projectListFull;
-
-  //   if (category !== 'all'){
-  //     projectList = projectListFull.filter((project) =>{
-  // if (project.projectA.)
-  //     })
-  //   }
+  useEffect(() => {
+    let tempProjectList = projectListFull;
+    if (category !== 'all') {
+      tempProjectList = projectListFull.filter((project) => {
+        if (project.projectA.tags.includes(category)) {
+          return project;
+        }
+      });
+      setProjectList(tempProjectList);
+    }
+  }, [category]);
 
   return (
     <div className="ProjectsContainer">
