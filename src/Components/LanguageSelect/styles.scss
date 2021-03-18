@@ -6,48 +6,59 @@
 .LangugageSelectContainer {
   z-index: 3;
   position: fixed;
-  top: -162px;
-  right: -110px;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-color: $main-lilly;
+  top: 0;
+  right: 10px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &-Languages {
-    position: relative;
-    top: 65%;
-    left: 0;
-    width: 60%;
-    height: 50px;
+    padding: 0.5em;
     display: flex;
     align-items: center;
     justify-content: center;
     &-Language {
       font: $language-select-font;
-      margin-left: 0.5em;
-      color: $main-white;
+      color: $main-lilly;
       cursor: pointer;
+      margin-right: 0.4em;
     }
   }
 }
-.activeLangugage {
-  color: $main-darkblue;
-}
-/*  --------------- Mobile ----------------- */
-@media (max-width: $mobile-max-width) and (max-height: $shortmobile-max-height) {
+
+/* ---------------------------  Larger screens  --------------------------- */
+@media (min-width: $tablet-min-width) {
   .LangugageSelectContainer {
-    top: -175px;
+    position: absolute;
+    right: 10px;
+    top: -95px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: $main-lilly;
 
     &-Languages {
-      top: 70%;
+      position: absolute;
+      top: 60%;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-Language {
+        font: $language-select-font;
+        color: $main-white;
+        cursor: pointer;
+        margin-right: 0.4em;
+      }
     }
   }
 }
 
-/*  --------------- Tiny Mobile ----------------- */
-@media (max-width: $tiny-mobile-max-width) {
-  .LangugageSelectContainer {
-    top: -162px;
-    right: -120px;
-  }
+.activeLangugage {
+  color: $main-darkblue;
 }
