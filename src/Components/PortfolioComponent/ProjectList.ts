@@ -1,4 +1,4 @@
-import ProjectCouple from './ProjectCoupleInterface';
+import Project from './ProjectInterface';
 
 /* SmartLife Images */
 import SmartLifeThumbnail from '../../assets/projects/smartlife/smartlife_thumbnail.webp';
@@ -25,9 +25,9 @@ export enum BackgroundColorCode {
   'DarkBlue' = '#122744'
 }
 
-const projectList: Array<ProjectCouple> = [
-  {
-    projectA: {
+const projectList: Array<Array<Project>> = [
+  [
+    {
       id: 1,
       name: 'Smart Life',
       tags: ['web', 'uiux'],
@@ -37,19 +37,19 @@ const projectList: Array<ProjectCouple> = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
       githubLink: 'https://github.com/anaviktoriv/SmartLife'
     },
-    projectB: {
+    {
       id: 2,
       name: 'Meslistes',
-      tags: ['ios'],
+      tags: [''],
       thumbnail: MeslistesThumbnail,
       thumbnailBackgroundColor: BackgroundColorCode.Grey,
       shortDescription:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
       githubLink: 'https://github.com/anaviktoriv/meslistes'
     }
-  },
-  {
-    projectA: {
+  ],
+  [
+    {
       id: 3,
       name: 'New Portfolio',
       tags: ['web', 'uiux'],
@@ -59,7 +59,7 @@ const projectList: Array<ProjectCouple> = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
       githubLink: 'https://github.com/anaviktoriv/my-website-v2'
     },
-    projectB: {
+    {
       id: 4,
       name: 'Old Portfolio',
       tags: ['web', 'uiux'],
@@ -69,9 +69,9 @@ const projectList: Array<ProjectCouple> = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
       githubLink: 'https://github.com/anaviktoriv/myWebsite'
     }
-  },
-  {
-    projectA: {
+  ],
+  [
+    {
       id: 5,
       name: 'Blue Snail',
       tags: ['ios'],
@@ -81,7 +81,7 @@ const projectList: Array<ProjectCouple> = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
       githubLink: 'https://github.com/anaviktoriv/BlueSnail'
     },
-    projectB: {
+    {
       id: 6,
       name: 'Success Builder',
       tags: ['ios'],
@@ -91,7 +91,7 @@ const projectList: Array<ProjectCouple> = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
       githubLink: 'https://github.com/anaviktoriv/Success-Builder'
     }
-  }
+  ]
 ];
 
 export default projectList;

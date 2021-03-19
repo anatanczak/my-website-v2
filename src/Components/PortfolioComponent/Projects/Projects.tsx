@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import ProjectCouple from '../ProjectCoupleInterface';
+import ProjectType from '../ProjectInterface';
 
 import projectListFull from '../ProjectList';
 import Project from './Project/Project';
@@ -16,35 +16,52 @@ const Projects: FunctionComponent<ProjectsProps> = ({ category }) => {
   const [projectList, setProjectList] = useState(projectListFull);
 
   useEffect(() => {
-    let tempProjectList = projectListFull;
     if (category !== 'all') {
-      tempProjectList = projectListFull.filter((project) => {
-        if (project.projectA.tags.includes(category)) {
-          return project;
-        }
+      console.log(category);
+
+      const filteredProjectList: Array<
+        Array<ProjectType>
+      > = projectListFull.map((projectInnerArray: Array<ProjectType>) => {
+        const filteredInnerArray = projectInnerArray.filter(
+          (project: ProjectType) => {
+            if (project.tags.includes(category)) {
+              return project;
+            }
+          }
+        );
+        return filteredInnerArray;
       });
-      setProjectList(tempProjectList);
+      console.log('filteredProjectList');
+      console.log(filteredProjectList);
+      setProjectList(filteredProjectList);
     }
   }, [category]);
 
+  useEffect(() => {
+    console.log('projectList');
+    console.log(projectList);
+  }, [projectList]);
+
   return (
     <div className="ProjectsContainer">
-      {projectList.map((projectCouple: ProjectCouple) => {
-        return (
-          <div
-            key={projectCouple.projectA.name}
-            className="ProjectsContainer-ProjectCoupleContainer"
-          >
-            <div className="ProjectsContainer-ProjectCoupleContainer-ProjectAContainer">
-              <Project project={projectCouple.projectA} />
-            </div>
-            {projectCouple.projectB && (
-              <div className="ProjectsContainer-ProjectCoupleContainer-ProjectBContainer">
-                <Project project={projectCouple.projectB} />
+      {projectList.map((projectArray: Array<ProjectType>) => {
+        if (projectArray.length > 0) {
+          return (
+            <div
+              key={projectArray[0].name}
+              className="ProjectsContainer-ProjectCoupleContainer"
+            >
+              <div className="ProjectsContainer-ProjectCoupleContainer-ProjectAContainer">
+                <Project project={projectArray[0]} />
               </div>
-            )}
-          </div>
-        );
+              {projectArray[1] && (
+                <div className="ProjectsContainer-ProjectCoupleContainer-ProjectBContainer">
+                  <Project project={projectArray[1]} />
+                </div>
+              )}
+            </div>
+          );
+        }
       })}
     </div>
   );
