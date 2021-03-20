@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { isConstructSignatureDeclaration } from 'typescript';
 import ProjectType from '../ProjectInterface';
 
 import projectListFull from '../ProjectList';
@@ -11,34 +12,61 @@ type ProjectsProps = {
   category: string;
 };
 
+function blabla(
+  projects: Array<ProjectType>,
+  projCategory = 'uiux'
+): Array<Array<ProjectType>> {
+  const sixElementArray: Array<ProjectType> = [];
+  const tempProjectArray: Array<Array<ProjectType>> = [];
+
+  projects.map((projectObj: ProjectType, index) => {
+    if (projCategory === 'all' || projectObj.tags.includes(projCategory)) {
+      if (sixElementArray.length === 6) {
+        sixElementArray.length = 0;
+      }
+      sixElementArray.push(projectObj);
+    }
+
+    if (sixElementArray.length === 6 || projects.length - (index + 1) === 0) {
+      tempProjectArray.push(sixElementArray);
+    }
+  });
+
+  return tempProjectArray;
+}
+
 const Projects: FunctionComponent<ProjectsProps> = ({ category }) => {
   const { t }: { t: any } = useTranslation();
-  const [projectList, setProjectList] = useState(projectListFull);
+  const [projectList, setProjectList] = useState<Array<Array<ProjectType>>>();
 
   useEffect(() => {
-    if (category !== 'all') {
-      console.log(category);
-    }
+    const tempArray = blabla(projectListFull, category);
+    setProjectList(tempArray);
   }, [category]);
 
-  useEffect(() => {
-    console.log('projectList');
-    console.log(projectList);
-  }, [projectList]);
+  // useEffect(() => {
+  //   console.log(projectList);
+  // }, [projectList]);
 
   return (
-    <div className="ProjectsContainer">
-      {projectList.map((project: ProjectType) => {
+    <>
+      {projectList?.map((sixProjectList, index) => {
         return (
-          <div
-            key={project.name}
-            className="ProjectsContainer-ProjectIndContainer"
-          >
-            <Project project={project} />
+          <div className="ProjectsContainer" key={'projectContainer' + index}>
+            {sixProjectList.map((project: ProjectType) => {
+              return (
+                <div
+                  key={project.name}
+                  className="ProjectsContainer-ProjectIndContainer"
+                >
+                  <Project project={project} />
+                </div>
+              );
+            })}
           </div>
         );
       })}
-    </div>
+    </>
   );
 };
 

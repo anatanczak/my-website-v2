@@ -59,7 +59,7 @@ const projectList: Array<Project> = [
   {
     id: 4,
     name: 'Meslistes',
-    tags: [''],
+    tags: ['ios'],
     thumbnail: MeslistesThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Grey,
     shortDescription:
@@ -92,7 +92,7 @@ const projectList: Array<Project> = [
   {
     id: 1,
     name: 'Smart Lifexxx',
-    tags: ['web', 'uiux'],
+    tags: [],
     thumbnail: SmartLifeThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Lilly,
     shortDescription:
@@ -102,7 +102,7 @@ const projectList: Array<Project> = [
   {
     id: 2,
     name: 'New Portfolxxxio',
-    tags: ['web', 'uiux'],
+    tags: [],
     thumbnail: NewPortfolioThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.PaleGreen,
     shortDescription:
@@ -112,7 +112,7 @@ const projectList: Array<Project> = [
   {
     id: 3,
     name: 'Blue Snxxxail',
-    tags: ['ios'],
+    tags: [],
     thumbnail: BlueSnailThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Grey,
     shortDescription:
@@ -133,7 +133,7 @@ const projectList: Array<Project> = [
   {
     id: 5,
     name: 'Old Portfoxxlio',
-    tags: ['web', 'uiux'],
+    tags: [],
     thumbnail: OldPortfolioThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.DarkBlue,
     shortDescription:
@@ -144,7 +144,7 @@ const projectList: Array<Project> = [
   {
     id: 6,
     name: 'Success Buixxlder',
-    tags: ['ios'],
+    tags: [],
     thumbnail: SuccessBuilderThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Lilly,
     shortDescription:
