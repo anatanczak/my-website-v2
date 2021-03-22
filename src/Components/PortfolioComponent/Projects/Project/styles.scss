@@ -28,6 +28,10 @@
     &-Button {
       @include simple-button;
       margin: 1em;
+      a {
+        text-decoration: inherit;
+        color: inherit;
+      }
     }
   }
   &-CardBack {
@@ -87,6 +91,8 @@
 @media (min-width: $desktop-min-width) and (hover: hover) {
   .ProjectContainer {
     position: relative;
+    min-width: 300px;
+    min-height: 300px;
 
     &:hover > &-CardBack {
       opacity: 1;
@@ -137,6 +143,10 @@
         width: 95%;
       }
       &-Button {
+        a {
+          text-decoration: inherit;
+          color: inherit;
+        }
       }
     }
   }

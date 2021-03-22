@@ -32,8 +32,7 @@ const projectList: Array<Project> = [
     tags: ['web', 'uiux'],
     thumbnail: SmartLifeThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Lilly,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+    shortDescription: 'portfolio.project.smartLife.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/SmartLife'
   },
   {
@@ -42,8 +41,7 @@ const projectList: Array<Project> = [
     tags: ['web', 'uiux'],
     thumbnail: NewPortfolioThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.PaleGreen,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+    shortDescription: 'portfolio.project.newPortfolio.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/my-website-v2'
   },
   {
@@ -52,8 +50,7 @@ const projectList: Array<Project> = [
     tags: ['ios'],
     thumbnail: BlueSnailThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Grey,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+    shortDescription: 'portfolio.project.blueSnail.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/BlueSnail'
   },
   {
@@ -62,8 +59,7 @@ const projectList: Array<Project> = [
     tags: ['ios'],
     thumbnail: MeslistesThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Grey,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+    shortDescription: 'portfolio.project.meslistes.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/meslistes'
   },
 
@@ -73,8 +69,7 @@ const projectList: Array<Project> = [
     tags: ['web', 'uiux'],
     thumbnail: OldPortfolioThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.DarkBlue,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+    shortDescription: 'portfolio.project.oldPortfolio.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/myWebsite'
   },
 
@@ -84,71 +79,7 @@ const projectList: Array<Project> = [
     tags: ['ios'],
     thumbnail: SuccessBuilderThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Lilly,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
-    githubLink: 'https://github.com/anaviktoriv/Success-Builder'
-  },
-  //DELETE
-  {
-    id: 1,
-    name: 'Smart Lifexxx',
-    tags: [],
-    thumbnail: SmartLifeThumbnail,
-    thumbnailBackgroundColor: BackgroundColorCode.Lilly,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
-    githubLink: 'https://github.com/anaviktoriv/SmartLife'
-  },
-  {
-    id: 2,
-    name: 'New Portfolxxxio',
-    tags: [],
-    thumbnail: NewPortfolioThumbnail,
-    thumbnailBackgroundColor: BackgroundColorCode.PaleGreen,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
-    githubLink: 'https://github.com/anaviktoriv/my-website-v2'
-  },
-  {
-    id: 3,
-    name: 'Blue Snxxxail',
-    tags: [],
-    thumbnail: BlueSnailThumbnail,
-    thumbnailBackgroundColor: BackgroundColorCode.Grey,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
-    githubLink: 'https://github.com/anaviktoriv/BlueSnail'
-  },
-  {
-    id: 4,
-    name: 'Meslistxxes',
-    tags: [''],
-    thumbnail: MeslistesThumbnail,
-    thumbnailBackgroundColor: BackgroundColorCode.Grey,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
-    githubLink: 'https://github.com/anaviktoriv/meslistes'
-  },
-
-  {
-    id: 5,
-    name: 'Old Portfoxxlio',
-    tags: [],
-    thumbnail: OldPortfolioThumbnail,
-    thumbnailBackgroundColor: BackgroundColorCode.DarkBlue,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
-    githubLink: 'https://github.com/anaviktoriv/myWebsite'
-  },
-
-  {
-    id: 6,
-    name: 'Success Buixxlder',
-    tags: [],
-    thumbnail: SuccessBuilderThumbnail,
-    thumbnailBackgroundColor: BackgroundColorCode.Lilly,
-    shortDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ultrices posuere.',
+    shortDescription: 'portfolio.project.successBuilder.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/Success-Builder'
   }
 ];

@@ -64,11 +64,13 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
         <button
           className="ProjectContainer-CardFront-Button"
           style={buttonStyles}
-          onClick={() => {
-            buttonClickHandler(project.id);
-          }}
+          // onClick={() => {
+          //   buttonClickHandler(project.id);
+          // }}
         >
-          {t('portfolio.project.seeProjectLink')}
+          <a href={project.githubLink}>
+            {t('portfolio.project.seeProjectLink')}
+          </a>
         </button>
       </div>
       <div className="ProjectContainer-CardBack">
@@ -78,7 +80,7 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
           style={separatorStyles}
         ></div>
         <p className="ProjectContainer-CardBack-Description">
-          {project.shortDescription}
+          {t(project.shortDescription)}
         </p>
         <button
           className="ProjectContainer-CardBack-Button"
@@ -87,7 +89,9 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
             buttonClickHandler(project.id);
           }}
         >
-          {t('portfolio.project.seeProjectLink')}
+          <a href={project.githubLink}>
+            {t('portfolio.project.seeProjectLink')}
+          </a>
         </button>
       </div>
     </div>

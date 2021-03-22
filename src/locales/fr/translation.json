@@ -40,5 +40,11 @@
   "portfolio.projectCategories.web": "Web",
   "portfolio.projectCategories.ios": "iOS",
   "portfolio.projectCategories.uiux": "UI/UX",
-  "portfolio.project.seeProjectLink": "Voir le projet"
+  "portfolio.project.seeProjectLink": "Voir le projet",
+  "portfolio.project.smartLife.shortDescription": "Un site de e-commerce, j'ai travaillé sur ce projet collectif pendant la formation Concepteur Développeur d'Applications.",
+  "portfolio.project.meslistes.shortDescription": "Une simple et élégante to-do list créée pour aider les gens à rester organisés. Cette application native iOS est très intuitive, facile à utiliser et entièrement gratuite.",
+  "portfolio.project.newPortfolio.shortDescription": "C’est la nouvelle version de mon site portfolio sur laquelle vous naviguez actuellement. Cette version est entièrement repensée, conçue avec un nouveau design et codée en React.js.",
+  "portfolio.project.oldPortfolio.shortDescription": "L’ancienne version de mon site portfolio, créée au début de ma formation Concepteur Développeur d'Applications, n'est plus active. Elle est remplacée par la SPA sur laquelle vous naviguez maintenant.",
+  "portfolio.project.blueSnail.shortDescription": "Une bibliothèque interactive pour les enfants. Cette application native est en cours de réalisation.",
+  "portfolio.project.successBuilder.shortDescription": "Une application native iOS, conçue pour aider à changer la manière de penser grâce à la répétition des affirmations positives - mantras."
 }
