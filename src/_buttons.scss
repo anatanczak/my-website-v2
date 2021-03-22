@@ -11,14 +11,15 @@
 @mixin pale-green-button {
   background-color: $main-palegreen;
   @include simple-button;
+  cursor: pointer;
 
   &:hover {
     //TODO: decide what to do on hover
-    background-color: red;
+    background-color: $main-lilly;
   }
   &:active,
   &:focus {
     //TODO: decide what to do when active
-    background-color: goldenrod;
+    background-color: $main-lilly;
   }
 }

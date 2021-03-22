@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-import Ball from '../../BallComponent/Ball';
+//import Ball from '../../BallComponent/Ball';
 import './styles.scss';
 
 type IntroComponentProps = {};
@@ -16,12 +17,21 @@ const IntroComponent: FunctionComponent<IntroComponentProps> = ({}) => {
         <h1 className="IntroductionAndPitchContainer-TextAndButtonContainer-MainTitle">
           {t('home.mainTitle')}
         </h1>
-        <h2 className="IntroductionAndPitchContainer-TextAndButtonContainer-Pitch">
+        <h2
+          className="IntroductionAndPitchContainer-TextAndButtonContainer-Pitch"
+          onClick={() => {
+            console.log('clicking');
+          }}
+        >
           {t('home.pitch')}
         </h2>
-        <button className="IntroductionAndPitchContainer-TextAndButtonContainer-DownloadButton">
+        <a
+          href="/files/cv_tanczak_fullstack.pdf"
+          className="IntroductionAndPitchContainer-TextAndButtonContainer-DownloadButton"
+          download
+        >
           {t('home.button.downloadResume')}
-        </button>
+        </a>
       </div>
     </div>
   );
