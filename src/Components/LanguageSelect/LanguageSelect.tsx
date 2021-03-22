@@ -15,18 +15,18 @@ const LanguageSelect: FunctionComponent<LanguageSelectProps> = ({}) => {
     localStorage.getItem('language')
   );
   const languageOptions: Array<LanguageOption> = [
-    {
-      label: 'En.',
-      value: 'en'
-    },
+    // {
+    //   label: 'En.',
+    //   value: 'en'
+    // },
     {
       label: 'Fr.',
       value: 'fr'
-    },
-    {
-      label: 'De.',
-      value: 'de'
     }
+    // {
+    //   label: 'De.',
+    //   value: 'de'
+    // }
   ];
 
   const handleLanguageChange = (newValue: string) => {

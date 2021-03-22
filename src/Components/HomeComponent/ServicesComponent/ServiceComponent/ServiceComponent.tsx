@@ -16,6 +16,8 @@ const ServiceComponent: FunctionComponent<ServiceComponentProps> = ({
   service
 }) => {
   const { t }: { t: any } = useTranslation();
+  const link = `/portfolio/${service.tag}`;
+
   return (
     <div className="ServiceContainer">
       <img
@@ -25,8 +27,7 @@ const ServiceComponent: FunctionComponent<ServiceComponentProps> = ({
       />
       <h3 className="ServiceContainer-Title">{t(service.title)}</h3>
       <p className="ServiceContainer-Text">{t(service.text)}</p>
-      {/* TODO: add services.tag to link */}
-      <Link to="/portfolio" className="ServiceContainer-Link">
+      <Link to={link} className="ServiceContainer-Link">
         <div className="ServiceContainer-Link-LinkTextContainer">
           <p className="ServiceContainer-Link-LinkTextContainer-Text">
             {t('home.services.link')}

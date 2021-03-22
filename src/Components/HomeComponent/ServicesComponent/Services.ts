@@ -23,7 +23,7 @@ const services: Array<Service> = [
     altText: 'home.services.uiDesign.altText',
     title: 'home.services.uiDesign.title',
     text: 'home.services.uiDesign.text',
-    tag: 'design'
+    tag: 'uiux'
   }
 ];
 

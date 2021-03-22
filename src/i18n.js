@@ -26,10 +26,10 @@ const detectedLanguage = () => {
   const { localStorage } = window;
   language = language.substring(0, 2);
   if (localStorage.getItem('language') == null) {
-    let defaultLanguage = 'en';
-    if (language === 'en' || language === 'fr' || language === 'de') {
-      defaultLanguage = language;
-    }
+    let defaultLanguage = 'fr';
+    // if (language === 'en' || language === 'fr' || language === 'de') {
+    //   defaultLanguage = language;
+    // }
     localStorage.setItem('language', defaultLanguage);
   }
   return localStorage.getItem('language');
@@ -44,7 +44,7 @@ i18n
     debug: false,
 
     lng: detectedLanguage(),
-    fallbackLng: 'en',
+    fallbackLng: 'fr',
     whitelist: ['en', 'fr', 'de'],
     keySeparator: true,
 

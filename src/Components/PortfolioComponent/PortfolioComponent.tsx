@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useHistory } from 'react-router-dom';
 
 import NavBar from '../../Components/NavBar/NavBar';
 import Footer from '../Footer/Footer';
@@ -15,6 +16,7 @@ type PortfolioComponentProps = {};
 const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
   const { t }: { t: any } = useTranslation();
   const { pathname } = window.location;
+  let history = useHistory();
   const [activeCategory, setActiveCategory] = useState('all');
 
   useEffect(() => {
@@ -35,7 +37,11 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
 
   const projectCategoryClickHandler = (category: string) => {
     setActiveCategory(category);
-    //TODO decide if I need history.push('/portfolio' + '/' + category)
+    if (category === 'all') {
+      history.push('/portfolio');
+    } else {
+      history.push(`/portfolio/${category}`);
+    }
   };
 
   return (
