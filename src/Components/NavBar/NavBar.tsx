@@ -1,6 +1,15 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, {
+  FunctionComponent,
+  SyntheticEvent,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+
+import useDetectClick from '../../CustomHooks/useDetectClick';
+import useOnScroll from '../../CustomHooks/useOnScroll';
 
 import Logo from '../../assets/icons/logo.svg';
 import GithubIcon from '../../assets/icons/github_icon.svg';
@@ -41,9 +50,28 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
 
   const { t }: { t: any } = useTranslation();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement | null>(null);
+  const [position] = useOnScroll();
+
+  const outSideNavbarClickHandler = (event: Event) => {
+    if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      setMenuIsOpen(false);
+    }
+  };
+
+  //close navbar when cklicked outside
+  useDetectClick(outSideNavbarClickHandler);
+
+  //close navbar when scrolled
+  useEffect(() => {
+    if (position > 10) {
+      setMenuIsOpen(false);
+    }
+  }, [position]);
 
   return (
     <nav
+      ref={navRef}
       className={
         menuIsOpen ? 'NavBarContainer OpenNavBarContainer' : 'NavBarContainer'
       }
