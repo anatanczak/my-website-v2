@@ -59,7 +59,7 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
           alt="project image"
         />
         <p className="ProjectContainer-CardFront-Description">
-          {project.shortDescription}
+          {t(project.shortDescription)}
         </p>
         <button
           className="ProjectContainer-CardFront-Button"

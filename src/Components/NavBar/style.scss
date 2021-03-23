@@ -3,8 +3,6 @@
 @import 'src/_fonts.scss';
 
 .NavBarContainer {
-  position: fixed;
-  z-index: 4;
   &-AllwaysVisibleMenuContainer {
     background-color: $main-white;
     display: flex;
@@ -76,11 +74,12 @@
 
 @media (max-width: 767px) {
   .NavBarContainer {
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
     &-AllwaysVisibleMenuContainer {
+      position: fixed;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 50px;
       padding: 5px 20px;
       &-SocialLinksContainer {
@@ -91,6 +90,11 @@
       }
     }
     &-ClosedMenuContainer {
+      z-index: 0;
+      position: fixed;
+      top: 50px;
+      left: 0;
+      right: 0;
       transform-origin: top;
       transform: scaleY(0);
 
@@ -124,6 +128,7 @@
     }
 
     &-MenuVisible {
+      z-index: 3;
       transform: scaleY(1);
       transition: all ease-in-out 0.5s;
     }
@@ -133,6 +138,7 @@
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: 768px) {
   .NavBarContainer {
+    position: fixed;
     display: flex;
     top: 0;
     bottom: 0;
