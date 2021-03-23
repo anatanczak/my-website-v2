@@ -1,0 +1,114 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_buttons.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+
+.ContactComponentContainer {
+  background-color: $main-darkblue;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-InfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1,
+    h2 {
+      color: $main-lilly;
+      margin: 0.4em;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      color: $main-white;
+      text-transform: uppercase;
+      margin: 0.4em;
+      span {
+        text-transform: initial;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border: 1px solid $main-palegreen;
+        border-radius: $main-border-radius;
+        padding: 0.5em;
+        margin: 0.4em;
+      }
+    }
+    &-LinksContainer {
+      display: flex;
+      img {
+        width: 40px;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .ContactComponentContainer {
+    &-InfoContainer {
+      width: 90%;
+      h1,
+      h2 {
+        font: $mobile-h1;
+      }
+      p {
+        font: $mobile-pitch-font;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .ContactComponentContainer {
+    &-InfoContainer {
+      max-width: 70%;
+      h1,
+      h2 {
+        font: $tablet-h1;
+      }
+      p {
+        font: $mobile-pitch-font;
+      }
+
+      &-LinksContainer {
+        display: flex;
+        img {
+          width: 50px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .ContactComponentContainer {
+    &-InfoContainer {
+      max-width: 60%;
+      h1,
+      h2 {
+        font: $desktop-h1;
+      }
+      p {
+        font: $desktop-pitch-font;
+      }
+      &-LinksContainer {
+        display: flex;
+        img {
+          width: 60px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
