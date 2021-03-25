@@ -59,6 +59,7 @@
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
   .BioContainer {
+    padding-bottom: 40px;
     &-Title {
       font: $tablet-h2;
     }
@@ -86,16 +87,24 @@
       align-items: center;
 
       &-Img {
-        max-width: 30%;
+        max-width: 40%;
         height: auto;
       }
       &-Text {
-        max-width: 40%;
+        max-width: 50%;
         &-Paragraph {
           padding: 0.3em 1.5em;
           font: $desktop-p;
         }
       }
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) and (orientation: portrait) {
+  .BioContainer {
+    &-ImgTextContainer {
+      align-items: flex-start;
     }
   }
 }

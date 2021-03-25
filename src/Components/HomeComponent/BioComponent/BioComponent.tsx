@@ -16,7 +16,7 @@ const BioComponent: FunctionComponent<BioComponentProps> = ({}) => {
   let photo = PhotoMobile;
   let text = t('home.bio.text').split('\n');
 
-  if (windowWidth > 1024) {
+  if (windowWidth > 1023) {
     photo = PhotoDesktop;
   } else {
     photo = PhotoMobile;
