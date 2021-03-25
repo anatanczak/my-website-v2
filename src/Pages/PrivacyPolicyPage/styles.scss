@@ -1,0 +1,68 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_buttons.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+
+.PrivacyPolicyPageContainer {
+  background-color: $main-darkblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: $main-white;
+
+  &-Title {
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .PrivacyPolicyPageContainer {
+    &-Title {
+      font: $mobile-h1;
+      width: 90%;
+    }
+    &-Text {
+      font: $mobile-p;
+      width: 90%;
+    }
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .PrivacyPolicyPageContainer {
+    &-Title {
+      font: $tablet-h1;
+      width: 80%;
+    }
+    &-Text {
+      font: $tablet-p;
+      width: 80%;
+    }
+    padding-bottom: 2em;
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .PrivacyPolicyPageContainer {
+    &-Title {
+      font: $desktop-h1;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    &-Text {
+      font: $desktop-p;
+      width: 80%;
+      max-width: 1200px;
+    }
+    padding-bottom: 2em;
+  }
+}

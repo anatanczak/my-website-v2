@@ -4,6 +4,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import PortfolioPage from './Pages/PortfolioPage/PortfolioPage';
 import ContactPage from './Pages/ContactPage/ContactPage';
+import PrivacyPolicyPage from './Pages/PrivacyPolicyPage/PrivacyPolicyPage';
 
 function App() {
   return (
@@ -19,6 +20,12 @@ function App() {
               component={PortfolioPage}
             />
             <Route path="/contact" title="Contact" component={ContactPage} />
+            <Route
+              exact
+              path="/privacypolicy"
+              title="PrivacyPolicy"
+              component={PrivacyPolicyPage}
+            />
             <Route component={HomePage} />
           </Switch>
         </div>

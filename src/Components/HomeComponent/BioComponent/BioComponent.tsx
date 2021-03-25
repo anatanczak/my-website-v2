@@ -32,7 +32,6 @@ const BioComponent: FunctionComponent<BioComponentProps> = ({}) => {
           alt="my photo"
         />
         <div className="BioContainer-ImgTextContainer-Text">
-          {' '}
           {text.map((paragraph: string, index: number) => {
             return (
               <p
