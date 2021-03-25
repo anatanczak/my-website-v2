@@ -21,15 +21,15 @@ const ContactComponent: FunctionComponent<ContactComponentProps> = ({}) => {
       <LanguageSelect />
       <div className="ContactComponentContainer">
         <div className="ContactComponentContainer-InfoContainer">
-          <h1>Want to hire me?</h1>
+          <h1>{t('contact.hireMe')}</h1>
           <p>
-            give me a call: <span>+33(0)6 95 56 49 93</span>
+            {t('contact.callMe')} <span>+33(0)6 95 56 49 93</span>
           </p>
-          <p>or</p>
+          <p>{t('contact.or')}</p>
           <p>
-            write an email: <span>anatkachen@gmail.com</span>
+            {t('contact.writeEmail')} <span>anatkachen@gmail.com</span>
           </p>
-          <h2>Want to know more about me?</h2>
+          <h2>{t('contact.knowMore')}</h2>
           <div className="ContactComponentContainer-InfoContainer-LinksContainer">
             <a href="https://www.linkedin.com/in/anastasiatanczak/">
               <img src={LinkedinIcon} alt="linkedin icon" />
