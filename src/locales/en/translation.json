@@ -25,5 +25,13 @@
   "home.laguages.fr": "French",
   "home.laguages.ua": "Ukrainian",
   "home.laguages.ru": "Russian",
-  "home.laguages.es": "Spanish"
+  "home.laguages.es": "Spanish",
+  "home.bio.title": "About me.",
+  "home.bio.text": "Bla bla bla",
+  "home.hobbies.title": "Hobbies",
+  "home.hobbies.salsa": "Salsa",
+  "home.hobbies.drawing": "Digital Art",
+  "home.hobbies.yoga": "Yoga",
+  "home.hobbies.travel": "Travel",
+  "portfolio.title": "My work"
 }
