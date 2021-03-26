@@ -11,6 +11,7 @@ import LanguageSelect from '../LanguageSelect/LanguageSelect';
 
 import './styles.scss';
 import ProjectGeneralInfo from './ProjectGeneralInfo/ProjectGeneralInfo';
+import Links from './Links/Links';
 
 type FullProjectComponentProps = {};
 
@@ -55,6 +56,7 @@ const FullProjectComponent: FunctionComponent<FullProjectComponentProps> = ({}) 
               quote={project.quote}
               heroImage={project.heroImage}
             />
+            {project.links && <Links links={project.links} />}
           </div>
           <Footer />
         </>

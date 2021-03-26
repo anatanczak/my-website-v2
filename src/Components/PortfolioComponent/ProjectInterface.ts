@@ -19,6 +19,7 @@ export default interface Project {
 export interface ProjectLink {
   label: string;
   url: string;
+  description: string;
 }
 
 export interface ProjectFeature {
