@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage/HomePage';
 import PortfolioPage from './Pages/PortfolioPage/PortfolioPage';
 import ContactPage from './Pages/ContactPage/ContactPage';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage/PrivacyPolicyPage';
+import ProjectPage from './Pages/ProjectPage/ProjectPage';
 
 function App() {
   return (
@@ -15,9 +16,16 @@ function App() {
           <Switch>
             <Route exact path="/" title="Home" component={HomePage} />
             <Route
+              exact
               path="/portfolio"
               title="Portfolio"
               component={PortfolioPage}
+            />
+            <Route
+              exact
+              path="/portfolio/projects/:id"
+              title="FullProject"
+              component={ProjectPage}
             />
             <Route path="/contact" title="Contact" component={ContactPage} />
             <Route
@@ -26,6 +34,7 @@ function App() {
               title="PrivacyPolicy"
               component={PrivacyPolicyPage}
             />
+
             <Route component={HomePage} />
           </Switch>
         </div>
