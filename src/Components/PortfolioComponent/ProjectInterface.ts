@@ -6,4 +6,23 @@ export default interface Project {
   thumbnailBackgroundColor: string;
   shortDescription: string;
   githubLink: string;
+  quote?: string;
+  //TODO: make hero image required
+  heroImage?: string;
+  longDescription: string;
+  links?: Array<ProjectLink>;
+  features?: Array<ProjectFeature>;
+  //TODO: make imageArray required
+  images?: Array<string>;
+}
+
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
+export interface ProjectFeature {
+  title: string;
+  decription: string;
+  visual?: string;
 }

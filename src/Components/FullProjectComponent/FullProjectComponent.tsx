@@ -10,6 +10,7 @@ import Footer from '../Footer/Footer';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
 
 import './styles.scss';
+import ProjectGeneralInfo from './ProjectGeneralInfo/ProjectGeneralInfo';
 
 type FullProjectComponentProps = {};
 
@@ -48,7 +49,12 @@ const FullProjectComponent: FunctionComponent<FullProjectComponentProps> = ({}) 
           <NavBar activePage="portfolio" />
           <LanguageSelect />
           <div className="FullProjectComonentContainer">
-            Project {project.id}
+            <ProjectGeneralInfo
+              title={project.name}
+              description={project.longDescription}
+              quote={project.quote}
+              heroImage={project.heroImage}
+            />
           </div>
           <Footer />
         </>
