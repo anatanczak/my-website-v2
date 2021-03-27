@@ -11,10 +11,6 @@
   margin: 1em;
   align-items: center;
 
-  h2 {
-    color: $main-darkblue;
-  }
-
   &-Title {
     color: $main-darkblue;
     margin: 0.5em;
@@ -50,10 +46,6 @@
   .ProjectGeneralContainer {
     width: 80%;
 
-    h2 {
-      font: $mobile-h2;
-    }
-
     &-Title {
       font: $mobile-h1;
     }
@@ -66,16 +58,15 @@
         font: $mobile-quote-font;
       }
     }
+    &-Text {
+      font: $mobile-p;
+    }
   }
 }
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
   .ProjectGeneralContainer {
     width: 80%;
-
-    h2 {
-      font: $tablet-h2;
-    }
 
     &-Title {
       font: $tablet-h1;
@@ -89,6 +80,9 @@
         font: $tablet-quote-font;
       }
     }
+    &-Text {
+      font: $tablet-p;
+    }
   }
 }
 
@@ -96,10 +90,6 @@
 @media (min-width: $desktop-min-width) {
   .ProjectGeneralContainer {
     width: 90%;
-
-    h2 {
-      font: $desktop-h2;
-    }
 
     &-Title {
       font: $desktop-h1;
@@ -112,6 +102,9 @@
       h4 {
         font: $desktop-quote-font;
       }
+    }
+    &-Text {
+      font: $desktop-p;
     }
   }
 }

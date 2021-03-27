@@ -16,6 +16,9 @@ body {
 h {
   font-family: 'Comfortaa', sans-serif;
 }
+p {
+  margin: 0;
+}
 
 button {
   -webkit-appearance: none;

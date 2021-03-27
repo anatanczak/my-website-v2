@@ -15,17 +15,17 @@ function App() {
         <div className="App">
           <Switch>
             <Route exact path="/" title="Home" component={HomePage} />
-            <Route
-              exact
-              path="/portfolio"
-              title="Portfolio"
-              component={PortfolioPage}
-            />
+
             <Route
               exact
               path="/portfolio/projects/:id"
               title="FullProject"
               component={ProjectPage}
+            />
+            <Route
+              path="/portfolio"
+              title="Portfolio"
+              component={PortfolioPage}
             />
             <Route path="/contact" title="Contact" component={ContactPage} />
             <Route

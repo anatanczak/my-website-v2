@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Service from './ServiceInterface';
 
-import LinkComponent from '../../../LinkComponent/LinkComponent';
+import InternalLink from '../../../Links/InternalLink';
 import './styles.scss';
 
 type ServiceComponentProps = {
@@ -26,7 +26,7 @@ const ServiceComponent: FunctionComponent<ServiceComponentProps> = ({
       />
       <h3 className="ServiceContainer-Title">{t(service.title)}</h3>
       <p className="ServiceContainer-Text">{t(service.text)}</p>
-      <LinkComponent url={url} text={'home.services.link'} />
+      <InternalLink url={url} text={'home.services.link'} />
     </div>
   );
 };

@@ -1,11 +1,10 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 
 import { ProjectLink } from '../../PortfolioComponent/ProjectInterface';
-import Arrow from '../../../../assets/icons/darkblue_arrow.svg';
 
 import './styles.scss';
+import ExternalLink from '../../Links/ExternalLink';
 
 type LinksProps = {
   links: Array<ProjectLink>;
@@ -15,18 +14,28 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
   const { t }: { t: any } = useTranslation();
 
   return (
-    <div className="LinksContainer">
-      <h2>Links</h2>
-      {links.map((link, index) => {
-        return (
-          <div key={'projectLink' + index}>
-            <div>
-              <p>{index + 1}</p>
+    <div className="ProjectLinksContainer">
+      <h2 className="ProjectLinksContainer-Title">Links</h2>
+      <div className="ProjectLinksContainer-LinksContainer">
+        {links.map((link, index) => {
+          return (
+            <div
+              className="ProjectLinksContainer-LinksContainer-IndLinkContainer"
+              key={'projectLink' + index}
+            >
+              <div className="ProjectLinksContainer-LinksContainer-IndLinkContainer-NumberContainer">
+                <p className="ProjectLinksContainer-LinksContainer-IndLinkContainer-NumberContainer-Number">
+                  {index + 1}
+                </p>
+              </div>
+              <p className="ProjectLinksContainer-LinksContainer-IndLinkContainer-Description">
+                {link.description}
+              </p>
+              <ExternalLink url={link.url} text={link.label} />
             </div>
-            <p>{link.description}</p>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

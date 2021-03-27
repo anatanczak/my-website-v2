@@ -3,90 +3,82 @@
 @import 'src/_breakpoints.scss';
 @import 'src/_mixins.scss';
 @import 'src/_fonts.scss';
+@import 'src/titles.scss';
 
-.ProjectGeneralContainer {
+.ProjectLinksContainer {
+  background-color: $main-lightgrey;
+  width: 100%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
-  margin: 1em;
   align-items: center;
+  &-LinksContainer {
+    &-IndLinkContainer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      &-NumberContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-  h2 {
-    color: $main-darkblue;
-  }
+        background-color: $main-lilly;
+        border-radius: 50%;
 
-  &-Title {
-    color: $main-darkblue;
-    margin: 0.5em;
-  }
+        &-Number {
+          font: 700 22px 'Comfortaa', sans-serif;
+        }
+      }
 
-  &-QuoteContainer {
-    display: flex;
-    align-items: baseline;
-
-    img {
-      height: auto;
-      margin-top: 0.5em;
+      &-Description {
+        margin: 0;
+        color: $main-darkblue;
+      }
     }
-    h4 {
-      color: $main-darkblue;
-      text-align: center;
-    }
-  }
-
-  &-Image {
-    max-width: 100%;
-    height: auto;
-    border-radius: $main-border-radius;
-    margin-bottom: 20px;
-  }
-  &-Text {
-    color: $main-darkblue;
   }
 }
+
 /* ---------------------------  Mobile --------------------------- */
 
 @media (max-width: $mobile-max-width) {
-  .ProjectGeneralContainer {
-    width: 80%;
-
-    h2 {
-      font: $mobile-h2;
-    }
-
-    &-Title {
-      font: $mobile-h1;
-    }
-
-    &-QuoteContainer {
-      img {
-        width: 15px;
-      }
-      h4 {
-        font: $mobile-quote-font;
+  .ProjectLinksContainer {
+    &-LinksContainer {
+      &-IndLinkContainer {
+        flex-direction: column;
+        &-NumberContainer {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          &-Number {
+            font: 700 16px 'Comfortaa', sans-serif;
+          }
+        }
+        &-Description {
+          font: $mobile-p;
+          text-align: center;
+        }
       }
     }
   }
 }
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
-  .ProjectGeneralContainer {
-    width: 80%;
-
-    h2 {
-      font: $tablet-h2;
-    }
-
-    &-Title {
-      font: $tablet-h1;
-    }
-
-    &-QuoteContainer {
-      img {
-        width: 17px;
-      }
-      h4 {
-        font: $tablet-quote-font;
+  .ProjectLinksContainer {
+    &-LinksContainer {
+      &-IndLinkContainer {
+        &-NumberContainer {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          margin-right: 5px;
+          &-Number {
+            font: 700 16px 'Comfortaa', sans-serif;
+          }
+        }
+        &-Description {
+          font: $tablet-p;
+          text-align: center;
+        }
       }
     }
   }
@@ -94,23 +86,21 @@
 
 /* ---------------------------  Desktop --------------------------- */
 @media (min-width: $desktop-min-width) {
-  .ProjectGeneralContainer {
-    width: 90%;
-
-    h2 {
-      font: $desktop-h2;
-    }
-
-    &-Title {
-      font: $desktop-h1;
-    }
-
-    &-QuoteContainer {
-      img {
-        width: 19px;
-      }
-      h4 {
-        font: $desktop-quote-font;
+  .ProjectLinksContainer {
+    &-LinksContainer {
+      &-IndLinkContainer {
+        &-NumberContainer {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          &-Number {
+            font: 700 18px 'Comfortaa', sans-serif;
+          }
+        }
+        &-Description {
+          font: $desktop-p;
+          text-align: center;
+        }
       }
     }
   }

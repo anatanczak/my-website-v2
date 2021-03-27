@@ -42,21 +42,21 @@ const projectList: Array<Project> = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet, urna vitae fringilla accumsan, massa nisl tincidunt massa, a tristique tellus purus nec erat. Fusce elit eros, viverra at feugiat in, dignissim eget ex. /n Aenean malesuada est nec sem congue, vitae semper ante facilisis. Etiam maximus tempus enim, quis ullamcorper enim ultrices efficitur. /n Aenean luctus dui quis urna placerat, non varius erat elementum. Nullam risus sem, condimentum quis elit sit amet, tempor fringilla diam. /n Mauris orci libero, convallis quis massa vitae, cursus rhoncus nulla. Ut sollicitudin sed lectus at posuere. Integer sed sapien at purus vehicula placerat. Sed lorem ex, posuere at ultrices et, ornare eget arcu. Nam eros ligula, dignissim non quam vitae, dignissim pretium ipsum. Proin convallis velit urna. Duis volutpat magna at ullamcorper tincidunt. Curabitur lacinia ultrices massa. Aliquam erat volutpat. Aliquam laoreet at nisi a rhoncus. Curabitur gravida tortor turpis, et molestie orci accumsan eu. Vestibulum fermentum dui dui. Donec pulvinar vel ligula ac tincidunt. Nunc magna massa, scelerisque vel commodo eu, convallis nec dolor. Praesent pellentesque semper fringilla. Suspendisse sed posuere nisl. Vestibulum egestas lorem id tincidunt gravida. Donec quis vulputate magna. Aliquam congue odio eu sagittis vulputate. Mauris enim magna, finibus vel justo non, faucibus molestie ipsum. Curabitur faucibus magna imperdiet pretium pharetra. Nullam eget volutpat mauris. Nulla commodo nisl in semper gravida. Fusce cursus quam sit amet massa maximus convallis. Sed vestibulum est velit, at aliquet risus luctus ac. Praesent vehicula dolor semper gravida dignissim. Donec varius eros at orci pulvinar finibus quis non elit. Aliquam ultricies odio vitae tempor dignissim. Phasellus id sem et magna vestibulum tempus vel ac velit. Vivamus sit amet ultricies elit. Curabitur leo ante, venenatis eu sodales non, posuere ac ex.',
     links: [
       {
-        label: 'mockup desktop',
+        label: 'Voir la maquette',
         url:
           'https://xd.adobe.com/view/3ee2275a-c3db-435b-a949-d0bc45e7a3c0-6bb1/',
         description:
           'Le lien vers la maquette Adobe XD pour la version ordinateur.'
       },
       {
-        label: 'mockup mobile',
+        label: 'Voir la maquette',
         url:
           'https://xd.adobe.com/view/5037430d-1ae9-484b-4cae-c1c5f98884fc-2606/',
         description:
           'Le lien vers la maquette Adobe XD pour la version  portable et tablette.'
       },
       {
-        label: 'code',
+        label: 'Voir le code',
         url: 'https://github.com/anaviktoriv/SmartLife',
         description: 'Le lien vers la "repo" Github.'
       }

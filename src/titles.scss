@@ -1,0 +1,26 @@
+h2 {
+  color: $main-darkblue;
+  text-align: center;
+  margin: 0.5em;
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  h2 {
+    font: $mobile-h2;
+  }
+}
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  h2 {
+    font: $tablet-h2;
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  h2 {
+    font: $desktop-h2;
+  }
+}

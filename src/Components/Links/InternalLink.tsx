@@ -6,15 +6,12 @@ import Arrow from '../../assets/icons/darkblue_arrow.svg';
 
 import './styles.scss';
 
-type LinkComponentProps = {
+type InternalLinkProps = {
   url: string;
   text: string;
 };
 
-const LinkComponent: FunctionComponent<LinkComponentProps> = ({
-  url,
-  text
-}) => {
+const InternalLink: FunctionComponent<InternalLinkProps> = ({ url, text }) => {
   const { t }: { t: any } = useTranslation();
 
   return (
@@ -34,4 +31,4 @@ const LinkComponent: FunctionComponent<LinkComponentProps> = ({
   );
 };
 
-export default LinkComponent;
+export default InternalLink;
