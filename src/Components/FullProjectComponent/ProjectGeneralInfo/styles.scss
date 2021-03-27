@@ -8,8 +8,8 @@
   display: flex;
   flex-direction: column;
   max-width: 1400px;
-  margin: 1em;
   align-items: center;
+  padding: 30px;
 
   &-Title {
     color: $main-darkblue;
@@ -44,8 +44,6 @@
 
 @media (max-width: $mobile-max-width) {
   .ProjectGeneralContainer {
-    width: 80%;
-
     &-Title {
       font: $mobile-h1;
     }
@@ -66,8 +64,6 @@
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
   .ProjectGeneralContainer {
-    width: 80%;
-
     &-Title {
       font: $tablet-h1;
     }
@@ -89,8 +85,6 @@
 /* ---------------------------  Desktop --------------------------- */
 @media (min-width: $desktop-min-width) {
   .ProjectGeneralContainer {
-    width: 90%;
-
     &-Title {
       font: $desktop-h1;
     }

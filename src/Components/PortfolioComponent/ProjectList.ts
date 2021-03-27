@@ -60,6 +60,31 @@ const projectList: Array<Project> = [
         url: 'https://github.com/anaviktoriv/SmartLife',
         description: 'Le lien vers la "repo" Github.'
       }
+    ],
+    features: [
+      {
+        title: 'Feature 1',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio nisl, vehicula eget neque ac, rhoncus tempor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus leo sem, suscipit in eros vel, ullamcorper sodales tellus. In faucibus pellentesque interdum. Cras nulla mauris, malesuada non massa vitae, vestibulum interdum nisi.',
+        visual: 'Photo'
+      },
+      {
+        title: 'Feature 2',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio nisl, vehicula eget neque ac, rhoncus tempor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus leo sem, suscipit in eros vel, ullamcorper sodales tellus.',
+        visual: 'Photo'
+      },
+      {
+        title: 'Feature 3',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio nisl, vehicula eget neque ac, rhoncus tempor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus leo sem, suscipit in eros vel, ullamcorper sodales tellus. In faucibus pellentesque interdum. Cras nulla mauris, malesuada non massa vitae, vestibulum interdum nisi.',
+        visual: 'Photo'
+      },
+      {
+        title: 'Feature 4',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio nisl, vehicula eget neque ac, rhoncus tempor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus leo sem, suscipit in eros vel, ullamcorper sodales tellus. In faucibus pellentesque interdum. Cras nulla mauris, malesuada non massa vitae, vestibulum interdum nisi.'
+      }
     ]
   },
   {

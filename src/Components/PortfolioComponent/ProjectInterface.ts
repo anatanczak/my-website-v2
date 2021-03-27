@@ -24,6 +24,6 @@ export interface ProjectLink {
 
 export interface ProjectFeature {
   title: string;
-  decription: string;
+  description: string;
   visual?: string;
 }

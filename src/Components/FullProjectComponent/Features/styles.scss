@@ -1,0 +1,58 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+@import 'src/titles.scss';
+
+.FeaturesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;
+  margin: 30px;
+
+  & > div {
+    background-color: $main-palegreen;
+    margin-bottom: 30px;
+    color: $main-darkblue;
+    button {
+      background-color: $main-lightgrey;
+    }
+  }
+  & > div:nth-child(2n + 1) {
+    background-color: $main-darkblue;
+    color: $main-white;
+    button {
+      background-color: $main-palegreen;
+    }
+  }
+  & > div:nth-child(3n + 1) {
+    background-color: $main-lightgrey;
+    color: $main-darkblue;
+    button {
+      background-color: $main-lilly;
+    }
+  }
+  & > div:nth-child(4n + 1) {
+    background-color: $main-lilly;
+    color: $main-darkblue;
+    button {
+      background-color: $main-lightgrey;
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .FeaturesContainer {
+  }
+}
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+}
