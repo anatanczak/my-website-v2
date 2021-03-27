@@ -1,8 +1,9 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import { ProjectLink } from '../../PortfolioComponent/ProjectInterface';
-import LinkNumber from './LinkNumber/LinkNumber';
+import Arrow from '../../../../assets/icons/darkblue_arrow.svg';
 
 import './styles.scss';
 
@@ -19,7 +20,10 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
       {links.map((link, index) => {
         return (
           <div key={'projectLink' + index}>
-            <LinkNumber position={index + 1} />
+            <div>
+              <p>{index + 1}</p>
+            </div>
+            <p>{link.description}</p>
           </div>
         );
       })}

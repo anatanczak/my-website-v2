@@ -30,36 +30,6 @@
     text-align: center;
     color: $main-darkblue;
   }
-  &-Link {
-    display: flex;
-    align-items: center;
-    color: $main-darkblue;
-    text-decoration: none;
-
-    &-LinkTextContainer {
-      @include underlinedTextContainerOnHover;
-      margin-right: 0.1em;
-
-      &-Text {
-        position: relative;
-        z-index: 2;
-      }
-    }
-    &-ArrowCircleBackground {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-      background-color: $main-lilly;
-      width: 16px;
-      height: 16px;
-      border-radius: 100%;
-      &-Arrow {
-        width: 50%;
-        margin-left: 0.1em;
-      }
-    }
-  }
 }
 
 /* ---------------------------  Mobile --------------------------- */
