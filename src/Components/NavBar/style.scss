@@ -143,8 +143,8 @@
     top: 0;
     bottom: 0;
     left: 0;
-    // height: -webkit-fill-available;
     transition: all ease-in-out 0.5s;
+    z-index: 0;
 
     &-AllwaysVisibleMenuContainer {
       flex-direction: column;
@@ -175,5 +175,9 @@
     &-MenuVisible {
       transform: scaleX(1);
     }
+  }
+
+  .OpenNavBarContainer {
+    z-index: 6;
   }
 }
