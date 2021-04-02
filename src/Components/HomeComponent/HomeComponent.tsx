@@ -9,6 +9,7 @@ import BioComponent from './BioComponent/BioComponent';
 import HobbiesComponent from './HobbiesComponent/HobbiesComponent';
 import IntroComponent from './IntroComponent/IntroComponent';
 import ServicesComponent from './ServicesComponent/ServicesComponent';
+import MailSticky from '../MailSticky/MailSticky';
 import Footer from '../Footer/Footer';
 
 import './styles.scss';
@@ -21,7 +22,7 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
   return (
     <>
       <NavBar activePage="aboutMe" />
-      <LanguageSelect />
+      {/* <LanguageSelect /> */}
       <div className="HomeComponentContainer">
         <section className="HomeComponentContainer-IntroHomeContainer">
           <IntroComponent />
@@ -42,6 +43,7 @@ const HomeComponent: FunctionComponent<HomeComponentProps> = ({}) => {
           <HobbiesComponent />
         </section>
       </div>
+      <MailSticky />
       <Footer />
     </>
   );

@@ -18,7 +18,7 @@ const ContactComponent: FunctionComponent<ContactComponentProps> = ({}) => {
   return (
     <>
       <NavBar activePage="contact" />
-      <LanguageSelect />
+      {/* <LanguageSelect /> */}
       <div className="ContactComponentContainer">
         <div className="ContactComponentContainer-InfoContainer">
           <h1>{t('contact.hireMe')}</h1>

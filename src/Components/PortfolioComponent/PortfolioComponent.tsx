@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 
 import NavBar from '../../Components/NavBar/NavBar';
+import MailSticky from '../MailSticky/MailSticky';
+
 import Footer from '../Footer/Footer';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
 
@@ -47,7 +49,7 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
   return (
     <>
       <NavBar activePage="portfolio" />
-      <LanguageSelect />
+      {/* <LanguageSelect /> */}
       <div className="PortfolioComonentContainer">
         <h1
           className="PortfolioComonentContainer-Title"
@@ -80,6 +82,7 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
         </div>
         <Projects category={activeCategory} />
       </div>
+      <MailSticky />
       <Footer />
     </>
   );

@@ -1,0 +1,46 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_buttons.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+
+.MailStickyContainer {
+  background-color: $translucent-lightgreen;
+  border-radius: $main-border-radius;
+
+  position: fixed;
+  z-index: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  &-Link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-Image {
+      width: 30px;
+      height: auto;
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .MailStickyContainer {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .MailStickyContainer {
+    top: 30px;
+    right: 30px;
+  }
+}
