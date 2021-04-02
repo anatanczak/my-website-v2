@@ -17,21 +17,24 @@ const IntroComponent: FunctionComponent<IntroComponentProps> = ({}) => {
         <h1 className="IntroductionAndPitchContainer-TextAndButtonContainer-MainTitle">
           {t('home.mainTitle')}
         </h1>
-        <h2
-          className="IntroductionAndPitchContainer-TextAndButtonContainer-Pitch"
-          onClick={() => {
-            console.log('clicking');
-          }}
-        >
+        <h2 className="IntroductionAndPitchContainer-TextAndButtonContainer-Pitch">
           {t('home.pitch')}
         </h2>
-        <a
-          href="/files/cv_tanczak_fullstack.pdf"
-          className="IntroductionAndPitchContainer-TextAndButtonContainer-DownloadButton"
-          download
-        >
-          {t('home.button.downloadResume')}
-        </a>
+        <div className="IntroductionAndPitchContainer-TextAndButtonContainer-ButtonsContainer">
+          <a
+            href="/files/cv_tanczak_fullstack.pdf"
+            className="IntroductionAndPitchContainer-TextAndButtonContainer-ButtonsContainer-DownloadButton"
+            download
+          >
+            {t('home.button.downloadResume')}
+          </a>
+          <Link
+            className="IntroductionAndPitchContainer-TextAndButtonContainer-ButtonsContainer-DownloadButton"
+            to="/portfolio"
+          >
+            {t('home.button.viewPortfolio')}
+          </Link>
+        </div>
       </div>
     </div>
   );
