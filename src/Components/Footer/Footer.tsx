@@ -47,9 +47,12 @@ const Footer: FunctionComponent<FooterProps> = ({}) => {
             src={Email}
             alt="Email icon"
           />
-          <p className="FooterContainer-ContactContainer-Contact-Text">
+          <a
+            href="mailto:anatkachen@gmail.com"
+            className="FooterContainer-ContactContainer-Contact-Text"
+          >
             anatkachen@gmail.com
-          </p>
+          </a>
         </div>
       </div>
       <div className="FooterContainer-SocialLinksContainer">
