@@ -22,7 +22,8 @@ const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
 }) => {
   const { t }: { t: any } = useTranslation();
   const [windowWidth] = useWindowSize();
-  const text = description.split('/n');
+  const projectLongDescription: string = t(description);
+  const text = projectLongDescription.split('\n');
 
   return (
     <div className="ProjectGeneralContainer">
@@ -30,7 +31,7 @@ const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
       {quote && (
         <div className="ProjectGeneralContainer-QuoteContainer">
           <img src={LeftQuotes} alt="left quotes" />
-          <h4>{quote}</h4>
+          <h4>{t(quote)}</h4>
           <img src={RightQuotes} alt="right quotes" />
         </div>
       )}

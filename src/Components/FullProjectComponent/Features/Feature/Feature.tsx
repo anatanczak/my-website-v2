@@ -14,8 +14,8 @@ const Feature: FunctionComponent<FeatureProps> = ({ feature }) => {
 
   return (
     <div className="FeatureContainer">
-      <h3>{feature.title}</h3>
-      <p>{feature.description}</p>
+      <h3>{t(feature.title)}</h3>
+      <p>{t(feature.description)}</p>
       {feature.visual && <button>Have a look</button>}
     </div>
   );

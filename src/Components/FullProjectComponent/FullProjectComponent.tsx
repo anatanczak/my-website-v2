@@ -6,6 +6,7 @@ import ProjectList from '../PortfolioComponent/ProjectList';
 import ProjectType from '../PortfolioComponent/ProjectInterface';
 
 import NavBar from '../NavBar/NavBar';
+import MailSticky from '../MailSticky/MailSticky';
 import Footer from '../Footer/Footer';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
 
@@ -49,7 +50,7 @@ const FullProjectComponent: FunctionComponent<FullProjectComponentProps> = ({}) 
       {project && (
         <>
           <NavBar activePage="portfolio" />
-          <LanguageSelect />
+          {/* <LanguageSelect /> */}
           <div className="FullProjectComonentContainer">
             <ProjectGeneralInfo
               title={project.name}
@@ -60,6 +61,7 @@ const FullProjectComponent: FunctionComponent<FullProjectComponentProps> = ({}) 
             {project.links && <Links links={project.links} />}
             {project.features && <Features features={project.features} />}
           </div>
+          <MailSticky />
           <Footer />
         </>
       )}

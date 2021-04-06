@@ -15,7 +15,9 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
 
   return (
     <div className="ProjectLinksContainer">
-      <h2 className="ProjectLinksContainer-Title">Links</h2>
+      <h2 className="ProjectLinksContainer-Title">
+        {t('portfolio.fullProjectDetail.links')}
+      </h2>
       <div className="ProjectLinksContainer-LinksContainer">
         {links.map((link, index) => {
           return (
@@ -28,9 +30,6 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
                   {index + 1}
                 </p>
               </div>
-              <p className="ProjectLinksContainer-LinksContainer-IndLinkContainer-Description">
-                {link.description}
-              </p>
               <ExternalLink url={link.url} text={link.label} />
             </div>
           );

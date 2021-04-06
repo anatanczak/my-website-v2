@@ -14,7 +14,7 @@ const Features: FunctionComponent<FeaturesProps> = ({ features }) => {
 
   return (
     <div className="FeaturesContainer">
-      <h2>Features</h2>
+      <h2>{t('portfolio.fullProjectDetail.features')}</h2>
       {features.map((feature, index) => {
         return <Feature key={'projectFeature' + index} feature={feature} />;
       })}

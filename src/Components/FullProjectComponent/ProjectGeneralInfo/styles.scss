@@ -19,6 +19,7 @@
   &-QuoteContainer {
     display: flex;
     align-items: baseline;
+    margin-bottom: 20px;
 
     img {
       height: auto;
@@ -38,6 +39,9 @@
   }
   &-Text {
     color: $main-darkblue;
+    &-Paragraph {
+      margin-bottom: 1em;
+    }
   }
 }
 /* ---------------------------  Mobile --------------------------- */

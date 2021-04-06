@@ -37,55 +37,8 @@ const projectList: Array<Project> = [
     githubLink: 'https://github.com/anaviktoriv/SmartLife',
     quote:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet',
-    heroImage: NewPortfolioHeroImage,
-    longDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet, urna vitae fringilla accumsan, massa nisl tincidunt massa, a tristique tellus purus nec erat. Fusce elit eros, viverra at feugiat in, dignissim eget ex. /n Aenean malesuada est nec sem congue, vitae semper ante facilisis. Etiam maximus tempus enim, quis ullamcorper enim ultrices efficitur. /n Aenean luctus dui quis urna placerat, non varius erat elementum. Nullam risus sem, condimentum quis elit sit amet, tempor fringilla diam. /n Mauris orci libero, convallis quis massa vitae, cursus rhoncus nulla. Ut sollicitudin sed lectus at posuere. Integer sed sapien at purus vehicula placerat. Sed lorem ex, posuere at ultrices et, ornare eget arcu. Nam eros ligula, dignissim non quam vitae, dignissim pretium ipsum. Proin convallis velit urna. Duis volutpat magna at ullamcorper tincidunt. Curabitur lacinia ultrices massa. Aliquam erat volutpat. Aliquam laoreet at nisi a rhoncus. Curabitur gravida tortor turpis, et molestie orci accumsan eu. Vestibulum fermentum dui dui. Donec pulvinar vel ligula ac tincidunt. Nunc magna massa, scelerisque vel commodo eu, convallis nec dolor. Praesent pellentesque semper fringilla. Suspendisse sed posuere nisl. Vestibulum egestas lorem id tincidunt gravida. Donec quis vulputate magna. Aliquam congue odio eu sagittis vulputate. Mauris enim magna, finibus vel justo non, faucibus molestie ipsum. Curabitur faucibus magna imperdiet pretium pharetra. Nullam eget volutpat mauris. Nulla commodo nisl in semper gravida. Fusce cursus quam sit amet massa maximus convallis. Sed vestibulum est velit, at aliquet risus luctus ac. Praesent vehicula dolor semper gravida dignissim. Donec varius eros at orci pulvinar finibus quis non elit. Aliquam ultricies odio vitae tempor dignissim. Phasellus id sem et magna vestibulum tempus vel ac velit. Vivamus sit amet ultricies elit. Curabitur leo ante, venenatis eu sodales non, posuere ac ex.',
-    links: [
-      {
-        label: 'Voir la maquette',
-        url:
-          'https://xd.adobe.com/view/3ee2275a-c3db-435b-a949-d0bc45e7a3c0-6bb1/',
-        description:
-          'Le lien vers la maquette Adobe XD pour la version ordinateur.'
-      },
-      {
-        label: 'Voir la maquette',
-        url:
-          'https://xd.adobe.com/view/5037430d-1ae9-484b-4cae-c1c5f98884fc-2606/',
-        description:
-          'Le lien vers la maquette Adobe XD pour la version  portable et tablette.'
-      },
-      {
-        label: 'Voir le code',
-        url: 'https://github.com/anaviktoriv/SmartLife',
-        description: 'Le lien vers la "repo" Github.'
-      }
-    ],
-    features: [
-      {
-        title: 'Feature 1',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio nisl, vehicula eget neque ac, rhoncus tempor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus leo sem, suscipit in eros vel, ullamcorper sodales tellus. In faucibus pellentesque interdum. Cras nulla mauris, malesuada non massa vitae, vestibulum interdum nisi.',
-        visual: 'Photo'
-      },
-      {
-        title: 'Feature 2',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio nisl, vehicula eget neque ac, rhoncus tempor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus leo sem, suscipit in eros vel, ullamcorper sodales tellus.',
-        visual: 'Photo'
-      },
-      {
-        title: 'Feature 3',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio nisl, vehicula eget neque ac, rhoncus tempor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus leo sem, suscipit in eros vel, ullamcorper sodales tellus. In faucibus pellentesque interdum. Cras nulla mauris, malesuada non massa vitae, vestibulum interdum nisi.',
-        visual: 'Photo'
-      },
-      {
-        title: 'Feature 4',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio nisl, vehicula eget neque ac, rhoncus tempor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus leo sem, suscipit in eros vel, ullamcorper sodales tellus. In faucibus pellentesque interdum. Cras nulla mauris, malesuada non massa vitae, vestibulum interdum nisi.'
-      }
-    ]
+    heroImage: 'heroImage',
+    longDescription: 'sjhkjshgjkshgkjhsgk'
   },
   {
     id: 2,
@@ -95,9 +48,26 @@ const projectList: Array<Project> = [
     thumbnailBackgroundColor: BackgroundColorCode.PaleGreen,
     shortDescription: 'portfolio.project.newPortfolio.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/my-website-v2',
-    quote: 'lorem ipsum dolorem',
-    longDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet, urna vitae fringilla accumsan, massa nisl tincidunt massa, a tristique tellus purus nec erat. Fusce elit eros, viverra at feugiat in, dignissim eget ex. Aenean malesuada est nec sem congue, vitae semper ante facilisis. Etiam maximus tempus enim, quis ullamcorper enim ultrices efficitur. Aenean luctus dui quis urna placerat, non varius erat elementum. Nullam risus sem, condimentum quis elit sit amet, tempor fringilla diam. Mauris orci libero, convallis quis massa vitae, cursus rhoncus nulla. Ut sollicitudin sed lectus at posuere. Integer sed sapien at purus vehicula placerat. Sed lorem ex, posuere at ultrices et, ornare eget arcu. Nam eros ligula, dignissim non quam vitae, dignissim pretium ipsum. Proin convallis velit urna. Duis volutpat magna at ullamcorper tincidunt. Curabitur lacinia ultrices massa. Aliquam erat volutpat. Aliquam laoreet at nisi a rhoncus. Curabitur gravida tortor turpis, et molestie orci accumsan eu. Vestibulum fermentum dui dui. Donec pulvinar vel ligula ac tincidunt. Nunc magna massa, scelerisque vel commodo eu, convallis nec dolor. Praesent pellentesque semper fringilla. Suspendisse sed posuere nisl. Vestibulum egestas lorem id tincidunt gravida. Donec quis vulputate magna. Aliquam congue odio eu sagittis vulputate. Mauris enim magna, finibus vel justo non, faucibus molestie ipsum. Curabitur faucibus magna imperdiet pretium pharetra. Nullam eget volutpat mauris. Nulla commodo nisl in semper gravida. Fusce cursus quam sit amet massa maximus convallis. Sed vestibulum est velit, at aliquet risus luctus ac. Praesent vehicula dolor semper gravida dignissim. Donec varius eros at orci pulvinar finibus quis non elit. Aliquam ultricies odio vitae tempor dignissim. Phasellus id sem et magna vestibulum tempus vel ac velit. Vivamus sit amet ultricies elit. Curabitur leo ante, venenatis eu sodales non, posuere ac ex.'
+    quote: 'portfolio.project.newPortfolio.quote',
+    heroImage: NewPortfolioHeroImage,
+    longDescription: 'portfolio.project.newPortfolio.longDescription',
+    links: [
+      {
+        label: 'portfolio.project.newPortfolio.link1',
+        url:
+          'https://xd.adobe.com/view/3a93144a-c480-4316-91d9-a07e0e60b374-6fc0/grid'
+      },
+      {
+        label: 'portfolio.project.newPortfolio.link2',
+        url: 'https://github.com/anaviktoriv/my-website-v2'
+      }
+    ],
+    features: [
+      {
+        title: 'portfolio.project.newPortfolio.feature1.title',
+        description: 'portfolio.project.newPortfolio.feature1.description'
+      }
+    ]
   },
   {
     id: 3,
