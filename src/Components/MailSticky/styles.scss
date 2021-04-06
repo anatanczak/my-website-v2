@@ -6,8 +6,9 @@
 @import 'src/_fonts.scss';
 
 .MailStickyContainer {
-  background-color: $translucent-lightgreen;
+  background-color: $translucent-olivegreen;
   border-radius: $main-border-radius;
+  //box-shadow: 0 0 2px $main-lightgrey;
 
   position: fixed;
   z-index: 10px;
