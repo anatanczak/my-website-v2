@@ -20,6 +20,8 @@
 
     &-Title {
       color: inherit;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
     &-Image {
       width: 90%;
@@ -28,10 +30,8 @@
     &-Button {
       @include simple-button;
       margin: 1em;
-      a {
-        text-decoration: inherit;
-        color: inherit;
-      }
+      text-decoration: none;
+      color: $main-darkblue;
     }
   }
   &-CardBack {
@@ -51,6 +51,8 @@
     &-Button {
       @include simple-button;
       margin: 1em;
+      text-decoration: none;
+      color: $main-darkblue;
     }
   }
 }

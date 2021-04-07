@@ -63,15 +63,25 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
         <p className="ProjectContainer-CardFront-Description">
           {t(project.shortDescription)}
         </p>
-        <button
-          className="ProjectContainer-CardFront-Button"
-          style={buttonStyles}
-          onClick={() => {
-            buttonClickHandler(project.id);
-          }}
-        >
-          {t('portfolio.project.seeProjectLink')}
-        </button>
+        {project.hasDetailedinfo ? (
+          <button
+            className="ProjectContainer-CardFront-Button"
+            style={buttonStyles}
+            onClick={() => {
+              buttonClickHandler(project.id);
+            }}
+          >
+            {t('portfolio.project.seeProjectLink')}
+          </button>
+        ) : (
+          <a
+            className="ProjectContainer-CardFront-Button"
+            style={buttonStyles}
+            href={project.githubLink}
+          >
+            {t('portfolio.project.seeCodeLink')}
+          </a>
+        )}
       </div>
       <div className="ProjectContainer-CardBack">
         <h3 className="ProjectContainer-CardBack-Title">{project.name}</h3>
@@ -82,15 +92,25 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
         <p className="ProjectContainer-CardBack-Description">
           {t(project.shortDescription)}
         </p>
-        <button
-          className="ProjectContainer-CardBack-Button"
-          style={buttonStyles}
-          onClick={() => {
-            buttonClickHandler(project.id);
-          }}
-        >
-          {t('portfolio.project.seeProjectLink')}
-        </button>
+        {project.hasDetailedinfo ? (
+          <button
+            className="ProjectContainer-CardBack-Button"
+            style={buttonStyles}
+            onClick={() => {
+              buttonClickHandler(project.id);
+            }}
+          >
+            {t('portfolio.project.seeProjectLink')}
+          </button>
+        ) : (
+          <a
+            className="ProjectContainer-CardBack-Button"
+            style={buttonStyles}
+            href={project.githubLink}
+          >
+            {t('portfolio.project.seeCodeLink')}
+          </a>
+        )}
       </div>
     </div>
   );

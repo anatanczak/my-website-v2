@@ -6,6 +6,7 @@ export default interface Project {
   thumbnailBackgroundColor: string;
   shortDescription: string;
   githubLink: string;
+  hasDetailedinfo: boolean;
   quote?: string;
   //TODO: make hero image required
   heroImage?: string;
