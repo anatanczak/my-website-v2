@@ -10,9 +10,13 @@ import './styles.scss';
 
 type ProjectProps = {
   project: ProjectInterface;
+  activeCategory: string;
 };
 
-const Project: FunctionComponent<ProjectProps> = ({ project }) => {
+const Project: FunctionComponent<ProjectProps> = ({
+  project,
+  activeCategory
+}) => {
   const { t }: { t: any } = useTranslation();
   let history = useHistory();
 

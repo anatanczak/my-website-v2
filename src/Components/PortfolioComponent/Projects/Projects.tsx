@@ -12,7 +12,7 @@ type ProjectsProps = {
   category: string;
 };
 
-function blabla(
+function prepareProjectList(
   projects: Array<ProjectType>,
   projCategory = 'uiux'
 ): Array<Array<ProjectType>> {
@@ -38,15 +38,12 @@ function blabla(
 const Projects: FunctionComponent<ProjectsProps> = ({ category }) => {
   const { t }: { t: any } = useTranslation();
   const [projectList, setProjectList] = useState<Array<Array<ProjectType>>>();
+  const [refreshComponent, setRefreshComponent] = useState(false);
 
   useEffect(() => {
-    const tempArray = blabla(projectListFull, category);
+    const tempArray = prepareProjectList(projectListFull, category);
     setProjectList(tempArray);
   }, [category]);
-
-  // useEffect(() => {
-  //   console.log(projectList);
-  // }, [projectList]);
 
   return (
     <>
@@ -59,7 +56,7 @@ const Projects: FunctionComponent<ProjectsProps> = ({ category }) => {
                   key={project.name}
                   className="ProjectsContainer-ProjectIndContainer"
                 >
-                  <Project project={project} />
+                  <Project project={project} activeCategory={category} />
                 </div>
               );
             })}

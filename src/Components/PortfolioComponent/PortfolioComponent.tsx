@@ -41,8 +41,10 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
     setActiveCategory(category);
     if (category === 'all') {
       history.push('/portfolio');
+      // window.location.reload();
     } else {
       history.push(`/portfolio/${category}`);
+      // window.location.reload();
     }
   };
 
