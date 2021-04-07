@@ -3,75 +3,61 @@
 @import 'src/_breakpoints.scss';
 @import 'src/_mixins.scss';
 @import 'src/_fonts.scss';
+@import 'src/titles.scss';
+@import 'src/_buttons.scss';
 
-/* ---------------------------  Commont Styles --------------------------- */
-
-.ServiceContainer {
+.FeatureContainer {
+  border-radius: $main-border-radius;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1em;
-
-  &-Image {
-    width: auto;
-    height: 60px;
-    margin: 0.5em;
-  }
-  &-Title {
+  padding: 20px;
+  h3 {
     text-transform: uppercase;
-    text-align: center;
-    color: $main-lilly;
-    margin: 0.5em;
+    margin-bottom: 0.5em;
   }
-  &-Text {
-    margin: 0.5em;
-    width: 80%;
-    text-align: center;
-    color: $main-darkblue;
+  button {
+    margin-top: 1em;
+    align-self: center;
+    border-radius: $main-border-radius;
+    padding: 0.4em 0.8em;
   }
 }
 
 /* ---------------------------  Mobile --------------------------- */
 
 @media (max-width: $mobile-max-width) {
-  .ServiceContainer {
-    &-Image {
-      height: 50px;
-    }
-    &-Title {
+  .FeatureContainer {
+    h3 {
       font: $mobile-h3;
     }
-    &-Text {
+    p {
       font: $mobile-p;
+    }
+    button {
+      font: $mobile-small-button;
     }
   }
 }
-
 /* ---------------------------  Tablet --------------------------- */
 @media (min-width: $tablet-min-width) {
-  .ServiceContainer {
-    width: 33%;
-    &-Title {
+  .FeatureContainer {
+    h3 {
       font: $tablet-h3;
     }
-    &-Text {
+    p {
       font: $tablet-p;
+    }
+    button {
+      font: $tablet-small-button;
     }
   }
 }
 
 /* ---------------------------  Desktop --------------------------- */
 @media (min-width: $desktop-min-width) {
-  .ServiceContainer {
-    &-Image {
-      height: 90px;
-    }
-    &-Title {
+  .FeatureContainer {
+    h3 {
       font: $desktop-h3;
-    }
-    &-Text {
-      font: $desktop-p;
     }
   }
 }

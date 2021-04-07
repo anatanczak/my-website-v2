@@ -12,19 +12,25 @@
   font: $footer-title;
 }
 
+/* ---- UNDERLINED LINKS ---- */
+
+@mixin lineBehind {
+  content: ' ';
+  position: absolute;
+  border-radius: 3px;
+  height: 40%;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
 @mixin underlinedTextContainer {
   position: relative;
   padding: 0.1em 0.3em;
   &::after {
-    content: ' ';
     background-color: $main-lilly;
-    position: absolute;
-    border-radius: 3px;
-    height: 20%;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transition: all 0.5s ease-in-out;
+    @include lineBehind;
+    transform-origin: left;
   }
 }
 
@@ -33,14 +39,8 @@
   padding: 0.1em 0.3em;
   cursor: pointer;
   &::after {
-    content: ' ';
     background-color: $main-lilly;
-    position: absolute;
-    border-radius: 3px;
-    height: 20%;
-    top: 50%;
-    left: 0;
-    right: 0;
+    @include lineBehind;
     transform: scaleX(0);
     transform-origin: left;
   }
@@ -54,14 +54,7 @@
   position: relative;
   padding: 0.1em 0.3em;
   &::after {
-    content: ' ';
     background-color: transparent;
-    position: absolute;
-    border-radius: 3px;
-    height: 20%;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transition: all 0.5s ease-in-out;
+    @include lineBehind;
   }
 }

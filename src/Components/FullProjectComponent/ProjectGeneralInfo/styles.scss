@@ -1,0 +1,108 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+
+.ProjectGeneralContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  align-items: center;
+  padding: 30px;
+
+  &-Title {
+    color: $main-darkblue;
+    margin: 0.5em;
+  }
+
+  &-QuoteContainer {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+
+    img {
+      height: auto;
+      margin-top: 0.5em;
+    }
+    h4 {
+      color: $main-darkblue;
+      text-align: center;
+    }
+  }
+
+  &-Image {
+    max-width: 100%;
+    height: auto;
+    border-radius: $main-border-radius;
+    margin-bottom: 20px;
+  }
+  &-Text {
+    color: $main-darkblue;
+    &-Paragraph {
+      margin-bottom: 1em;
+    }
+  }
+}
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .ProjectGeneralContainer {
+    &-Title {
+      font: $mobile-h1;
+    }
+
+    &-QuoteContainer {
+      img {
+        width: 15px;
+      }
+      h4 {
+        font: $mobile-quote-font;
+      }
+    }
+    &-Text {
+      font: $mobile-p;
+    }
+  }
+}
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .ProjectGeneralContainer {
+    &-Title {
+      font: $tablet-h1;
+    }
+
+    &-QuoteContainer {
+      img {
+        width: 17px;
+      }
+      h4 {
+        font: $tablet-quote-font;
+      }
+    }
+    &-Text {
+      font: $tablet-p;
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .ProjectGeneralContainer {
+    &-Title {
+      font: $desktop-h1;
+    }
+
+    &-QuoteContainer {
+      img {
+        width: 19px;
+      }
+      h4 {
+        font: $desktop-quote-font;
+      }
+    }
+    &-Text {
+      font: $desktop-p;
+    }
+  }
+}

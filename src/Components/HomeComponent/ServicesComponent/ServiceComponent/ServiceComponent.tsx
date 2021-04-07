@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Service from './ServiceInterface';
 
-import Arrow from '../../../../assets/icons/darkblue_arrow.svg';
-
+import InternalLink from '../../../Links/InternalLink';
 import './styles.scss';
 
 type ServiceComponentProps = {
@@ -16,7 +15,7 @@ const ServiceComponent: FunctionComponent<ServiceComponentProps> = ({
   service
 }) => {
   const { t }: { t: any } = useTranslation();
-  const link = `/portfolio/${service.tag}`;
+  const url = `/portfolio/${service.tag}`;
 
   return (
     <div className="ServiceContainer">
@@ -27,21 +26,7 @@ const ServiceComponent: FunctionComponent<ServiceComponentProps> = ({
       />
       <h3 className="ServiceContainer-Title">{t(service.title)}</h3>
       <p className="ServiceContainer-Text">{t(service.text)}</p>
-      <Link to={link} className="ServiceContainer-Link">
-        <div className="ServiceContainer-Link-LinkTextContainer">
-          <p className="ServiceContainer-Link-LinkTextContainer-Text">
-            {t('home.services.link')}
-          </p>
-        </div>
-
-        <span className="ServiceContainer-Link-ArrowCircleBackground">
-          <img
-            className="ServiceContainer-Link-ArrowCircleBackground-Arrow"
-            src={Arrow}
-            alt="arrow"
-          />
-        </span>
-      </Link>
+      <InternalLink url={url} text={'home.services.link'} />
     </div>
   );
 };

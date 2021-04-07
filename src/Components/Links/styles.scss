@@ -1,0 +1,72 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+
+/* ---------------------------  Commont Styles --------------------------- */
+
+.Link {
+  display: flex;
+  align-items: center;
+  color: $main-darkblue;
+  text-decoration: none;
+
+  &-LinkTextContainer {
+    margin-right: 0.1em;
+
+    &-Text {
+      position: relative;
+      z-index: 2;
+      margin: 0.2em;
+    }
+  }
+  &-ArrowCircleBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: $main-lilly;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    &-Arrow {
+      width: 50%;
+      margin-left: 0.1em;
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+@media (max-width: $mobile-max-width) {
+  .Link {
+    &-LinkTextContainer {
+      &-Text {
+        font: $mobile-p;
+      }
+    }
+  }
+}
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .Link {
+    &-LinkTextContainer {
+      @include underlinedTextContainerOnHover;
+      &-Text {
+        font: $tablet-p;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .Link {
+    &-LinkTextContainer {
+      @include underlinedTextContainerOnHover;
+      &-Text {
+        font: $desktop-p;
+      }
+    }
+  }
+}

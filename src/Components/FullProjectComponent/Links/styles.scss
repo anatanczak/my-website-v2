@@ -1,0 +1,107 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+@import 'src/titles.scss';
+
+.ProjectLinksContainer {
+  background-color: $main-lightgrey;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-LinksContainer {
+    &-IndLinkContainer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      &-NumberContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $main-lilly;
+        border-radius: 50%;
+
+        &-Number {
+          font: 700 22px 'Comfortaa', sans-serif;
+        }
+      }
+
+      &-Description {
+        margin: 0;
+        color: $main-darkblue;
+      }
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+  .ProjectLinksContainer {
+    &-LinksContainer {
+      &-IndLinkContainer {
+        flex-direction: column;
+        &-NumberContainer {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          &-Number {
+            font: 700 16px 'Comfortaa', sans-serif;
+          }
+        }
+        &-Description {
+          font: $mobile-p;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+  .ProjectLinksContainer {
+    &-LinksContainer {
+      &-IndLinkContainer {
+        &-NumberContainer {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          margin-right: 5px;
+          &-Number {
+            font: 700 16px 'Comfortaa', sans-serif;
+          }
+        }
+        &-Description {
+          font: $tablet-p;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+  .ProjectLinksContainer {
+    &-LinksContainer {
+      &-IndLinkContainer {
+        &-NumberContainer {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          &-Number {
+            font: 700 18px 'Comfortaa', sans-serif;
+          }
+        }
+        &-Description {
+          font: $desktop-p;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

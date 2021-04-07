@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import ProjectInterface from '../../ProjectInterface';
@@ -13,6 +14,7 @@ type ProjectProps = {
 
 const Project: FunctionComponent<ProjectProps> = ({ project }) => {
   const { t }: { t: any } = useTranslation();
+  let history = useHistory();
 
   let styles = {
     backgroundColor: project.thumbnailBackgroundColor,
@@ -46,7 +48,7 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
   }
 
   const buttonClickHandler = (projectId: number) => {
-    console.log(projectId);
+    history.push('/portfolio/projects/' + projectId);
   };
 
   return (
@@ -64,13 +66,11 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
         <button
           className="ProjectContainer-CardFront-Button"
           style={buttonStyles}
-          // onClick={() => {
-          //   buttonClickHandler(project.id);
-          // }}
+          onClick={() => {
+            buttonClickHandler(project.id);
+          }}
         >
-          <a href={project.githubLink}>
-            {t('portfolio.project.seeProjectLink')}
-          </a>
+          {t('portfolio.project.seeProjectLink')}
         </button>
       </div>
       <div className="ProjectContainer-CardBack">
@@ -89,9 +89,7 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
             buttonClickHandler(project.id);
           }}
         >
-          <a href={project.githubLink}>
-            {t('portfolio.project.seeProjectLink')}
-          </a>
+          {t('portfolio.project.seeProjectLink')}
         </button>
       </div>
     </div>
