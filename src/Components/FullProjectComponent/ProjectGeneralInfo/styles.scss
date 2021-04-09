@@ -3,6 +3,7 @@
 @import 'src/_breakpoints.scss';
 @import 'src/_mixins.scss';
 @import 'src/_fonts.scss';
+@import 'src/_buttons.scss';
 
 .ProjectGeneralContainer {
   display: flex;
@@ -10,6 +11,12 @@
   max-width: 1400px;
   align-items: center;
   padding: 30px;
+
+  &-Button {
+    position: relative;
+    align-self: flex-start;
+    margin-top: 6px;
+  }
 
   &-Title {
     color: $main-darkblue;

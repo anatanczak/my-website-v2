@@ -5,6 +5,10 @@ import SmartLifeThumbnail from '../../assets/projects/smartlife/smartlife_thumbn
 
 /* Meslistes Images */
 import MeslistesThumbnail from '../../assets/projects/meslistes/meslistes_thumbnail.webp';
+import MeslistesHeroImage from '../../assets/projects/meslistes/meslistes_hero_image.webp';
+import MeslistesDarkModeIphones from '../../assets/projects/meslistes/meslistes_dark_mode_iphones.webp';
+import MeslistesVerticalPhonesLightMode from '../../assets/projects/meslistes/meslistes_vertical_iphones_light_mode.webp';
+import MeslistesVerticalPhonesDarkMode from '../../assets/projects/meslistes/meslistes_vertical_iphones_dark_mode.webp';
 
 /* New Portfolio Images */
 import NewPortfolioThumbnail from '../../assets/projects/newPortfolio/new_portfolio_thumbnail.webp';
@@ -68,6 +72,26 @@ const projectList: Array<Project> = [
       {
         title: 'portfolio.project.newPortfolio.feature1.title',
         description: 'portfolio.project.newPortfolio.feature1.description'
+      },
+      {
+        title: 'portfolio.project.newPortfolio.feature2.title',
+        description: 'portfolio.project.newPortfolio.feature2.description'
+      },
+      {
+        title: 'portfolio.project.newPortfolio.feature3.title',
+        description: 'portfolio.project.newPortfolio.feature3.description'
+      },
+      {
+        title: 'portfolio.project.newPortfolio.feature4.title',
+        description: 'portfolio.project.newPortfolio.feature4.description'
+      },
+      {
+        title: 'portfolio.project.newPortfolio.feature5.title',
+        description: 'portfolio.project.newPortfolio.feature5.description'
+      },
+      {
+        title: 'portfolio.project.newPortfolio.feature6.title',
+        description: 'portfolio.project.newPortfolio.feature6.description'
       }
     ]
   },
@@ -92,10 +116,26 @@ const projectList: Array<Project> = [
     thumbnailBackgroundColor: BackgroundColorCode.Grey,
     shortDescription: 'portfolio.project.meslistes.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/meslistes',
-    hasDetailedinfo: false,
-    quote: 'lorem ipsum dolorem',
-    longDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet, urna vitae fringilla accumsan, massa nisl tincidunt massa, a tristique tellus purus nec erat. Fusce elit eros, viverra at feugiat in, dignissim eget ex. Aenean malesuada est nec sem congue, vitae semper ante facilisis. Etiam maximus tempus enim, quis ullamcorper enim ultrices efficitur. Aenean luctus dui quis urna placerat, non varius erat elementum. Nullam risus sem, condimentum quis elit sit amet, tempor fringilla diam. Mauris orci libero, convallis quis massa vitae, cursus rhoncus nulla. Ut sollicitudin sed lectus at posuere. Integer sed sapien at purus vehicula placerat. Sed lorem ex, posuere at ultrices et, ornare eget arcu. Nam eros ligula, dignissim non quam vitae, dignissim pretium ipsum. Proin convallis velit urna. Duis volutpat magna at ullamcorper tincidunt. Curabitur lacinia ultrices massa. Aliquam erat volutpat. Aliquam laoreet at nisi a rhoncus. Curabitur gravida tortor turpis, et molestie orci accumsan eu. Vestibulum fermentum dui dui. Donec pulvinar vel ligula ac tincidunt. Nunc magna massa, scelerisque vel commodo eu, convallis nec dolor. Praesent pellentesque semper fringilla. Suspendisse sed posuere nisl. Vestibulum egestas lorem id tincidunt gravida. Donec quis vulputate magna. Aliquam congue odio eu sagittis vulputate. Mauris enim magna, finibus vel justo non, faucibus molestie ipsum. Curabitur faucibus magna imperdiet pretium pharetra. Nullam eget volutpat mauris. Nulla commodo nisl in semper gravida. Fusce cursus quam sit amet massa maximus convallis. Sed vestibulum est velit, at aliquet risus luctus ac. Praesent vehicula dolor semper gravida dignissim. Donec varius eros at orci pulvinar finibus quis non elit. Aliquam ultricies odio vitae tempor dignissim. Phasellus id sem et magna vestibulum tempus vel ac velit. Vivamus sit amet ultricies elit. Curabitur leo ante, venenatis eu sodales non, posuere ac ex.'
+    hasDetailedinfo: true,
+    quote: 'portfolio.project.meslistes.quote',
+    heroImage: MeslistesHeroImage,
+    longDescription: 'portfolio.project.meslistes.longDescription',
+    links: [
+      {
+        label: 'portfolio.project.meslistes.link1',
+        url:
+          'https://apps.apple.com/us/app/meslistes-a-checklist-app/id1458475140'
+      },
+      {
+        label: 'portfolio.project.meslistes.link2',
+        url: 'https://github.com/anaviktoriv/meslistes'
+      }
+    ],
+    images: [
+      MeslistesDarkModeIphones,
+      MeslistesVerticalPhonesLightMode,
+      MeslistesVerticalPhonesDarkMode
+    ]
   },
 
   {

@@ -15,6 +15,7 @@ export default interface Project {
   features?: Array<ProjectFeature>;
   //TODO: make imageArray required
   images?: Array<string>;
+  videos?: Array<string>;
 }
 
 export interface ProjectLink {

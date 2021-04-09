@@ -25,26 +25,30 @@ const PortfolioComponent: FunctionComponent<PortfolioComponentProps> = ({}) => {
     switch (pathname) {
       case '/portfolio/web':
         setActiveCategory('web');
+        window.sessionStorage.setItem('projectCategory', 'web');
         break;
       case '/portfolio/ios':
         setActiveCategory('ios');
+        window.sessionStorage.setItem('projectCategory', 'ios');
         break;
       case '/portfolio/uiux':
         setActiveCategory('uiux');
+        window.sessionStorage.setItem('projectCategory', 'uiux');
         break;
       default:
+        window.sessionStorage.setItem('projectCategory', 'all');
         break;
     }
   }, []);
 
   const projectCategoryClickHandler = (category: string) => {
     setActiveCategory(category);
+    window.sessionStorage.setItem('projectCategory', category);
+
     if (category === 'all') {
       history.push('/portfolio');
-      // window.location.reload();
     } else {
       history.push(`/portfolio/${category}`);
-      // window.location.reload();
     }
   };
 

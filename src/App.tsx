@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import PortfolioPage from './Pages/PortfolioPage/PortfolioPage';

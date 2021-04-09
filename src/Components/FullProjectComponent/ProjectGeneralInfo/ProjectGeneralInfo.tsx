@@ -1,9 +1,11 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import useWindowSize from '../../../CustomHooks/useWindowSize';
 
 import LeftQuotes from '../../../assets/icons/quotes-leftside-icon.svg';
 import RightQuotes from '../../../assets/icons/quotes-rightside-icon.svg';
+import BackToProjectsIcon from '../../../assets/icons/back_to_projects_icon.svg';
 
 import './styles.scss';
 
@@ -24,9 +26,17 @@ const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
   const [windowWidth] = useWindowSize();
   const projectLongDescription: string = t(description);
   const text = projectLongDescription.split('\n');
+  let previousURL = '/portfolio';
+  const projectCategory = window.sessionStorage.getItem('projectCategory');
+  if (projectCategory) {
+    previousURL = '/portfolio/' + projectCategory;
+  }
 
   return (
     <div className="ProjectGeneralContainer">
+      <Link to={previousURL} className="ProjectGeneralContainer-Button">
+        <img src={BackToProjectsIcon} alt="back icon" />
+      </Link>
       <h1 className="ProjectGeneralContainer-Title">{title}</h1>
       {quote && (
         <div className="ProjectGeneralContainer-QuoteContainer">
