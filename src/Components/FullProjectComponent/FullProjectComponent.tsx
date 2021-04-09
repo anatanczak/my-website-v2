@@ -54,6 +54,7 @@ const FullProjectComponent: FunctionComponent<FullProjectComponentProps> = ({}) 
           <div className="FullProjectComonentContainer">
             <ProjectGeneralInfo
               title={project.name}
+              technologies={project.technologies}
               description={project.longDescription}
               quote={project.quote}
               heroImage={project.heroImage}

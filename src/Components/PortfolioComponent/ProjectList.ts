@@ -54,6 +54,7 @@ const projectList: Array<Project> = [
     shortDescription: 'portfolio.project.newPortfolio.shortDescription',
     githubLink: 'https://github.com/anaviktoriv/my-website-v2',
     hasDetailedinfo: true,
+    technologies: ['React JS', 'SASS', 'TypeScript'],
     quote: 'portfolio.project.newPortfolio.quote',
     heroImage: NewPortfolioHeroImage,
     longDescription: 'portfolio.project.newPortfolio.longDescription',
@@ -118,6 +119,7 @@ const projectList: Array<Project> = [
     githubLink: 'https://github.com/anaviktoriv/meslistes',
     hasDetailedinfo: true,
     quote: 'portfolio.project.meslistes.quote',
+    technologies: ['Swift'],
     heroImage: MeslistesHeroImage,
     longDescription: 'portfolio.project.meslistes.longDescription',
     links: [

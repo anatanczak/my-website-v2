@@ -11,6 +11,7 @@ import './styles.scss';
 
 type ProjectGeneralInfoProps = {
   title: string;
+  technologies?: Array<string>;
   quote?: string;
   heroImage?: string;
   description: string;
@@ -18,6 +19,7 @@ type ProjectGeneralInfoProps = {
 
 const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
   title,
+  technologies,
   quote,
   heroImage,
   description
@@ -34,15 +36,27 @@ const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
 
   return (
     <div className="ProjectGeneralContainer">
-      <Link to={previousURL} className="ProjectGeneralContainer-Button">
-        <img src={BackToProjectsIcon} alt="back icon" />
+      <Link to={previousURL} className="ProjectGeneralContainer-ReturnLink">
+        <img
+          className="ProjectGeneralContainer-ReturnLink-Image"
+          src={BackToProjectsIcon}
+          alt="back icon"
+        />
       </Link>
       <h1 className="ProjectGeneralContainer-Title">{title}</h1>
+
       {quote && (
         <div className="ProjectGeneralContainer-QuoteContainer">
           <img src={LeftQuotes} alt="left quotes" />
           <h4>{t(quote)}</h4>
           <img src={RightQuotes} alt="right quotes" />
+        </div>
+      )}
+      {technologies && (
+        <div className="ProjectGeneralContainer-TechnologiesContainer">
+          {technologies.map((technology, index) => {
+            return <p key={title + index + technology}>{technology}</p>;
+          })}
         </div>
       )}
       {heroImage && (

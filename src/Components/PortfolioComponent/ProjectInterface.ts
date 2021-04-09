@@ -7,6 +7,7 @@ export default interface Project {
   shortDescription: string;
   githubLink: string;
   hasDetailedinfo: boolean;
+  technologies?: Array<string>;
   quote?: string;
   //TODO: make hero image required
   heroImage?: string;

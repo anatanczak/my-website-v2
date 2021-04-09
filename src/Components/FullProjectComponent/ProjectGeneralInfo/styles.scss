@@ -12,7 +12,7 @@
   align-items: center;
   padding: 30px;
 
-  &-Button {
+  &-ReturnLink {
     position: relative;
     align-self: flex-start;
     margin-top: 6px;
@@ -38,6 +38,27 @@
     }
   }
 
+  &-TechnologiesContainer {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    p:nth-child(1n) {
+      border: 2px solid $main-palegreen;
+      border-radius: $main-border-radius;
+      padding: 0.2em 0.6em;
+      margin: 5px;
+    }
+    p:nth-child(2n) {
+      border: 2px solid $main-darkblue;
+    }
+    p:nth-child(3n) {
+      border: 2px solid $main-lilly;
+    }
+  }
+
   &-Image {
     max-width: 100%;
     height: auto;
@@ -55,8 +76,17 @@
 
 @media (max-width: $mobile-max-width) {
   .ProjectGeneralContainer {
+    padding: 10px 15px;
+    &-ReturnLink {
+      &-Image {
+        width: 30px;
+        height: auto;
+      }
+    }
+
     &-Title {
       font: $mobile-h1;
+      margin: 10px;
     }
 
     &-QuoteContainer {
@@ -65,6 +95,15 @@
       }
       h4 {
         font: $mobile-quote-font;
+      }
+    }
+
+    &-TechnologiesContainer {
+      margin-bottom: 10px;
+      p:nth-child(1n) {
+        border-width: 1px;
+        font: $mobile-technology-font;
+        padding: 0.1em 0.4em;
       }
     }
     &-Text {
