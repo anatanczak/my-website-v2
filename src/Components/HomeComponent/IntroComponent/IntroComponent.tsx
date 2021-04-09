@@ -17,9 +17,9 @@ const IntroComponent: FunctionComponent<IntroComponentProps> = ({}) => {
         <h1 className="IntroductionAndPitchContainer-TextAndButtonContainer-MainTitle">
           {t('home.mainTitle')}
         </h1>
-        <h2 className="IntroductionAndPitchContainer-TextAndButtonContainer-Pitch">
+        <p className="IntroductionAndPitchContainer-TextAndButtonContainer-Pitch">
           {t('home.pitch')}
-        </h2>
+        </p>
         <div className="IntroductionAndPitchContainer-TextAndButtonContainer-ButtonsContainer">
           <a
             href="/files/cv_tanczak_fullstack.pdf"
