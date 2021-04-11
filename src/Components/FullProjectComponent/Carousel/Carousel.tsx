@@ -1,4 +1,5 @@
-import { FunctionComponent, useRef } from 'react';
+import { NONAME } from 'node:dns';
+import { FunctionComponent, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import LeftArrow from '../../../assets/icons/left_arrow_carousel_icon.svg';
@@ -13,30 +14,55 @@ type CarouselProps = {
 const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
   const { t }: { t: any } = useTranslation();
   const slider = useRef<HTMLDivElement | null>(null);
-  let counter = 0;
+  const [leftArrowIsVisible, setLeftArrowIsVisible] = useState(false);
+  const [rightArrowIsVisible, setRightArrowIsVisible] = useState(false);
+  //const [stateCounter, setStateCounter] = useState(0);
+  let counter = useRef(0);
 
-  const style = {
-    translate: '-100%'
+  const invisible = {
+    display: 'none'
   };
+  const visible = {
+    display: 'block'
+  };
+
+  useEffect(() => {
+    if (images.length > 1) {
+      setRightArrowIsVisible(true);
+    }
+  }, []);
 
   const handleLeftArrowClick = () => {
     if (slider) {
-      if (counter > 0) {
-        counter--;
-        console.log('moving left ' + counter);
-        slider.current!.style.transform = `translateX(-${100 * counter}%)`;
-        console.log(`translateX  (${100 * counter}%)`);
+      if (counter.current > 0) {
+        if (!rightArrowIsVisible) {
+          setRightArrowIsVisible(true);
+        }
+        counter.current--;
+        slider.current!.style.transform = `translateX(-${
+          100 * counter.current
+        }%)`;
+      }
+      if (counter.current <= 0) {
+        setLeftArrowIsVisible(false);
       }
     }
   };
+
   const handleRightArrowClick = () => {
     if (slider) {
-      if (counter < images.length - 1) {
-        counter++;
-        console.log('moving right ' + counter);
-        slider.current!.style.transform = `translateX(-${100 * counter}%)`;
-        console.log(`translateX(-${100 * counter}%)`);
+      if (counter.current < images.length - 1) {
+        if (!leftArrowIsVisible) {
+          setLeftArrowIsVisible(true);
+        }
+        counter.current++;
+        slider.current!.style.transform = `translateX(-${
+          100 * counter.current
+        }%)`;
       }
+    }
+    if (counter.current === images.length - 1) {
+      setRightArrowIsVisible(false);
     }
   };
 
@@ -45,9 +71,11 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
       <button
         onClick={handleLeftArrowClick}
         className="CarouselContainer-Button CarouselContainer-ButtonLeft"
+        style={leftArrowIsVisible ? visible : invisible}
       >
         <img src={LeftArrow} alt="left arrow" />
       </button>
+
       <div className="CarouselContainer-SliderContainer">
         <div ref={slider} className="CarouselContainer-SliderContainer-Slider">
           {images.map((image, index) => {
@@ -69,10 +97,10 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
           })}
         </div>
       </div>
-
       <button
         className="CarouselContainer-Button CarouselContainer-ButtonRight"
         onClick={handleRightArrowClick}
+        style={rightArrowIsVisible ? visible : invisible}
       >
         <img src={RightArrow} alt="right arrow" />
       </button>

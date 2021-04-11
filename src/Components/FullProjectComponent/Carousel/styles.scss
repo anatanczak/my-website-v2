@@ -19,13 +19,13 @@
   &-ButtonLeft {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 20px;
     z-index: 3;
   }
   &-ButtonRight {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 20px;
     z-index: 3;
   }
 
@@ -43,11 +43,13 @@
         flex-shrink: 0;
         width: 100%;
         position: relative;
+        padding: 10px;
 
         &-Image {
           width: 100%;
           //to hide empty line at the bottom
           display: block;
+          border-radius: $main-border-radius;
         }
         &-Caption {
           position: absolute;
