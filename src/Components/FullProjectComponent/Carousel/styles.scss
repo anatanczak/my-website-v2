@@ -1,0 +1,79 @@
+@import 'src/_colors.scss';
+@import 'src/_vars.scss';
+@import 'src/_breakpoints.scss';
+@import 'src/_mixins.scss';
+@import 'src/_fonts.scss';
+@import 'src/titles.scss';
+
+/* ---------------------------  Common styles --------------------------- */
+
+//Contains all carousl items includding buttons, slider and navigation
+.CarouselContainer {
+  width: 90%;
+  display: flex;
+  position: relative;
+
+  &-Button {
+    cursor: pointer;
+  }
+  &-ButtonLeft {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 3;
+  }
+  &-ButtonRight {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 3;
+  }
+  //Wrapper for a slider inorder to make all slides visible but hidden
+  &-SliderContainer {
+    //Contains slides a long track of slides
+    overflow-x: hidden;
+    &-Slider {
+      width: 100%;
+      display: flex;
+
+      transition: all ease-in-out 1s;
+
+      &-ImageContainer {
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+
+        &-Image {
+          width: 100%;
+          //to hide empty line at the bottom
+          display: block;
+        }
+        &-Caption {
+          position: absolute;
+          left: 50%;
+          bottom: 10px;
+          width: 60%;
+          transform: translate(-50%, -50%);
+          background-color: $translucent-white;
+          color: $main-white;
+          border-radius: $main-border-radius;
+          padding: 0.8em;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------  Mobile --------------------------- */
+
+@media (max-width: $mobile-max-width) {
+}
+
+/* ---------------------------  Tablet --------------------------- */
+@media (min-width: $tablet-min-width) {
+}
+
+/* ---------------------------  Desktop --------------------------- */
+@media (min-width: $desktop-min-width) {
+}
