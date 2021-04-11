@@ -14,7 +14,6 @@ import './styles.scss';
 import ProjectGeneralInfo from './ProjectGeneralInfo/ProjectGeneralInfo';
 import Links from './Links/Links';
 import Features from './Features/Features';
-import Carousel from './Carousel/Carousel';
 
 type FullProjectComponentProps = {};
 
@@ -58,11 +57,10 @@ const FullProjectComponent: FunctionComponent<FullProjectComponentProps> = ({}) 
               technologies={project.technologies}
               description={project.longDescription}
               quote={project.quote}
-              heroImage={project.heroImage}
+              images={project.images}
             />
             {project.links && <Links links={project.links} />}
             {project.features && <Features features={project.features} />}
-            {project.images && <Carousel images={project.images} />}
           </div>
           <MailSticky />
           <Footer />

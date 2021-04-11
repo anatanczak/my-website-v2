@@ -2,6 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import useWindowSize from '../../../CustomHooks/useWindowSize';
+import Carousel from '../Carousel/Carousel';
 
 import LeftQuotes from '../../../assets/icons/quotes-leftside-icon.svg';
 import RightQuotes from '../../../assets/icons/quotes-rightside-icon.svg';
@@ -13,7 +14,7 @@ type ProjectGeneralInfoProps = {
   title: string;
   technologies?: Array<string>;
   quote?: string;
-  heroImage?: string;
+  images?: Array<string>;
   description: string;
 };
 
@@ -21,7 +22,7 @@ const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
   title,
   technologies,
   quote,
-  heroImage,
+  images,
   description
 }) => {
   const { t }: { t: any } = useTranslation();
@@ -59,13 +60,14 @@ const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
           })}
         </div>
       )}
-      {heroImage && (
+      {images && <Carousel images={images} />}
+      {/* {heroImage && (
         <img
           className="ProjectGeneralContainer-Image"
           src={heroImage}
           alt="project image"
         />
-      )}
+      )} */}
       <h2 className="ProjectGeneralContainer-Subtitle">About project</h2>
       <div className="ProjectGeneralContainer-Text">
         {text.map((paragraph, index) => {

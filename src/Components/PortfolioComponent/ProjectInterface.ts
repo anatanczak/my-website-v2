@@ -9,13 +9,11 @@ export default interface Project {
   hasDetailedinfo: boolean;
   technologies?: Array<string>;
   quote?: string;
-  //TODO: make hero image required
-  heroImage?: string;
+  images?: Array<string>;
   longDescription: string;
   links?: Array<ProjectLink>;
   features?: Array<ProjectFeature>;
-  //TODO: make imageArray required
-  images?: Array<string>;
+
   videos?: Array<string>;
 }
 

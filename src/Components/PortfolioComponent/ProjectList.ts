@@ -5,7 +5,7 @@ import SmartLifeThumbnail from '../../assets/projects/smartlife/smartlife_thumbn
 
 /* Meslistes Images */
 import MeslistesThumbnail from '../../assets/projects/meslistes/meslistes_thumbnail.webp';
-import MeslistesHeroImage from '../../assets/projects/meslistes/meslistes_hero_image.webp';
+import MeslistesLightModeIphones from '../../assets/projects/meslistes/meslistes_hero_image.webp';
 import MeslistesDarkModeIphones from '../../assets/projects/meslistes/meslistes_dark_mode_iphones.webp';
 import MeslistesVerticalPhonesLightMode from '../../assets/projects/meslistes/meslistes_vertical_iphones_light_mode.webp';
 import MeslistesVerticalPhonesDarkMode from '../../assets/projects/meslistes/meslistes_vertical_iphones_dark_mode.webp';
@@ -42,7 +42,6 @@ const projectList: Array<Project> = [
     hasDetailedinfo: false,
     quote:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet',
-    heroImage: 'heroImage',
     longDescription: 'sjhkjshgjkshgkjhsgk'
   },
   {
@@ -56,7 +55,7 @@ const projectList: Array<Project> = [
     hasDetailedinfo: true,
     technologies: ['React JS', 'SASS', 'TypeScript'],
     quote: 'portfolio.project.newPortfolio.quote',
-    heroImage: NewPortfolioHeroImage,
+    images: [NewPortfolioHeroImage],
     longDescription: 'portfolio.project.newPortfolio.longDescription',
     links: [
       {
@@ -119,8 +118,13 @@ const projectList: Array<Project> = [
     githubLink: 'https://github.com/anaviktoriv/meslistes',
     hasDetailedinfo: true,
     quote: 'portfolio.project.meslistes.quote',
+    images: [
+      MeslistesVerticalPhonesLightMode,
+      MeslistesDarkModeIphones,
+      MeslistesVerticalPhonesDarkMode,
+      MeslistesLightModeIphones
+    ],
     technologies: ['Swift'],
-    heroImage: MeslistesHeroImage,
     longDescription: 'portfolio.project.meslistes.longDescription',
     links: [
       {
@@ -132,11 +136,6 @@ const projectList: Array<Project> = [
         label: 'portfolio.project.meslistes.link2',
         url: 'https://github.com/anaviktoriv/meslistes'
       }
-    ],
-    images: [
-      MeslistesDarkModeIphones,
-      MeslistesVerticalPhonesLightMode,
-      MeslistesVerticalPhonesDarkMode
     ]
   },
 
