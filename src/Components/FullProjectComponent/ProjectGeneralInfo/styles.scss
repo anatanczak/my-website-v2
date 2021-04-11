@@ -22,15 +22,16 @@
     color: $main-darkblue;
     margin: 0.5em;
   }
-
+  &-Subtitle {
+    margin-bottom: 0.3em;
+  }
   &-QuoteContainer {
     display: flex;
-    align-items: baseline;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 0.5em;
 
     img {
       height: auto;
-      margin-top: 0.5em;
     }
     h4 {
       color: $main-darkblue;
@@ -91,7 +92,7 @@
 
     &-QuoteContainer {
       img {
-        width: 15px;
+        width: 10px;
       }
       h4 {
         font: $mobile-quote-font;
@@ -120,7 +121,7 @@
 
     &-QuoteContainer {
       img {
-        width: 17px;
+        width: 12px;
       }
       h4 {
         font: $tablet-quote-font;
@@ -141,7 +142,7 @@
 
     &-QuoteContainer {
       img {
-        width: 19px;
+        width: 14px;
       }
       h4 {
         font: $desktop-quote-font;

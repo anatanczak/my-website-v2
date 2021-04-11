@@ -46,13 +46,6 @@ const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
       </Link>
       <h1 className="ProjectGeneralContainer-Title">{title}</h1>
 
-      {quote && (
-        <div className="ProjectGeneralContainer-QuoteContainer">
-          <img src={LeftQuotes} alt="left quotes" />
-          <h4>{t(quote)}</h4>
-          <img src={RightQuotes} alt="right quotes" />
-        </div>
-      )}
       {technologies && (
         <div className="ProjectGeneralContainer-TechnologiesContainer">
           {technologies.map((technology, index) => {
@@ -61,14 +54,14 @@ const ProjectGeneralInfo: FunctionComponent<ProjectGeneralInfoProps> = ({
         </div>
       )}
       {images && <Carousel images={images} />}
-      {/* {heroImage && (
-        <img
-          className="ProjectGeneralContainer-Image"
-          src={heroImage}
-          alt="project image"
-        />
-      )} */}
       <h2 className="ProjectGeneralContainer-Subtitle">About project</h2>
+      {quote && (
+        <div className="ProjectGeneralContainer-QuoteContainer">
+          <img src={LeftQuotes} alt="left quotes" />
+          <h4>{t(quote)}</h4>
+          <img src={RightQuotes} alt="right quotes" />
+        </div>
+      )}
       <div className="ProjectGeneralContainer-Text">
         {text.map((paragraph, index) => {
           return (
