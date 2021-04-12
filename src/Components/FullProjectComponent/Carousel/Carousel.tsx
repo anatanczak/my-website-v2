@@ -32,6 +32,29 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
     backgroundColor: '#dedede'
   };
 
+  const moveSlides = (newValue: number) => {
+    counter.current = newValue;
+    setActiveButtonIndex(counter.current);
+    slider.current!.style.transform = `translateX(-${100 * counter.current}%)`;
+
+    if (slider) {
+      if (counter.current === images.length - 1) {
+        setRightArrowIsVisible(false);
+      } else {
+        if (!rightArrowIsVisible) {
+          setRightArrowIsVisible(true);
+        }
+      }
+      if (counter.current <= 0) {
+        setLeftArrowIsVisible(false);
+      } else {
+        if (!leftArrowIsVisible) {
+          setLeftArrowIsVisible(true);
+        }
+      }
+    }
+  };
+
   useEffect(() => {
     if (images.length > 1) {
       setRightArrowIsVisible(true);
@@ -39,49 +62,21 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
   }, []);
 
   const handleLeftArrowClick = () => {
-    if (slider) {
-      if (counter.current > 0) {
-        if (!rightArrowIsVisible) {
-          setRightArrowIsVisible(true);
-        }
-        counter.current--;
-        setActiveButtonIndex(counter.current);
-        slider.current!.style.transform = `translateX(-${
-          100 * counter.current
-        }%)`;
-      }
-      if (counter.current <= 0) {
-        setLeftArrowIsVisible(false);
-      }
+    const newValue = counter.current - 1;
+    if (newValue >= 0) {
+      moveSlides(newValue);
     }
   };
 
   const handleRightArrowClick = () => {
-    if (slider) {
-      if (counter.current < images.length - 1) {
-        if (!leftArrowIsVisible) {
-          setLeftArrowIsVisible(true);
-        }
-        counter.current++;
-        setActiveButtonIndex(counter.current);
-        slider.current!.style.transform = `translateX(-${
-          100 * counter.current
-        }%)`;
-      }
-    }
-    if (counter.current === images.length - 1) {
-      setRightArrowIsVisible(false);
+    const newValue = counter.current + 1;
+    if (newValue < images.length) {
+      moveSlides(newValue);
     }
   };
 
   const handleBulletButtonClick = (currentSlideIndex: number) => {
-    counter.current = currentSlideIndex;
-    setActiveButtonIndex(counter.current);
-    if (slider) {
-      slider.current!.style.transform = `translateX(-${
-        100 * counter.current
-      }%)`;
-    }
+    moveSlides(currentSlideIndex);
   };
 
   return (
