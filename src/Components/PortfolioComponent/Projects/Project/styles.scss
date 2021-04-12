@@ -29,6 +29,19 @@
       width: 90%;
       height: auto;
     }
+    &-TechnologiesContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 10px;
+      &-Technology {
+        margin: 0.2em;
+        padding: 0.1em 0.4em;
+        border: 1px solid $main-white;
+        border-radius: $main-border-radius;
+      }
+    }
     &-Button {
       @include simple-button;
       margin: 1em;
@@ -117,6 +130,9 @@
         max-width: 85%;
         height: auto;
       }
+      &-TechnologiesContainer {
+        display: none;
+      }
       &-Button {
         display: none;
       }
@@ -134,11 +150,24 @@
       transition: 0.8s opacity ease-in-out;
       &-Title {
         font: $tablet-h2;
-        margin: 0.4em;
+        margin: 0.5em 0.3em 0.3em 0.3em;
       }
       &-Separator {
         border-bottom: 1px solid $main-white;
         width: 70%;
+      }
+      &-TechnologiesContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 5px;
+        &-Technology {
+          margin: 0.2em;
+          padding: 0.1em 0.4em;
+          border: 1px solid $main-white;
+          border-radius: $main-border-radius;
+        }
       }
       &-Description {
         font: $desktop-p;

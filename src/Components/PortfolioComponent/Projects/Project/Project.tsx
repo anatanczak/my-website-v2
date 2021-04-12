@@ -29,7 +29,7 @@ const Project: FunctionComponent<ProjectProps> = ({
     backgroundColor: BackgroundColorCode.Grey
   };
 
-  let separatorStyles = {
+  let borderStyles = {
     borderColor: ''
   };
 
@@ -41,7 +41,7 @@ const Project: FunctionComponent<ProjectProps> = ({
     buttonStyles = {
       backgroundColor: BackgroundColorCode.Lilly
     };
-    separatorStyles = {
+    borderStyles = {
       borderColor: BackgroundColorCode.DarkBlue
     };
   }
@@ -64,6 +64,21 @@ const Project: FunctionComponent<ProjectProps> = ({
           src={project.thumbnail}
           alt="project image"
         />
+        {project.technologies && (
+          <div className="ProjectContainer-CardFront-TechnologiesContainer">
+            {project.technologies.map((technology, index) => {
+              return (
+                <p
+                  key={technology + index + project.name}
+                  style={borderStyles}
+                  className="ProjectContainer-CardFront-TechnologiesContainer-Technology"
+                >
+                  {technology}
+                </p>
+              );
+            })}
+          </div>
+        )}
         <p className="ProjectContainer-CardFront-Description">
           {t(project.shortDescription)}
         </p>
@@ -91,8 +106,23 @@ const Project: FunctionComponent<ProjectProps> = ({
         <h3 className="ProjectContainer-CardBack-Title">{project.name}</h3>
         <div
           className="ProjectContainer-CardBack-Separator"
-          style={separatorStyles}
+          style={borderStyles}
         ></div>
+        {project.technologies && (
+          <div className="ProjectContainer-CardBack-TechnologiesContainer">
+            {project.technologies.map((technology, index) => {
+              return (
+                <p
+                  key={technology + index + project.name}
+                  style={borderStyles}
+                  className="ProjectContainer-CardBack-TechnologiesContainer-Technology"
+                >
+                  {technology}
+                </p>
+              );
+            })}
+          </div>
+        )}
         <p className="ProjectContainer-CardBack-Description">
           {t(project.shortDescription)}
         </p>
