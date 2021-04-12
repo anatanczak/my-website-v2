@@ -20,10 +20,10 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
   let counter = useRef(0);
 
   const invisible = {
-    display: 'none'
+    opacity: '0.3'
   };
   const visible = {
-    display: 'block'
+    opacity: '1'
   };
 
   useEffect(() => {
