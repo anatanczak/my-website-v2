@@ -16,7 +16,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
   const slider = useRef<HTMLDivElement | null>(null);
   const [leftArrowIsVisible, setLeftArrowIsVisible] = useState(false);
   const [rightArrowIsVisible, setRightArrowIsVisible] = useState(false);
-  //const [stateCounter, setStateCounter] = useState(0);
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
   let counter = useRef(0);
 
   const invisible = {
@@ -24,6 +24,12 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
   };
   const visible = {
     opacity: '1'
+  };
+  const activeBulletButton = {
+    backgroundColor: '#a3d0cb'
+  };
+  const inActiveBulletButton = {
+    backgroundColor: '#dedede'
   };
 
   useEffect(() => {
@@ -39,6 +45,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
           setRightArrowIsVisible(true);
         }
         counter.current--;
+        setActiveButtonIndex(counter.current);
         slider.current!.style.transform = `translateX(-${
           100 * counter.current
         }%)`;
@@ -56,6 +63,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
           setLeftArrowIsVisible(true);
         }
         counter.current++;
+        setActiveButtonIndex(counter.current);
         slider.current!.style.transform = `translateX(-${
           100 * counter.current
         }%)`;
@@ -63,6 +71,16 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
     }
     if (counter.current === images.length - 1) {
       setRightArrowIsVisible(false);
+    }
+  };
+
+  const handleBulletButtonClick = (currentSlideIndex: number) => {
+    counter.current = currentSlideIndex;
+    setActiveButtonIndex(counter.current);
+    if (slider) {
+      slider.current!.style.transform = `translateX(-${
+        100 * counter.current
+      }%)`;
     }
   };
 
@@ -110,7 +128,15 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
           return (
             <div
               className="CarouselContainer-Nav-Indicator"
+              style={
+                activeButtonIndex === index
+                  ? activeBulletButton
+                  : inActiveBulletButton
+              }
               key={image + index + 'nav'}
+              onClick={() => {
+                handleBulletButtonClick(index);
+              }}
             ></div>
           );
         })}
