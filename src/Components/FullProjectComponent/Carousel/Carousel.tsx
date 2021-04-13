@@ -1,9 +1,17 @@
 import { NONAME } from 'node:dns';
-import { FunctionComponent, useEffect, useRef, useState } from 'react';
+import {
+  createRef,
+  FunctionComponent,
+  RefObject,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import LeftArrow from '../../../assets/icons/left_arrow_carousel_icon.svg';
 import RightArrow from '../../../assets/icons/right_arrow_carousel_icon.svg';
+import useDetectSwipe from '../../../CustomHooks/useDetectSwipe';
 
 import './styles.scss';
 
@@ -18,19 +26,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
   const [rightArrowIsVisible, setRightArrowIsVisible] = useState(false);
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
   let counter = useRef(0);
-
-  const invisible = {
-    opacity: '0.3'
-  };
-  const visible = {
-    opacity: '1'
-  };
-  const activeBulletButton = {
-    backgroundColor: '#a3d0cb'
-  };
-  const inActiveBulletButton = {
-    backgroundColor: '#dedede'
-  };
+  const swipableCover = useRef<HTMLImageElement | null>(null);
 
   const moveSlides = (newValue: number) => {
     counter.current = newValue;
@@ -53,6 +49,21 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
         }
       }
     }
+  };
+
+  useDetectSwipe(swipableCover, moveSlides, counter, images.length);
+
+  const invisible = {
+    opacity: '0.3'
+  };
+  const visible = {
+    opacity: '1'
+  };
+  const activeBulletButton = {
+    backgroundColor: '#a3d0cb'
+  };
+  const inActiveBulletButton = {
+    backgroundColor: '#dedede'
   };
 
   useEffect(() => {
@@ -109,6 +120,10 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
             );
           })}
         </div>
+        <div
+          className="CarouselContainer-SliderContainer-SwipableCover"
+          ref={swipableCover}
+        ></div>
       </div>
       <button
         className="CarouselContainer-Button CarouselContainer-ButtonRight"
@@ -117,7 +132,6 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
       >
         <img src={RightArrow} alt="right arrow" />
       </button>
-
       <div className="CarouselContainer-Nav">
         {images.map((image, index) => {
           return (
