@@ -42,8 +42,8 @@ i18n
   .init({
     resources,
     debug: false,
-
-    lng: detectedLanguage(),
+    //TODO: Call detect language function when enable language select
+    lng: 'fr',
     fallbackLng: 'fr',
     whitelist: ['en', 'fr', 'de'],
     keySeparator: true,
