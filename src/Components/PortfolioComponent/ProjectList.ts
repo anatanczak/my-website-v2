@@ -38,7 +38,7 @@ const projectList: Array<Project> = [
     thumbnail: SmartLifeThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Lilly,
     shortDescription: 'portfolio.project.smartLife.shortDescription',
-    githubLink: 'https://github.com/anaviktoriv/SmartLife',
+    githubLink: 'https://github.com/anatanczak/SmartLife',
     hasDetailedinfo: false,
     quote:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet',
@@ -52,7 +52,7 @@ const projectList: Array<Project> = [
     thumbnail: NewPortfolioThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.PaleGreen,
     shortDescription: 'portfolio.project.newPortfolio.shortDescription',
-    githubLink: 'https://github.com/anaviktoriv/my-website-v2',
+    githubLink: 'https://github.com/anatanczak/my-website-v2',
     hasDetailedinfo: true,
     technologies: ['React JS', 'SASS', 'TypeScript'],
     quote: 'portfolio.project.newPortfolio.quote',
@@ -66,7 +66,7 @@ const projectList: Array<Project> = [
       },
       {
         label: 'portfolio.project.newPortfolio.link2',
-        url: 'https://github.com/anaviktoriv/my-website-v2'
+        url: 'https://github.com/anatanczak/my-website-v2'
       }
     ],
     features: [
@@ -103,7 +103,7 @@ const projectList: Array<Project> = [
     thumbnail: BlueSnailThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Grey,
     shortDescription: 'portfolio.project.blueSnail.shortDescription',
-    githubLink: 'https://github.com/anaviktoriv/BlueSnail',
+    githubLink: 'https://github.com/anatanczak/BlueSnail',
     hasDetailedinfo: false,
     quote: 'lorem ipsum dolorem',
     technologies: ['Swift', 'SwiftUI'],
@@ -117,7 +117,7 @@ const projectList: Array<Project> = [
     thumbnail: MeslistesThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Grey,
     shortDescription: 'portfolio.project.meslistes.shortDescription',
-    githubLink: 'https://github.com/anaviktoriv/meslistes',
+    githubLink: 'https://github.com/anatanczak/meslistes',
     hasDetailedinfo: true,
     quote: 'portfolio.project.meslistes.quote',
     images: [
@@ -136,7 +136,7 @@ const projectList: Array<Project> = [
       },
       {
         label: 'portfolio.project.meslistes.link2',
-        url: 'https://github.com/anaviktoriv/meslistes'
+        url: 'https://github.com/anatanczak/meslistes'
       }
     ]
   },
@@ -148,7 +148,7 @@ const projectList: Array<Project> = [
     thumbnail: OldPortfolioThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.DarkBlue,
     shortDescription: 'portfolio.project.oldPortfolio.shortDescription',
-    githubLink: 'https://github.com/anaviktoriv/myWebsite',
+    githubLink: 'https://github.com/anatanczak/myWebsite',
     hasDetailedinfo: false,
     quote: 'lorem ipsum dolorem',
     technologies: ['PHP', 'HTML', 'CSS', 'JS'],
@@ -163,7 +163,7 @@ const projectList: Array<Project> = [
     thumbnail: SuccessBuilderThumbnail,
     thumbnailBackgroundColor: BackgroundColorCode.Lilly,
     shortDescription: 'portfolio.project.successBuilder.shortDescription',
-    githubLink: 'https://github.com/anaviktoriv/Success-Builder',
+    githubLink: 'https://github.com/anatanczak/Success-Builder',
     hasDetailedinfo: false,
     quote: 'lorem ipsum dolorem',
     technologies: ['Swift'],

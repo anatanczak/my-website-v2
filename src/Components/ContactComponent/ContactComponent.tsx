@@ -34,7 +34,7 @@ const ContactComponent: FunctionComponent<ContactComponentProps> = ({}) => {
             <a href="https://www.linkedin.com/in/anastasiatanczak/">
               <img src={LinkedinIcon} alt="linkedin icon" />
             </a>
-            <a href="https://github.com/anaviktoriv">
+            <a href="https://github.com/anatanczak">
               <img src={GithubIcon} alt="github icon" />
             </a>
           </div>

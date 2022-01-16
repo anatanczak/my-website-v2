@@ -72,7 +72,7 @@ const Footer: FunctionComponent<FooterProps> = ({}) => {
           </a>
           <a
             className="FooterContainer-SocialLinksContainer-Links-Link"
-            href="https://github.com/anaviktoriv"
+            href="https://github.com/anatanczak"
           >
             <img
               className="FooterContainer-SocialLinksContainer-Links-Link-Icon"

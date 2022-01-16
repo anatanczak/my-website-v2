@@ -91,7 +91,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
           setMenuIsOpen={setMenuIsOpen}
         />
         <div className="NavBarContainer-AllwaysVisibleMenuContainer-SocialLinksContainer">
-          <a href="https://github.com/anaviktoriv">
+          <a href="https://github.com/anatanczak">
             <img src={GithubIcon} alt="github logo" />
           </a>
           <a href="https://www.linkedin.com/in/anastasiatanczak/">
@@ -136,7 +136,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
                 : 'NavBarContainer-ClosedMenuContainer-MenuListContainer-SocialLinksContainerMobile'
             }
           >
-            <a href="https://github.com/anaviktoriv">
+            <a href="https://github.com/anatanczak">
               <img src={GithubIcon} alt="github logo" />
             </a>
             <a href="https://www.linkedin.com/in/anastasiatanczak/">
