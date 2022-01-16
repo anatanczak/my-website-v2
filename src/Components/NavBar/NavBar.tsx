@@ -59,10 +59,10 @@ const NavBar: FunctionComponent<NavBarProps> = ({ activePage }) => {
     }
   };
 
-  //close navbar when cklicked outside
+  // close navbar when cklicked outside
   useDetectClick(outSideNavbarClickHandler);
 
-  //close navbar when scrolled
+  // close navbar when scrolled
   useEffect(() => {
     if (position > 10) {
       setMenuIsOpen(false);
